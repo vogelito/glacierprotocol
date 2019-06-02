@@ -169,11 +169,12 @@ already. (See the instructions in Section III for details.)
             Import the signature
             ```
             $ wget https://raw.githubusercontent.com/spesmilo/electrum/3.3.6/pubkeys/ThomasV.asc
-            $ gpg --keyid-format long --show-key ThomasV.asc
+            $ gpg ThomasV.asc
             ```
             Inspect the key file to confirm it has 6694D8DE7BE8EE5631BED9502BD5824B7F9470E6 as its keyid
             Verify the file
             ```
+            $ gpg --import ThomasV.asc
             $ gpg --verify electrum-3.3.6-x86_64.AppImage.asc electrum-3.3.6-x86_64.AppImage
             ```
         * **ElectronCash**: Used to manage multi-location multisig cold wallets
@@ -233,7 +234,14 @@ already. (See the instructions in Section III for details.)
                 gpg:          There is no indication that the signature belongs to the owner.
                 Primary key fingerprint: CAE1 092A D355 3FFD 21C0  5DE3 6FC4 C9F7 F1BE 8FEA
             ```
-
+        * **BIP39**: Used to manage multi-location multisig cold wallets
+            ```
+            $ wget https://github.com/iancoleman/bip39/releases/download/0.3.11/bip39-standalone.html
+            ```
+            Make sure the sha256sum of the file is:
+            ```
+            954691257c7ab59175de365688e3bc7c1112e1392d308c1b97336b23854fe397
+            ```
 
     3. Copy that software to the Q1 APP USB.
         1. Create a folder for the application files that will be moved to the
@@ -247,6 +255,7 @@ already. (See the instructions in Section III for details.)
             $ cp ~/dls/electrum-3.3.6-x86_64.AppImage ~/apps
             $ cp ~/dls/Electron-Cash-4.0.5-x86_64.AppImage ~/apps
             $ cp ~/dls/electrum-ltc-3.3.6.1-x86_64.AppImage ~/apps
+            $ cp ~/dls/bip39-standalone.html ~/apps
             ```
         3. Make the AppImage files executable
             ```
@@ -273,9 +282,10 @@ contents should look like this
     version.
 
     ```
+    bip39-standalone.html
     bitcoind_0.13.2-xenial1_amd64.deb
-    electrum-3.3.6-x86_64.AppImage
     Electron-Cash-4.0.5-x86_64.AppImage
+    electrum-3.3.6-x86_64.AppImage
     electrum-ltc-3.3.6.1-x86_64.AppImage
     libboost-chrono1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
     libboost-program-options1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
