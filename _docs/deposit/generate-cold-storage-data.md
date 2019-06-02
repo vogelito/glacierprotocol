@@ -37,7 +37,7 @@ Protocol unless explicitly instructed otherwise.</span>**
     of Glacier you are using at <https://github.com/GlacierProtocol/GlacierProtocol/releases>.
 2. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/) to
 prepare your quarantined workspace.
-3. Create entropy and private keys to test setup
+3. Test setup of quarantined computers
 
     Creating an unguessable private key requires
     *entropy* -- random data. We'll combine two sources of entropy to generate
@@ -141,3 +141,39 @@ prepare your quarantined workspace.
                 Deposit Protocol.
                 3. If they are identical, restart the Deposit Protocol.
             2. Seek assistance if discrepancies persist. Your setup might be compromised.
+
+    5. Begin multi-device protocol
+        1. Delete the contents of the Quarantined Scratchpads on each computer
+        2. **<span style="color: red;">Quarantined hardware should never be allowed to be
+        turned on in close proximity to one another.</span>**
+
+4. Create private keys
+
+    Creating an unguessable private key requires
+    *entropy* -- random data. We'll combine two sources of entropy to generate
+    our keys. This ensures securely random keys even if *one* entropy source is
+    somehow flawed or compromised to be less-than-perfectly random.
+
+    1. Generate dice entropy
+        1. Delete the contents of the Quarantined Scratchpad
+        1. Type "PRIVATE KEY DICE ENTROPY" into the Quarantined Scratchpad.
+        2. Roll 62 six-sided dice, shaking the dice thoroughly each roll.
+        62 dice rolls corresponds to 160 bits of entropy. See the
+        [design document](../design-doc/overview.md) for details.
+        3. If you are rolling multiple dice at the same time, read the
+        dice left-to-right. **This is important.** Humans are
+        [horrible at generating random data](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041531)
+        and great at noticing patterns. Without a consistent heuristic like
+        "read the dice left to right", you may subconsciously read them in a
+        non-random order (like tending to record lower numbers first).
+        This can drastically undermine the randomness of the data, and could be
+        exploited to guess your private keys.
+        4. Manually enter the <span class="danger">numbers</span> into the
+        Quarantined Scratchpads on *all* quarantined computers. Put all rolls on
+        the same line to create
+        <span class="danger">one line of 62 numbers</span>. (It's fine to add
+        spaces for readability.)
+
+
+
+       
