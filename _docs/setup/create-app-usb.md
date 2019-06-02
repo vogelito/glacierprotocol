@@ -148,6 +148,8 @@ already. (See the instructions in Section III for details.)
             ```
         * **multisigweb**: Used to manage multi-location multisig cold wallets for ETH and ERC20 token
             ```
+            $ mkdir ~/dls
+            $ cd ~/dls
             $ wget https://github.com/gnosis/MultiSigWallet/releases/download/v1.6.0/multisigweb-1.6.0-amd64.deb.zip
             ```
             Make sure the sha256 of the file is:
@@ -168,8 +170,6 @@ already. (See the instructions in Section III for details.)
             $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage
             $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage.asc
             $ gpg --verify electrum-3.3.6-x86_64.AppImage.asc electrum-3.3.6-x86_64.AppImage
-
-            $chmod +x electrum-3.3.6-x86_64.AppImage
             ```
         * **ElectronCash**: Used to manage multi-location multisig cold wallets
             ```
@@ -237,8 +237,17 @@ already. (See the instructions in Section III for details.)
         2. Copy the software into the apps folder:
             ```
             $ cp /var/cache/apt/archives/*.deb ~/apps
+            $ cp ~/dls/electrum-3.3.6-x86_64.AppImage ~/apps
+            $ cp ~/dls/Electron-Cash-4.0.5-x86_64.AppImage ~/apps
+            $ cp ~/dls/electrum-ltc-3.3.6.1-x86_64.AppImage ~/apps
             ```
-        3. Copy the contents of the apps folder to the Q1 APP USB:
+        3. Make the AppImage files executable
+            ```
+            $ chmod +x electrum-3.3.6-x86_64.AppImage
+            $ chmod +x Electron-Cash-4.0.5-x86_64.AppImage
+            $ chmod +x electrum-ltc-3.3.6.1-x86_64.AppImage
+            ```
+        4. Copy the contents of the apps folder to the Q1 APP USB:
             1. Click on the File Manager icon in the launching dock:
             2. Navigate to the "Home" folder.
             3. Click and drag "apps" folder to the icon representing
