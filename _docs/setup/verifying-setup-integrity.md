@@ -32,62 +32,78 @@ prepare your quarantined workspace.
         non-random order (like tending to record lower numbers first).
         This can drastically undermine the randomness of the data, and could be
         exploited to guess your private keys.
-        4. Manually enter the <span class="danger">numbers</span> into the
+        4. Manually enter the **numbers** into the
         Quarantined Scratchpads on *all* quarantined computers. Put all rolls on
-        the same line to create
-        <span class="danger">one line of 62 numbers</span>. (It's fine to add
+        the same line to create **one line of 62 numbers**. (It's fine to add
         spaces for readability.)
 
 
-    2. Generate computer entropy    
+    2. Generate test BIP39 entropy
         1. Type "COMPUTER ENTROPY" into all computers' Quarantined Scratchpads.
         (This is a descriptive heading to keep your notes organized and minimize
         risk of error.)
-        2. Make sure you are in the `~/glacier folder`:
-           ```
-           $ cd ~/glacier
-           ```
-        3. **On the Q1 computer** enter the following command:
-           ```
-           $ ./glacierscript.py entropy --num-keys 1
-           ```
-           Example output:
 
-           <pre><span class="danger" style="font-size: 11px;">Computer entropy #1: f8e1 39f4 8dd2 129c 689c 1cb1 1280 79fe db56 573f</span></pre>
-        4. Copy-paste the output into the Quarantined Scratchpad.
-        5. Manually copy the output into the Quarantined Scratchpad on all the other quarantined computers.
-
-
-    3. Generate setup verification data information using your entropy
-
-       **On the Q1 computer:**
-        1. Run GlacierScript to generate the private keys.
+       **On the Q1 computer**
+        2. Make sure you are in the `~/apps folder`:
            ```
-           $ ./glacierscript.py create-deposit-data -m 1 -n 1
+           $ cd ~/apps
            ```
-        2. GlacierScript will prompt you to enter the 62-number line of dice entropy and the line of computer entropy.
-        3. GlacierScript will output your setup verification data:
-            * 1 private key
-            * A cold storage address
-            * A redemption script
+        3. Enter the following command:
+           ```
+           $ ./mnemonic_entropy.py entropy
+           ```
+        4. The script will prompt you to enter the 62-number line of dice entropy. It will output:
+            * Computer Entropy
+            * BIP39 Entropy
 
            Example output:
 
-           <pre><span class="danger">Private keys:
-           Key #1: 5JAwK9bihMRFe9zw32csUUEn7N5MvLvuwXKv5qUnQVjbthZyuwQ</span>
+           <pre>Making a random data string....
+           If strings don't appear right away, please continually move your mouse cursor. These movements generate entropy which is used to create random data.
 
-           <span class="warning" style="white-space: pre-wrap;">Cold storage address:
-           3Hy6A3rSXKRumyVqURBoiv4QpQLt6vMCzt
+           Generated Computer entropy: f324 12a2 03fd ad07 60a5 6edd d6d9 0617 78d8 e680
 
-           Redemption script:
-           51410421167f7dac2a159bc3957e3498bb6a7c2f16874bf1fbbe5b523b3632d2c0c43f1b491f6f2f449ae45c9b0716329c0c2dbe09f3e5d4e9fb6843af083e222a70a441043704eafafd73f1c32fafe10837a69731b93c0179fa268fc325bdc08f3bb3056b002eac4fa58c520cc3f0041a097232afbe002037edd5ebdab2e493f18ef19e9052ae</span>
+           Generated Entropy (copy this string into bip39-standalone.html): b09b3eff97116351dbd9b2c93105c077a7cbe2d14bee0746b2ddb3005c7cb150</pre>
+        5. Manually copy the `Generated Computer entropy` output into the Quarantined Scratchpad on all the other quarantined computers
+        6. Open bip39-standalone.html
+           ```
+           $ xdf-open ~/apps/bip39-standalone.html
+           ```
+        7. Check the `Show entropy details` checkbox
+        8. Copy the output of `Generated Entropy (copy this string into bip39-standalone.html)` from the script into the `Entropy` box
 
-           QR code for cold storage address in address.png
-           QR code for redemption script in redemption.png</pre>
 
-    4. Verify the integrity of the data.
-        1. **On every other computer**, repeat step (c) above.
-        2. Verify that the output of GlacierScript shown in the terminal
+    3. Generate BIP39 mnemonic verification data information using your generated entropy
+
+       **On every other computer except Q1:**
+        1. Make sure you are in the `~/apps folder`:
+           ```
+           $ cd ~/apps
+           ```
+        2. Enter the following command:
+           ```
+           $ ./mnemonic_entropy.py entropy --integrity
+           ```
+        3. The script will prompt you to enter the 62-number line of dice entropy and the `Generated Computer entropy` previously manually copied
+        to all other computer's Quarantined Scratchpad under `COMPUTER ENTROPY`
+        3. The escript will output your setup verification data:
+            * Computer Entropy
+            * BIP39 Entropy
+
+           Example output:
+
+           <pre>Generated Entropy (copy this string into bip39-standalone.html): b09b3eff97116351dbd9b2c93105c077a7cbe2d14bee0746b2ddb3005c7cb150</pre>
+        4. Open bip39-standalone.html
+           ```
+           $ xdf-open ~/apps/bip39-standalone.html
+           ```
+        5. Check the `Show entropy details` checkbox
+        6. Copy the output of `Generated Entropy (copy this string into bip39-standalone.html)` from the script into the `Entropy` box
+        7. Verify that the 24 words generated in the `BIP39 Mnemonic` section is identical across computers
+
+    4. Verify private keys
+        1. The following steps must be made **on every computer**
+        2. **<span style="color: red;">TODO:</span>** missing xrp, btc, bch, ltc, and eth keys. Verify that the output of GlacierScript shown in the terminal
         window is identical on all computers:
             1. <span class="danger">All private keys</span>
             2. <span class="warning">Cold storage address</span>
