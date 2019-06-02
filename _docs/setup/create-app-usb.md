@@ -267,6 +267,9 @@ contents should look like this
 
     ```
     bitcoind_0.13.2-xenial1_amd64.deb
+    electrum-3.3.6-x86_64.AppImage
+    Electron-Cash-4.0.5-x86_64.AppImage
+    electrum-ltc-3.3.6.1-x86_64.AppImage
     libboost-chrono1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
     libboost-program-options1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
     libboost-thread1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
@@ -275,8 +278,11 @@ contents should look like this
     libevent-pthreads-2.0-5_2.0.21-stable-2_amd64.deb
     libqrencode3_3.4.4-1_amd64.deb
     libsodium18_1.0.8-5_amd64.deb
-    libzbar0_0.10+doc-10ubuntu1_amd64.deb libzmq5_4.1.4-7_amd64.deb
-    qrencode_3.4.4-1_amd64.deb zbar-tools_0.10+doc-10ubuntu1_amd64.deb
+    libzbar0_0.10+doc-10ubuntu1_amd64.deb
+    libzmq5_4.1.4-7_amd64.deb
+    multisigweb-1.6.0-amd64.deb
+    qrencode_3.4.4-1_amd64.deb
+    zbar-tools_0.10+doc-10ubuntu1_amd64.deb
     ```
     Click the glacier folder. It will have the following content:
     ```
