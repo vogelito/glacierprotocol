@@ -1,10 +1,10 @@
 ---
-title: Setup Integrity Verification
+title: Setup Integrity Verification Protocol
 description: Learn how to verify the integrity of the setup with Glacier, the
   step-by-step protocol for storing bitcoins in a highly secure way
 ---
 
-The Setup Integrity Verification is used to make sure that the setup was not compromised. This step
+The Setup Integrity Verification Protocol is used to make sure that the setup was not compromised. This step
 must take place before the actual private keys for the devices are generated.
 
 **<span style="color: red;">Only quarantined hardware should be used during the execution of the Setup
@@ -100,6 +100,16 @@ prepare your quarantined workspace.
         5. Check the `Show entropy details` checkbox
         6. Copy the output of `Generated Entropy (copy this string into bip39-standalone.html)` from the script into the `Entropy` box
         7. Verify that the 24 words generated in the `BIP39 Mnemonic` section is identical across computers
+        8. **If there are any discrepancies, do not proceed.**
+            1. Check whether the numbers and the entropy in all Quarantined Scratchpads matches
+            precisely.
+                1. If they are different by 1-3 characters (presumably due to
+                transcription errors), manually tweak them to make them match.
+                It doesn't matter which scratchpads are tweaked.
+                2. If they are different by more than 3 characters, restart the
+                Deposit Protocol.
+                3. If they are identical, restart the Setup Integrity Verification Protocol.
+            2. Seek assistance if discrepancies persist. Your setup might be compromised.
 
     4. Verify private keys
         1. The following steps must be made **on every computer**
@@ -128,7 +138,7 @@ prepare your quarantined workspace.
                 It doesn't matter which scratchpads are tweaked.
                 2. If they are different by more than 3 characters, restart the
                 Deposit Protocol.
-                3. If they are identical, restart the Deposit Protocol.
+                3. If they are identical, restart the Setup Integrity Verification Protocol.
             2. Seek assistance if discrepancies persist. Your setup might be compromised.
 
         4. **<span style="color: red;">TODO: This is missing BIP39, Electrum, Electrum-LTC, Electron-Cash and Multisigweb's verification.</span>**
