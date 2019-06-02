@@ -138,14 +138,17 @@ already. (See the instructions in Section III for details.)
         $ sudo apt-get update
         ```
     2. Download and perform integrity verification59 of software available from Ubuntu's package repository:
-        * **bitcoind**: [Bitcoin Core](https://bitcoincore.org/):
-        , which we'll use for cryptography & financial operations
+        * **bitcoind**: [Bitcoin Core](https://bitcoincore.org/), which we'll use for cryptography & financial operations
         * **qrencode**: Used for creating QR codes to move data off quarantined
         computers
         * **zbar-tools**: Used for reading QR codes to import data into quarantined
         computers
+        * **multisignweb**: Used for sending ETH and ERC20 transactions
             ```
             $ sudo apt-get install qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1 bitcoind
+            $ wget https://github.com/gnosis/MultiSigWallet/releases/download/v1.6.0/multisigweb-1.6.0-amd64.deb.zip
+            $ unzip multisigweb-1.6.0-amd64.deb.zip
+            $ sudo dpkg -i multisigweb-1.6.0-amd64.deb
             ```
     3. Copy that software to the Q1 APP USB.
         1. Create a folder for the application files that will be moved to the
