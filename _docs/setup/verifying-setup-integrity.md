@@ -115,6 +115,8 @@ prepare your quarantined workspace.
                 3. If they are identical, restart the Deposit Protocol.
             2. Seek assistance if discrepancies persist. Your setup might be compromised.
 
+        4. **<span style="color: red;">TODO: This is missing BIP39, Electrum, Electrum-LTC, Electron-Cash and Multisigweb's verification.</span>**
+
     5. Begin multi-device protocol
         1. Delete the contents of the Quarantined Scratchpads on each computer
         2. **<span style="color: red;">Quarantined hardware should never be allowed to be
