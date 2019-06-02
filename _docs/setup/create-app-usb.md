@@ -143,12 +143,33 @@ already. (See the instructions in Section III for details.)
         computers
         * **zbar-tools**: Used for reading QR codes to import data into quarantined
         computers
-        * **multisignweb**: Used for sending ETH and ERC20 transactions
             ```
             $ sudo apt-get install qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1 bitcoind
+            ```
+        * **multisigweb**: Used for sending ETH and ERC20 transactions
+            ```
             $ wget https://github.com/gnosis/MultiSigWallet/releases/download/v1.6.0/multisigweb-1.6.0-amd64.deb.zip
+            ```
+            Make sure the sha256 of the file is:
+            ```
+            607e1e94cb5d4d9deb2b05eb0d9f6aaa6a41eaba531b3333dea5da90e2f29350
+            ```
+            Unzip and install
+            ```
             $ unzip multisigweb-1.6.0-amd64.deb.zip
             $ sudo dpkg -i multisigweb-1.6.0-amd64.deb
+            ```
+        * **Electrum**: Used to manage multi-location multisig cold wallets
+            ```
+            $ wget https://raw.githubusercontent.com/spesmilo/electrum/3.3.6/pubkeys/ThomasV.asc
+            $ gpg --keyid-format long --show-key ThomasV.asc
+            # Inspect the key file to confirm it has 6694D8DE7BE8EE5631BED9502BD5824B7F9470E6 as its keyid
+
+            $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage
+            $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage.asc
+            $ gpg --verify electrum-3.3.6-x86_64.AppImage.asc electrum-3.3.6-x86_64.AppImage
+
+            $chmod +x electrum-3.3.6-x86_64.AppImage
             ```
     3. Copy that software to the Q1 APP USB.
         1. Create a folder for the application files that will be moved to the
