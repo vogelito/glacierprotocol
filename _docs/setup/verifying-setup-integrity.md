@@ -1,42 +1,18 @@
 ---
-title: Verifyng Integrity of Setup
+title: Setup Integrity Verification
 description: Learn how to verify the integrity of the setup with Glacier, the
   step-by-step protocol for storing bitcoins in a highly secure way
 ---
 
-The Deposit Protocol is used to transfer bitcoins into high-security cold storage. If you have previously used the
-Deposit Protocol to deposit funds into cold storage, and want to deposit
-additional funds to the same cold storage address, skip to Section IV.
+The Setup Integrity Verification is used to make sure that the setup was not compromised. This step
+must take place before the actual private keys for the devices are generated.
 
-By the end of this section, you will generate the following information.
+**<span style="color: red;">Only quarantined hardware should be used during the execution of the Setup
+Integrity Verification.</span>**
 
-* The <span class="danger">*N* private keys</span>: These are the keys that will later
-be used to unlock your funds. You'll create several private keys, depending on the
-multisignature withdrawal policy you chose (e.g. 4 keys for a 2-of-4 withdrawal
-policy).
-
-  In this protocol, the total number of private keys you're creating will be
-referred to as *N*. Each key will be created in a separate device.
-* The <span class="warning">cold storage address</span>: An alphanumeric
-string indicating the virtual location of your funds.
-* The <span class="warning">redemption script</span>: An additional key
-needed to access any funds deposited. There is only one redemption script for
-each set of private keys. A copy will be stored with each private key.
-
-**<span style="color: red;">Only quarantined hardware should be used during the execution of the Deposit
-Protocol unless explicitly instructed otherwise.</span>**
-
-1. If this is **not** your first time working with Glacier:
-    1. Use a networked computer to access the latest full release of Glacier
-    ( not just the protocol document) at <https://github.com/GlacierProtocol/GlacierProtocol/releases>.
-    2. Open the protocol document (Glacier.pdf) within the ZIP file.
-    3. Check the Release Notes (Appendix E) of the protocol document to see if
-    there are any new versions of Glacier recommended.
-    4. Whether or not you decide to upgrade, review the errata for the version
-    of Glacier you are using at <https://github.com/GlacierProtocol/GlacierProtocol/releases>.
-2. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/) to
+1. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/) to
 prepare your quarantined workspace.
-3. Test setup of quarantined computers
+2. Test setup of quarantined hardware
 
     Creating an unguessable private key requires
     *entropy* -- random data. We'll combine two sources of entropy to generate
@@ -82,7 +58,7 @@ prepare your quarantined workspace.
         5. Manually copy the output into the Quarantined Scratchpad on all the other quarantined computers.
 
 
-    3. Generate new cold storage data information using your entropy
+    3. Generate setup verification data information using your entropy
 
        **On the Q1 computer:**
         1. Run GlacierScript to generate the private keys.
@@ -90,7 +66,7 @@ prepare your quarantined workspace.
            $ ./glacierscript.py create-deposit-data -m 1 -n 1
            ```
         2. GlacierScript will prompt you to enter the 62-number line of dice entropy and the line of computer entropy.
-        3. GlacierScript will output your cold storage data:
+        3. GlacierScript will output your setup verification data:
             * 1 private key
             * A cold storage address
             * A redemption script
@@ -109,7 +85,7 @@ prepare your quarantined workspace.
            QR code for cold storage address in address.png
            QR code for redemption script in redemption.png</pre>
 
-    4. Verify the integrity of the cold storage data.
+    4. Verify the integrity of the data.
         1. **On every other computer**, repeat step (c) above.
         2. Verify that the output of GlacierScript shown in the terminal
         window is identical on all computers:
@@ -126,9 +102,7 @@ prepare your quarantined workspace.
             keys or a cold storage address, making the private keys easier to brute
             force, so it's important to check them thoroughly. If we know the private keys
             and cold storage address are good, then the redemption script is almost
-            certainly good as well. And if there are any errors in the redemption script,
-            they will be caught during the test deposit & withdrawal process later in the
-            protocol; a painstaking manual verification is not required.
+            certainly good as well; a painstaking manual verification is not required.
 
         3. **If there are any discrepancies, do not proceed.**
             1. Check whether the entropy in all Quarantined Scratchpads matches
