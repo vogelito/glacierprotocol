@@ -6,7 +6,9 @@ description: Learn how to withdrawal Bitcoin using Glacier, the step-by-step
 
 In this section, we construct a "signed transaction" in our quarantined
 environments, verify it, and then use QR codes to extract it from the
-quarantined environments (for execution in the following section).
+quarantined environment to pass on to additional quarantied environments
+for additional signatures and eventually extract it for execution (in the
+following section).
 
 1. Execute [Section VI of the Setup Protocol](../setup/quarantined-workspace/)
 to prepare your quarantined workspace.
