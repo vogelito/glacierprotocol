@@ -10,7 +10,7 @@ quarantined environment to pass on to additional quarantied environments
 for additional signatures and eventually extract it for execution (in the
 following section).
 
-1. Execute [Section VI of the Setup Protocol](../setup/quarantined-workspace/)
+1. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/)
 to prepare your quarantined workspace.
 2. Construct the withdrawal transaction.
 

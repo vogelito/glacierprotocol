@@ -10,7 +10,7 @@ must take place before the actual private keys for the devices are generated.
 **<span style="color: red;">Only quarantined hardware should be used during the execution of the Setup
 Integrity Verification.</span>**
 
-1. Execute [Section VI of the Setup Protocol](../setup/quarantined-workspace/) to
+1. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/) to
 prepare your quarantined workspace.
 2. Test setup of quarantined hardware
 
