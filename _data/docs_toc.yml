@@ -17,9 +17,10 @@
   - setup/create-boot-usb
   - setup/create-app-usb
   - setup/quarantined-workspace
+  - setup/verifying-setup-integrity
 - title: Deposit
   docs:
-  - deposit/generate-cold-storage-data
+  - deposit/generate-cold-storage-keys
   - deposit/transfer-to-paper
   - deposit/test-deposit-withdrawal
   - deposit/deposit-execution

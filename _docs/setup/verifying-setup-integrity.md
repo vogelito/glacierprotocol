@@ -1,8 +1,7 @@
 ---
-title: Generate cold storage data
-description: Learn how to generate cold storage data to use with Glacier, the
+title: Verifyng Integrity of Setup
+description: Learn how to verify the integrity of the setup with Glacier, the
   step-by-step protocol for storing bitcoins in a highly secure way
-redirect_from: /docs/deposit/
 ---
 
 The Deposit Protocol is used to transfer bitcoins into high-security cold storage. If you have previously used the
@@ -147,33 +146,3 @@ prepare your quarantined workspace.
         2. **<span style="color: red;">Quarantined hardware should never be allowed to be
         turned on in close proximity to one another.</span>**
 
-4. Create private keys
-
-    Creating an unguessable private key requires
-    *entropy* -- random data. We'll combine two sources of entropy to generate
-    our keys. This ensures securely random keys even if *one* entropy source is
-    somehow flawed or compromised to be less-than-perfectly random.
-
-    1. Generate dice entropy
-        1. Delete the contents of the Quarantined Scratchpad
-        1. Type "PRIVATE KEY DICE ENTROPY" into the Quarantined Scratchpad.
-        2. Roll 62 six-sided dice, shaking the dice thoroughly each roll.
-        62 dice rolls corresponds to 160 bits of entropy. See the
-        [design document](../design-doc/overview.md) for details.
-        3. If you are rolling multiple dice at the same time, read the
-        dice left-to-right. **This is important.** Humans are
-        [horrible at generating random data](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041531)
-        and great at noticing patterns. Without a consistent heuristic like
-        "read the dice left to right", you may subconsciously read them in a
-        non-random order (like tending to record lower numbers first).
-        This can drastically undermine the randomness of the data, and could be
-        exploited to guess your private keys.
-        4. Manually enter the <span class="danger">numbers</span> into the
-        Quarantined Scratchpads on *all* quarantined computers. Put all rolls on
-        the same line to create
-        <span class="danger">one line of 62 numbers</span>. (It's fine to add
-        spaces for readability.)
-
-
-
-       
