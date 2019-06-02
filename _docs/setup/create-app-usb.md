@@ -146,7 +146,7 @@ already. (See the instructions in Section III for details.)
             ```
             $ sudo apt-get install qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1 bitcoind
             ```
-        * **multisigweb**: Used for sending ETH and ERC20 transactions
+        * **multisigweb**: Used to manage multi-location multisig cold wallets for ETH and ERC20 token
             ```
             $ wget https://github.com/gnosis/MultiSigWallet/releases/download/v1.6.0/multisigweb-1.6.0-amd64.deb.zip
             ```
@@ -171,6 +171,63 @@ already. (See the instructions in Section III for details.)
 
             $chmod +x electrum-3.3.6-x86_64.AppImage
             ```
+        * **ElectronCash**: Used to manage multi-location multisig cold wallets
+            ```
+            $ wget https://github.com/Electron-Cash/Electron-Cash/releases/download/4.0.5/Electron-Cash-4.0.5-x86_64.AppImage
+            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.5/win-linux/Electron-Cash-4.0.5-x86_64.AppImage.asc
+            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.5/win-linux/SHA256.Electron-Cash-4.0.5-x64_64.AppImage.txt
+            $ sha256sum -c SHA256SUMS
+
+            $ gpg --import <(curl -L https://raw.githubusercontent.com/fyookball/keys-n-hashes/master/pubkeys/jonaldkey2.txt)
+            $ gpg --verify Electron-Cash-4.0.5-x86_64.AppImage.asc Electron-Cash-4.0.5-x86_64.AppImage
+            ```
+        * **Electrum-LTC**: Used to manage multi-location multisig cold wallets
+            ```
+            $ wget https://electrum-ltc.org/download/electrum-ltc-3.3.6.1-x86_64.AppImage
+            $ wget https://electrum-ltc.org/download/electrum-ltc-3.3.6.1-x86_64.AppImage.asc
+            ```
+            Import signing keys from keyserver
+            ```
+            $ gpg --keyserver pool.sks-keyservers.net --recv-keys 0x6fc4c9f7f1be8fea 0xfe3348877809386c
+            ```
+            You should see something similar to
+            ```
+                gpg: key 6FC4C9F7F1BE8FEA: public key "pooler <pooler@litecoinpool.org>" imported
+                gpg: key FE3348877809386C: public key "Adrian Gallagher <thrasher@addictionsoftware.com>" imported
+                gpg: Total number processed: 2
+                gpg:               imported: 2
+            ```
+            Verify that the fingerprints are correct
+            ```
+            $ gpg --fingerprint 0x6fc4c9f7f1be8fea 0xfe3348877809386c
+            ```
+            You should see:
+            ```
+                pub   rsa2048 2013-07-21 [SC]
+                      CAE1 092A D355 3FFD 21C0  5DE3 6FC4 C9F7 F1BE 8FEA
+                uid           [ unknown] pooler <pooler@litecoinpool.org>
+                sub   rsa2048 2013-07-21 [E]
+
+                pub   rsa2048 2013-06-19 [SC]
+                      59CA F0E9 6F23 F537 4794  5FD4 FE33 4887 7809 386C
+                uid           [ unknown] Adrian Gallagher <thrasher@addictionsoftware.com>
+                sub   rsa2048 2013-06-19 [E]
+            ```
+            Verify signature of downloaded files
+            ```
+            $ gpg --verify electrum-ltc-3.3.6.1-x86_64.AppImage.asc electrum-ltc-3.3.6.1-x86_64.AppImage
+            ```
+            You should see something like:
+            ```
+                gpg: Signature made Thu 17 Aug 2017 10:59:17 AM PDT
+                gpg:                using RSA key 6FC4C9F7F1BE8FEA
+                gpg: Good signature from "pooler <pooler@litecoinpool.org>" [unknown]
+                gpg: WARNING: This key is not certified with a trusted signature!
+                gpg:          There is no indication that the signature belongs to the owner.
+                Primary key fingerprint: CAE1 092A D355 3FFD 21C0  5DE3 6FC4 C9F7 F1BE 8FEA
+            ```
+
+
     3. Copy that software to the Q1 APP USB.
         1. Create a folder for the application files that will be moved to the
         USB:
