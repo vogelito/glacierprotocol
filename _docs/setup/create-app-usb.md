@@ -163,12 +163,17 @@ already. (See the instructions in Section III for details.)
             ```
         * **Electrum**: Used to manage multi-location multisig cold wallets
             ```
-            $ wget https://raw.githubusercontent.com/spesmilo/electrum/3.3.6/pubkeys/ThomasV.asc
-            $ gpg --keyid-format long --show-key ThomasV.asc
-            # Inspect the key file to confirm it has 6694D8DE7BE8EE5631BED9502BD5824B7F9470E6 as its keyid
-
             $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage
             $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage.asc
+            ```
+            Import the signature
+            ```
+            $ wget https://raw.githubusercontent.com/spesmilo/electrum/3.3.6/pubkeys/ThomasV.asc
+            $ gpg --keyid-format long --show-key ThomasV.asc
+            ```
+            Inspect the key file to confirm it has 6694D8DE7BE8EE5631BED9502BD5824B7F9470E6 as its keyid
+            Verify the file
+            ```
             $ gpg --verify electrum-3.3.6-x86_64.AppImage.asc electrum-3.3.6-x86_64.AppImage
             ```
         * **ElectronCash**: Used to manage multi-location multisig cold wallets
@@ -176,8 +181,10 @@ already. (See the instructions in Section III for details.)
             $ wget https://github.com/Electron-Cash/Electron-Cash/releases/download/4.0.5/Electron-Cash-4.0.5-x86_64.AppImage
             $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.5/win-linux/Electron-Cash-4.0.5-x86_64.AppImage.asc
             $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.5/win-linux/SHA256.Electron-Cash-4.0.5-x64_64.AppImage.txt
-            $ sha256sum -c SHA256SUMS
-
+            ```
+            Verify the signatures
+            ```
+            $ sha256sum -c SHA256.Electron-Cash-4.0.5-x64_64.AppImage.txt
             $ gpg --import <(curl -L https://raw.githubusercontent.com/fyookball/keys-n-hashes/master/pubkeys/jonaldkey2.txt)
             $ gpg --verify Electron-Cash-4.0.5-x86_64.AppImage.asc Electron-Cash-4.0.5-x86_64.AppImage
             ```
