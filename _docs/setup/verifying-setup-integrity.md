@@ -1,7 +1,7 @@
 ---
 title: Setup Integrity Verification Protocol
 description: Learn how to verify the integrity of the setup with Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+  step-by-step protocol for storing crypto in a highly secure way
 ---
 
 The Setup Integrity Verification Protocol is used to make sure that the setup was not compromised. This step
