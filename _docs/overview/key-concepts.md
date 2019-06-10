@@ -1,12 +1,12 @@
 ---
 title: Key concepts
-description: Overview of some of the key concepts leveraged by Glacier to make
-  sure your Bitcoin keys are kept safe.
+description: Overview of some of the key concepts leveraged by CryptoGlacier to make
+  sure your crypto keys are kept safe.
 ---
 
 ## Private Key
 
-Your currency balance is effectively stored in the Bitcoin
+Your currency balances are effectively stored in crypto
 blockchain -- the global decentralized ledger. You can imagine a locked box
 with all of your bitcoins sitting inside of it. This box is unlocked with
 a piece of information known as "private key". (Some boxes require multiple

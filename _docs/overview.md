@@ -1,61 +1,73 @@
 ---
-title: About Glacier
-description: Glacier is a step-by-step protocol for long-term storage of
-  Bitcoins, in an offline and secure way.
+title: About CryptoGlacier
+description: CryptoGlacier is a step-by-step protocol for long-term storage of
+  various cryptocurrencies, in an offline and secure way.
 redirect_from:
   - /docs/
 ---
 
-Glacier is a step-by-step protocol for storing bitcoins in a highly secure
-manner. It is intended for:
+CryptoGlacier is based on [Glacier](https://glacierprotocol.org/), the step-by-step
+protocol for storing bitcoins in a highly secure manner.
 
-* **Personal storage**: Glacier does not address institutional security
-needs such as internal controls, transparent auditing, and preventing access
-to funds by a single individual.
-* **Large amounts of money ($100,000+)**: Glacier thoroughly considers corner
+There are two main differences between CryptoGlacier and Glacier:
+* CryptoGlacier adds support for other cryptocurrencies
+* CryptoGlacier is not intended for personal storage, but situations where
+various, distinct, keyholders must agree with each other to access funds
+* CryptoGlacier **does not address institutional security**
+needs such as internal controls, and transparent auditing. It **does prevent**
+access to funds by a single individual.
+
+Just as Glacier, CryptoGlacier is also intended for:
+
+* **Large amounts of money ($100,000+)**: CryptoGlacier thoroughly considers corner
 cases such as obscure vectors for malware infection, personal estate
 planning, human error resulting in loss of funds, and so on.
-Even if your Bitcoin holdings are more modest, it's worth considering using
-Glacier. If Bitcoin proves successful as a global currency, it will appreciate
+Even if your crypto holdings are more modest, it's worth considering using
+CryptoGlacier. If Bitcoin proves successful as a global currency, it will appreciate
 10x (or much more) in the coming years. Security will become increasingly
 important if your holdings appreciate and Bitcoin becomes a more attractive
 target for thieves.
 The "Protocol Overview" section also describes some lower-security, lower-cost
 approaches to self-managed storage that may be more appropriate for smaller
 amounts of funds.
-* **Long-term storage**: Glacier not only considers the Bitcoin security
-landscape today, but also a future world where Bitcoin is much more valuable
+* **Long-term storage**: CryptoGlacier not only considers the crypto security
+landscape today, but also a future world where crypto is much more valuable
 and attracts many more security threats.
-* **Infrequently-accessed funds**: Accessing highly secure bitcoins is
+* **Infrequently-accessed funds**: Accessing highly secure funds is
 cumbersome and introduces security risk through the possibility of human
 error, so it is best done infrequently.
-* **Technically unskilled users**: Although the Glacier protocol is long, it is
+* **Technically unskilled users**: Although the CryptoGlacier protocol is long, it is
 clear and straightforward to follow. No technical expertise is required.
 
-The Glacier protocol covers bitcoin storage, not procurement. It assumes you
+The CryptoGlacier protocol covers crypto storage, not procurement. It assumes you
 already possess bitcoins and wish to store them more securely.
 
-If you are already familiar with Bitcoin security concepts and are certain that
+If you are already familiar with crypto security concepts and are certain that
 you want high security cold storage, you may prefer to read
 [Trusting This Protocol](#trusting-this-protocol) and then skip to the section
 [Choosing a Multisignature Withdrawal Policy](../overview/multi-signature-security#choosing-a-multisignature-withdrawal-policy).
 
+## Supported Cryptocurrencies
+
+This document currently support Bitcoin, Litecoin, XRP, BitcoinCash, Ether
+and ERC20 tokens on top of the Ethereum protocol
+
 ## Trusting this protocol
 
-Funds secured using Glacier can only be as secure as its design.
-Here's what you can trust about this protocol:
-* **Expert advisors**: The development of Glacier was guided with input from
-Bitcoin technology and security experts. See our advisor list.
-* **Open source**: GlacierScript, the Glacier companion software, is open
-source. The code is straightforward and well-commented to facilitate easy review
-for flaws or vulnerabilities. [View it on Github](https://github.com/GlacierProtocol/GlacierProtocol).
-* **Community review**: The protocol has evolved in conjunction with the wider
-Bitcoin community. Early versions were circulated during development, and
-community feedback integrated. [See our list of contributors](../contribute/acknowledgments.md).
-* **Natural selection**: All documentation and code related to this protocol is
-under open licenses (Creative Commons for the document, MIT license for the
-code), enabling others to publish their own revisions. Inferior alternatives
-will tend to lose popularity over time.
+Funds secured using CryptoGlacier can only be as secure as its design.
+As previously mentioned, CryptoGlacier is based on the Glacier protocol but
+has some important distinctions and at the time of writting it hasn't yet
+attracted widespread Expert Advisory or Community Review.
+
+Just as Glacier, CryptoGlacier is **Open source**: CryptoGlacierScript, the
+CryptoGlacier companion software, is open source. The code is straightforward
+and well-commented to facilitate easy review for flaws or vulnerabilities.
+[View it on Github](https://github.com/vogelito/CryptoGlacierScript).
+
+All documentation and code related to this protocol is under open licenses
+(Creative Commons for the document, MIT license for the code), enabling others
+to publish their own revisions. Inferior alternatives will tend to lose
+popularity over time.
 
 If you like, you may review the [design document](../design-doc/overview.md)
 for details on the technical design.
@@ -64,16 +76,17 @@ for details on the technical design.
 
 ### Self-Managed Storage vs. Online
 
-Let's start by assessing whether Glacier is right for you.
+Let's start by assessing whether CryptoGlacier is right for you.
 
 There is no such thing as perfect security. There are only degrees of security,
 and those degrees come at a cost (in time, money, convenience, etc.) So the
 first question is: How much security are you willing to invest in?
-For most people, most of the time, the authors recommend storing Bitcoin using a
+For most people, most of the time, the authors recommend storing crypto using a
 high-quality online storage service. The pros and cons of the various online
 services are beyond the scope of this document, but most popular ones are fairly
 secure and easy to use. Some popular options are
 [Blockchain](https://blockchain.info/),
+[Bitso](https://bitso.com/),
 [Coinbase](https://www.coinbase.com/),
 [Gemini](https://gemini.com/),
 and [Kraken](https://www.kraken.com/).
@@ -132,9 +145,10 @@ money. We recommend self-managed storage for large investments, but ultimately
 it's a personal decision based on your risk tolerance and costs you're willing
 to pay (in money and time) for security.
 
-Glacier focuses exclusively on self-managed storage.
+CryptoGlacier focuses exclusively on storage managed by different entities
+where not a single entity has unilateral control over the funds
 
-### Glacier vs. Hardware Wallets
+### CryptoGlacier vs. Hardware Wallets
 
 Many people who choose
 self-managed storage (as opposed to an online storage service) use "hardware
@@ -142,8 +156,8 @@ wallets" such as the
 [Trezor](https://trezor.io/),
 [Ledger](https://www.ledgerwallet.com/),
 and [KeepKey](https://www.keepkey.com/)
-to store their bitcoins. While these are great products that provide strong security,
-Glacier is intended to offer an even higher level of protection than today's
+to store their crypto. While these are great products that provide strong security,
+CryptoGlacier is intended to offer an even higher level of protection than today's
 hardware wallets can provide.
 
 The primary security consideration is that
@@ -157,6 +171,6 @@ For details on this and other security considerations, see the
 "No Hardware Wallets" section of the [design document](../design-doc/overview.md)
 As with online multisig
 vaults, many people do use hardware wallets to store sizeable amounts of
-money. We personally recommend Glacier for large investments, but ultimately
+money. We personally recommend CryptoGlacier for large investments, but ultimately
 it's a personal decision based on your risk tolerance and costs you're
 willing to pay (in money and time) for security.
