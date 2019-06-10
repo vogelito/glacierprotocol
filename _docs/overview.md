@@ -49,8 +49,13 @@ you want high security cold storage, you may prefer to read
 
 ## Supported Cryptocurrencies
 
-This document currently support Bitcoin, Litecoin, XRP, BitcoinCash, Ether
-and ERC20 tokens on top of the Ethereum protocol
+This document currently supports:
+* Bitcoin
+* Litecoin
+* XRP
+* Bitcoin Cash
+* Ether
+* ERC20 tokens on top of the Ethereum protocol
 
 ## Trusting this protocol
 
