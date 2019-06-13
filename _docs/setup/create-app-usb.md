@@ -207,7 +207,7 @@ already. (See the instructions in Section III for details.)
             ```
             You should see something similar to (verify fingerprint matches):
             ```
-                gpg: Signature made Mon 27 May 2019 06:34:45 PM UTC using DSA key ID EFF1DDE1
+                gpg: Signature made Thu 06 Jun 2019 02:46:52 PM UTC using DSA key ID EFF1DDE1
                 gpg: Good signature from "Jonald Fyookball <jonf@electroncash.org>"
                 gpg: WARNING: This key is not certified with a trusted signature!
                 gpg:          There is no indication that the signature belongs to the owner.
