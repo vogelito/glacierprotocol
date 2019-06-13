@@ -168,30 +168,50 @@ already. (See the instructions in Section III for details.)
             $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage
             $ wget https://download.electrum.org/3.3.6/electrum-3.3.6-x86_64.AppImage.asc
             ```
-            Import the signature
+            Import the signing keys
             ```
             $ wget https://raw.githubusercontent.com/spesmilo/electrum/3.3.6/pubkeys/ThomasV.asc
             $ gpg --import ThomasV.asc
-            ```
-            Inspect the fingerprint of the signature file with `$ gpg --fingerprint` and confirm the keyid is:
-            ```
-            6694 D8DE 7BE8 EE56 31BE D950 2BD5 824B 7F94 70E6
             ```
             Verify the file
             ```
             $ gpg --verify electrum-3.3.6-x86_64.AppImage.asc electrum-3.3.6-x86_64.AppImage
             ```
+            You should see something similar to (verify fingerprint matches):
+            ```
+                gpg: Signature made Thu 16 May 2019 06:14:30 PM UTC using RSA key ID 7F9470E6
+                gpg: Good signature from "Thomas Voegtlin (https://electrum.org) <thomasv@electrum.org>"
+                gpg:                 aka "ThomasV <thomasv1@gmx.de>"
+                gpg:                 aka "Thomas Voegtlin <thomasv1@gmx.de>"
+                gpg: WARNING: This key is not certified with a trusted signature!
+                gpg:          There is no indication that the signature belongs to the owner.
+                Primary key fingerprint: 6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6
+            ```
         * **ElectronCash**: Used to manage multi-location multisig cold wallets
             ```
-            $ wget https://github.com/Electron-Cash/Electron-Cash/releases/download/4.0.5/Electron-Cash-4.0.5-x86_64.AppImage
-            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.5/win-linux/Electron-Cash-4.0.5-x86_64.AppImage.asc
-            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.5/win-linux/SHA256.Electron-Cash-4.0.5-x64_64.AppImage.txt
+            $ wget https://github.com/Electron-Cash/Electron-Cash/releases/download/4.0.6/Electron-Cash-4.0.6-x86_64.AppImage
+            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.6/win-linux/Electron-Cash-4.0.6-x86_64.AppImage.asc
+            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.6/win-linux/SHA256.Electron-Cash-4.0.6-x64_64.AppImage.txt
+            ```
+            Import the signing keys
+            ```
+            $ gpg --import <(curl -L https://raw.githubusercontent.com/fyookball/keys-n-hashes/master/pubkeys/jonaldkey2.txt)
+            ```
+            Make sure the output of `$ sha256sum -c SHA256.Electron-Cash-4.0.6-x64_64.AppImage.txt` is:
+            ```
+            Electron-Cash-4.0.6-x86_64.AppImage: OK
             ```
             Verify the signatures
             ```
-            $ sha256sum -c SHA256.Electron-Cash-4.0.5-x64_64.AppImage.txt
-            $ gpg --import <(curl -L https://raw.githubusercontent.com/fyookball/keys-n-hashes/master/pubkeys/jonaldkey2.txt)
-            $ gpg --verify Electron-Cash-4.0.5-x86_64.AppImage.asc Electron-Cash-4.0.5-x86_64.AppImage
+            $ gpg --verify Electron-Cash-4.0.6-x86_64.AppImage.asc Electron-Cash-4.0.6-x86_64.AppImage
+            ```
+            You should see something similar to (verify fingerprint matches):
+            ```
+                gpg: Signature made Mon 27 May 2019 06:34:45 PM UTC using DSA key ID EFF1DDE1
+                gpg: Good signature from "Jonald Fyookball <jonf@electroncash.org>"
+                gpg: WARNING: This key is not certified with a trusted signature!
+                gpg:          There is no indication that the signature belongs to the owner.
+                Primary key fingerprint: D56C 110F 4555 F371 AEEF  CB25 4FD0 6489 EFF1 DDE1
             ```
         * **Electrum-LTC**: Used to manage multi-location multisig cold wallets
             ```
@@ -204,10 +224,13 @@ already. (See the instructions in Section III for details.)
             ```
             You should see something similar to
             ```
-                gpg: key 6FC4C9F7F1BE8FEA: public key "pooler <pooler@litecoinpool.org>" imported
-                gpg: key FE3348877809386C: public key "Adrian Gallagher <thrasher@addictionsoftware.com>" imported
+                gpg: requesting key F1BE8FEA from hkp server pool.sks-keyservers.net
+                gpg: requesting key 7809386C from hkp server pool.sks-keyservers.net
+                gpg: key F1BE8FEA: public key "pooler <pooler@litecoinpool.org>" imported
+                gpg: key 7809386C: public key "Adrian Gallagher <thrasher@addictionsoftware.com>" imported
+                gpg: no ultimately trusted keys found
                 gpg: Total number processed: 2
-                gpg:               imported: 2
+                gpg:               imported: 2  (RSA: 2)
             ```
             Verify that the fingerprints are correct
             ```
@@ -215,15 +238,16 @@ already. (See the instructions in Section III for details.)
             ```
             You should see:
             ```
-                pub   rsa2048 2013-07-21 [SC]
-                      CAE1 092A D355 3FFD 21C0  5DE3 6FC4 C9F7 F1BE 8FEA
-                uid           [ unknown] pooler <pooler@litecoinpool.org>
-                sub   rsa2048 2013-07-21 [E]
+                pub   2048R/F1BE8FEA 2013-07-21
+                      Key fingerprint = CAE1 092A D355 3FFD 21C0  5DE3 6FC4 C9F7 F1BE 8FEA
+                uid                  pooler <pooler@litecoinpool.org>
+                sub   2048R/A31415A6 2013-07-21
 
-                pub   rsa2048 2013-06-19 [SC]
-                      59CA F0E9 6F23 F537 4794  5FD4 FE33 4887 7809 386C
-                uid           [ unknown] Adrian Gallagher <thrasher@addictionsoftware.com>
-                sub   rsa2048 2013-06-19 [E]
+                pub   2048R/7809386C 2013-06-19
+                      Key fingerprint = 59CA F0E9 6F23 F537 4794  5FD4 FE33 4887 7809 386C
+                uid                  Adrian Gallagher <thrasher@addictionsoftware.com>
+                sub   2048R/6FB978EE 2013-06-19
+
             ```
             Verify signature of downloaded files
             ```
@@ -231,9 +255,8 @@ already. (See the instructions in Section III for details.)
             ```
             You should see something like:
             ```
-                gpg: Signature made Thu 17 Aug 2017 10:59:17 AM PDT
-                gpg:                using RSA key 6FC4C9F7F1BE8FEA
-                gpg: Good signature from "pooler <pooler@litecoinpool.org>" [unknown]
+                gpg: Signature made Wed 22 May 2019 07:07:53 AM UTC using RSA key ID F1BE8FEA
+                gpg: Good signature from "pooler <pooler@litecoinpool.org>"
                 gpg: WARNING: This key is not certified with a trusted signature!
                 gpg:          There is no indication that the signature belongs to the owner.
                 Primary key fingerprint: CAE1 092A D355 3FFD 21C0  5DE3 6FC4 C9F7 F1BE 8FEA
@@ -242,7 +265,7 @@ already. (See the instructions in Section III for details.)
             ```
             $ wget https://github.com/iancoleman/bip39/releases/download/0.3.11/bip39-standalone.html
             ```
-            Make sure the sha256sum of the file is:
+            Make sure the output of `$ sha256sum bip39-standalone.html` is:
             ```
             954691257c7ab59175de365688e3bc7c1112e1392d308c1b97336b23854fe397
             ```
