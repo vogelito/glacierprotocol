@@ -51,7 +51,7 @@ Most attacks require the presence of malware, either in or near the quarantined 
     * Checksum false positives could happen because:
       * Malware might interfere with the verification process (or the display of its results).
       * The checksum verification software could be compromised.
-        * Verifying the integrity of GnuPG requires one have access to a trusted installation of GnuPG, but many CryptoGlacier users won't have that. Glacier currently recommends users simply trust the version of GnuPG they download.
+        * Verifying the integrity of GnuPG requires one have access to a trusted installation of GnuPG, but many CryptoGlacier users won't have that. CryptoGlacier currently recommends users simply trust the version of GnuPG they download.
   * Malware on Setup Computer infects OS/App USB software AFTER checksum verification produces a true positive (i.e. before/during copying of software to the USB, or during USB ejection)
 * Firmware
   * Malware on Setup Computer infects Setup Boot USB firmware AND malware on Setup Boot USB infects Quarantined Boot/App USB
@@ -105,7 +105,7 @@ software
 * Design failure in the protocol misses or inadequately addresses a risk
 
 For potential man-in-the-middle vulnerabilities, we mitigate this by signing a
-checksum of the Glacier document itself, and including steps in the protocol for
+checksum of the CryptoGlacier document itself, and including steps in the protocol for
 users to verify the signature and checksum. But this is not foolproof:
 
 
