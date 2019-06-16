@@ -8,7 +8,7 @@ timezone: America/Mexico_City
 
 # Set this if the repo is for a project, e.g
 # "/glacier" -> https://gh-user.github.io/glacier
-baseurl: "/glacierprotocol"
+baseurl: "/cryptoglacierdocs"
 
 # Exclude from site build
 exclude: [".git", ".gitignore", "_build", "dockerfiles", "Makefile", "README.md", "todo.md"]
