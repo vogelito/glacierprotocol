@@ -1,13 +1,13 @@
 ---
 title: Multi-signature security
-description: Glacier uses multiple keys to protect your Bitcoins. This makes it
-  harder for someone to steal your Bitcoins, and allows you to still access them
-  even if you lose one keys.
+description: CryptoGlacier uses multiple keys to protect your funds. This makes it
+  harder for someone to steal your funds, and gives the protocol redundance in case
+  of accidental key loss.
 ---
 
 Central to our security protocols is
 a technique called "multisignature security." You'll need a quick primer on
-this topic to understand the Glacier protocol.
+this topic to understand the CryptoGlacier protocol.
 
 ## Regular Private Keys are Risky
 
@@ -33,22 +33,20 @@ extended period, during which time your safe is looted.
 
 ## What is Multisignature Security?
 
-To address these
-issues, Bitcoin provides a way to secure funds with a set of private keys,
-such that some of the keys (but not necessarily all) are required to
-withdraw funds. For example, you might secure your bitcoins with 3 keys but
-only need any 2 of those keys to withdraw funds. (This example is known as
-a "2-of-3" withdrawal policy.)
+To address these issues, most cryptocurrency protocols provide a way to
+secure funds with a set of private keys, such that some of the keys (but
+not necessarily all) are required to withdraw funds. For example, you might
+secure your funds with 3 keys but only need any 2 of those keys to withdraw
+funds. (This example is known as a "2-of-3" withdrawal policy.)
 
-The keys are then stored in different
-locations, so someone who gets access to one key will not automatically
-have access to the others. Sometimes, a key is entrusted to the custody of
-another person, known as a "signatory."
+The keys are generated and controlled by different entities in different
+locations so someone who gets access to one key will not automatically
+have access to the others. Key custodians are called "signatories."
 
 This approach of using multiple
 keys is known as "multisignature security." The "signature" part of
 "multisignature" comes from the process of using a private key to access
-bitcoins, which is referred to as "signing a transaction." Multisignature
+funds, which is referred to as "signing a transaction." Multisignature
 security is analogous to a bank requiring signatures from multiple people
 (for example, any 2 of a company's 3 designated officers) to access funds in
 an account.
@@ -61,12 +59,13 @@ Multisignature security protects against the following scenarios:
 enough to steal the money.
 * **Loss**: If a key is destroyed or simply misplaced, you can recover your money
 using the remaining keys.
-* **Betrayal**:
-You may want to entrust one or more signatories with keys to facilitate
-access to your funds when you are dead or incapacitated. With multisignature
-security, entrusting them with a key will not enable them to steal your
-funds (unless they steal additional key(s), or collude with another
-signatory).
+* **Key-man risk**:
+By having multiple signatories you significantly reduce the risk of fund
+loss in case a signatory dies or becomes incapacitated. In the case of duress,
+a single-signatory is unable to access funds.
+* **Unilateral access**: With multisignature security, signatories with a key
+will not be able to move funds (unless they steal additional key(s), or collude
+with additional signatories). This allows for more institutional decision-making.
 
 ## Choosing a Multisignature Withdrawal Policy
 
