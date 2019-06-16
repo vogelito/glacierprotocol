@@ -1,11 +1,12 @@
 # Glacier website
 
-This is the source of the website you see at https://glacierprotocol.org.
+This is the source of the website you see at https://vogelito.github.io/cryptoglacierdocs
 
-Glacier is a step-by-step protocol for storing bitcoins in a highly secure
-manner. It is intended for:
+CryptoGlacier is a step-by-step, secure, multi-blockchain, multi-signature,
+cold storage protocol for long-term storage of crypto assets based on the
+popular [Glacier Protocol](https://glacierprotocol.org). It is intended for:
 
-* Personal storage
+* Multi-device storage
 * Large amounts of money ($100,000+)
 * Long-term storage
 * Infrequently-accessed funds

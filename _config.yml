@@ -3,7 +3,7 @@ description: The step-by-step protocol for storing crypto in a highly secure way
 incremental: true
 show_dir_listing: false
 permalink: pretty
-url: "https://vogelito.github.io/glacierprotocol"
+url: "https://vogelito.github.io/cryptoglacierdocs"
 timezone: America/Mexico_City
 
 # Set this if the repo is for a project, e.g
@@ -14,8 +14,8 @@ baseurl: "/glacierprotocol"
 exclude: [".git", ".gitignore", "_build", "dockerfiles", "Makefile", "README.md", "todo.md"]
 
 # Urls to social networks
-git_address: https://github.com/vogelito/glacierprotocol
-git_edit_address: https://github.com/vogelito/glacierprotocol/edit/master
+git_address: https://github.com/vogelito/cryptoglacierdocs
+git_edit_address: https://github.com/vogelito/cryptoglacierdocs/edit/master
 # Decide what to do with these
 twitter_address: https://twitter.com/glacierprotocol
 gitter_address: https://gitter.im/glacierprotocol/lobby

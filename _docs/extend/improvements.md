@@ -1,7 +1,9 @@
 ---
-title: Possible improvements to Glacier
-description: Here's a list of improvements that can be made to Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Possible improvements to CryptoGlacier
+description: Here's a list of improvements that can be made to CryptoGlacier,
+  the step-by-step, secure, multi-blockchain, multi-signature,
+  cold storage protocol for long-term storage of crypto assets
+  based on the popular Glacier Protocol
 ---
 
 

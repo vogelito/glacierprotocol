@@ -1,7 +1,8 @@
 ---
 title: About CryptoGlacier
-description: CryptoGlacier is a step-by-step protocol for long-term storage of
-  various cryptocurrencies, in an offline and secure way.
+description: CryptoGlacier is the step-by-step, secure, multi-blockchain,
+  multi-signature, cold storage protocol for long-term storage of crypto assets
+  based on the popular Glacier Protocol
 redirect_from:
   - /docs/
 ---
@@ -13,7 +14,8 @@ There are two main differences between CryptoGlacier and Glacier:
 * CryptoGlacier adds support for other cryptocurrencies
 * CryptoGlacier is not intended for personal storage, but situations where
 various, distinct, keyholders must agree with each other to access funds
-* CryptoGlacier **does not address institutional security**
+
+CryptoGlacier **does not address institutional security**
 needs such as internal controls, and transparent auditing. It **does prevent**
 access to funds by a single individual.
 

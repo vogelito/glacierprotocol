@@ -1,7 +1,9 @@
 ---
 title: Maintenance
-description: Learn how to view your Bitcoin balance with Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+description: Learn how to view your balances with CryptoGlacier,
+  the step-by-step, secure, multi-blockchain, multi-signature,
+  cold storage protocol for long-term storage of crypto assets
+  based on the popular Glacier Protocol
 ---
 
 The Maintenance Protocol is designed to minimize the risk of losing funds due to:

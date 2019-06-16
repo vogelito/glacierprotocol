@@ -1,14 +1,17 @@
 ---
 title: Acknowledgments
-description: These are the contributors to Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+description: These are the contributors to CryptoGlacier,
+  the step-by-step, secure, multi-blockchain, multi-signature,
+  cold storage protocol for long-term storage of crypto assets
+  based on the popular Glacier Protocol
 ---
 
-The following individuals have offered feedback or other contributions that
-were incorporated into Glacier:
+CryptoGlacier is based on the popular [Glacier Protocol](https://glacierprotocol.org)
 
-* Andrew C.
-* Julian Borrey
-* Kristov Atlas
-* Lasse Birk Olesen
-* /u/dooglus
+The following individuals have offered feedback or other contributions that
+were incorporated into CryptoGlacier:
+
+* Your name here!
+* Your name here!
+* Your name here!
+* Your name here!

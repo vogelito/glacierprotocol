@@ -1,7 +1,9 @@
 ---
 title: Transaction construction
-description: Learn how to withdrawal Bitcoin using Glacier, the step-by-step
-  protocol for storing bitcoins in a highly secure way
+description: Learn how to withdraw funds using CryptoGlacier,
+  the step-by-step, secure, multi-blockchain, multi-signature,
+  cold storage protocol for long-term storage of crypto assets
+  based on the popular Glacier Protocol
 ---
 
 In this section, we construct a "signed transaction" in our quarantined

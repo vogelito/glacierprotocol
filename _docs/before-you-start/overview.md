@@ -1,7 +1,9 @@
 ---
 title: Protocol overview
-description: Learn the basic concepts used in Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+description: Learn the basic concepts used in CryptoGlacier, the
+  step-by-step, secure, multi-blockchain, multi-signature, cold storage
+  protocol for long-term storage of crypto assets based on the popular
+  Glacier Protocol
 redirect_from: /docs/before-you-start/
 ---
 

@@ -1,7 +1,9 @@
 ---
 title: Create App USBs
-description: Learn how to prepare your USB drives for Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+description: Learn how to prepare your USB drives for CryptoGlacier,
+  the step-by-step, secure, multi-blockchain, multi-signature,
+  cold storage protocol for long-term storage of crypto assets
+  based on the popular Glacier Protocol
 ---
 
 We will prepare two (2) "Quarantined App USB"

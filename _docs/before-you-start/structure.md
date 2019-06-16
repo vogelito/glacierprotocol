@@ -1,7 +1,9 @@
 ---
 title: Protocol structure
-description: This page explains the overall structure of Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+description: This page explains the overall structure of CryptoGlacier,
+  the step-by-step, secure, multi-blockchain, multi-signature, cold
+  storage protocol for long-term storage of crypto assets based on the
+  popular Glacier Protocol
 ---
 
 The overall Glacier protocol consists of several distinct subprotocols:
