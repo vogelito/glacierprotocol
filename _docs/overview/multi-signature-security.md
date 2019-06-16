@@ -69,87 +69,56 @@ with additional signatories). This allows for more institutional decision-making
 
 ## Choosing a Multisignature Withdrawal Policy
 
-Below are common options for withdrawal policies. You will need to select one
-before beginning the protocol.
+An M-of-N Multisignature Withdrawal Policy will provide a way to enforce multi-person
+control over fund access. N signatories will generate a key each so that M < N of them
+(M of N) are needed in order to access funds, but no smaller group up to M -1 can do so.
 
-### Option 1: Self-custody of keys
+For example, in a 1-of-2 setup, there would be two signatories and any one of them would
+be able to spend funds. In a 2-of-3 setup, there would be three signatories and at least
+two will be required to spend funds.
 
-Our default
-recommendation is a 2-of-4 withdrawal policy where you manage all of your
-own keys (i.e. you do not entrust any to the custody of friends or family).
-2-of-4 means there are four keys, and any two of those keys can be combined
-to access your money, ensuring access even if two keys are lost or
-stolen.
+By choosiing M < N, you give up control but gain redundancy in the event of key loss.
 
-The keys will be distributed as follows:
+Depending on your use case, you will need to optimize choosing your M-of-N policy. You will
+need to select a policy before beginning the protocol.
 
-* One in a safe at home
-* The remaining three in safe deposit boxes or [private vaults](https://www.google.com/search?q=private+safe+deposit+box) at
-different locations
+## Signatory responsibilities
 
-It's important to think about estate planning -- making
-arrangements for your designated agents to be able to access your funds when
-you are dead (e.g. for distribution to your heirs) or incapacitated (e.g. to
-pay medical bills). This usually requires significant legal arrangements to
-be made in advance.
+Each signatory is responsible for securing their key in a safe deposit box.
+Signatories should make legal arrangements in advance so their key can be
+accessed in case of death or incapacitation.
 
-The most failsafe way to ensure your agents will have access to your safe
-deposit box is to check with the bank. Standard estate planning legal documents
-should allow your agent to access the box upon your incapacity, and to get into
-it upon your death. But banks can be fussy and sometimes prefer their own forms.
+The most failsafe way to ensure a signatory's agent will have access to a
+signatory's safe deposit box is to check with the bank. Standard estate
+planning legal documents should allow a signatory's agent to access the box
+upon a signatory's death or incapacitation. But banks can be fussy and
+sometimes prefer their own forms.
 
-If you have a living trust, one option may be to have your trust as the co-owner
-of your safe deposit box. That generally allows a successor trustee to access
-the box.
+## Choosing signatories
 
-### Option 2: Distributed custody of keys
+Consider the following when choosing signatories:
 
-Another option is to distribute some of your
-keys to individuals who you trust ("signatories"). This can offer some
-advantages:
-
-* **Availability**: If you live in a rural area, there may not be many vaults
-or safe deposit boxes that are practical to get to.
-* **Ease of setup**: It may be simpler to distribute keys to signatories than
-to find available vaults, travel to them, and set up accounts.
-* **Ease of estate planning**: You don't need to make complicated legal
-arrangements for your signatories to access your funds. They'll have the keys
-they need to do so.
-
-However, there are significant drawbacks:
-
-* **Privacy**: Other signatories will have the ability to see your balance.
-Technical details: Every private key needs to be packaged with the multisig
-redemption script (since losing all redemption scripts is just as bad as losing
-all keys). Redemption scripts, however, allow one to view funds. An alternate
-version of this protocol could be created using a different multisig approach
-besides P2SH transactions, which would eliminate the ability of signatories to
-view balances; see Appendix C for details.
+* **Availability**: If your signatory lives in a rural area, there may not be
+many vaults or safe deposit boxes that are practical to get to.
+* **Privacy**: Signatories will have the ability to see account balances.
 * **Signatory collusion**: Although possessing one key won't allow a signatory
-to access your funds, two signatories might collude with each other to steal
-your money.
+to access your funds, signatories might collude with each other to steal funds.
 * **Signatory reliability**: A signatory may fail to store the key securely, or
 they may lose it.
+* **Geography risk**: Signatories should be located in different physical
+locations to reduce the risk of fund loss due to events that could affect wide
+geographical areas, like natural disasters or power losses which could
+potentially affect all your signatories' capability to sign transactions.
+* **Jurisdiction risk**: Signatories should be located in different
+jurisdictions to reduce the risk of a coordinated fund seizure attack.
 * **Signatory safety**: Giving your signatories custody of a valuable key may
 expose them to the risk of targeted physical theft.
-* **Kidnapping risk**: If you anticipate traveling in
+* **Kidnapping risk**: If your signatories anticipate traveling in
 [high-crime areas with kidnapping risk](http://www.nytimes.com/2012/05/03/business/kidnapping-becomes-a-growing-travel-risk.html),
-your funds will be at greater risk because you'll
-have the ability to access them remotely (by contacting your signatories and
-asking for their keys).
-Financially-motivated kidnapping hinges on your ability to access funds to give
-to the kidnappers. If you are literally unable to access additional funds
-(because the keys are stored in remote vaults which you must be physically
-present to access, as opposed to held by friends or family who you can call),
-kidnappers will have no incentive to hold you.
-
-For distributed custody, we recommend a 2-of-5 withdrawal policy. The extra key
-(5 keys, rather than the recommended
-4 keys in Option 1) is recommended since you have less control over whether
-a signatory effectively protects their key against theft or loss
-
-If you have estate planning arrangements which you are confident will allow your
-agents to access the keys in your custody when needed, you should be fine with
-4 keys instead of 5 (two keys going to trusted signatories rather than three).
-Make sure your executors and signatories know to get in touch with each other
-when needed.
+funds will be at greater risk because a signatory will have the ability to
+access them remotely (by contacting other signatories and asking for their
+keys). Financially-motivated kidnapping hinges on a signatory's ability to
+access funds to give to the kidnappers. If a signatory is literally unable to
+access additional funds (because there are duress protocols in place or
+signatories do not know of each other or don't have a way of contacting each
+other), kidnappers will have no incentive to hold a signatory.
