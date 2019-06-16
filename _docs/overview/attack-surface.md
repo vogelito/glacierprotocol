@@ -6,16 +6,18 @@ description: Learn about the attack survace for CryptoGlacier,
   based on the popular Glacier Protocol
 ---
 
-This list describes the attack surface and other failure points for Glacier. We
+This list describes the attack surface and other failure points for
+CryptoGlacier. We
 include only attacks and failures limited in scope to specific coins.
-Attacks and failures related to the Bitcoin ecosystem as a whole (newly
+Attacks and failures related to the broader crypto ecosystem as a whole (newly
 discovered cryptographic flaws, critical Bitcoin protocol security or
 scalability failures, etc.) are not included as most are equally likely to
-impact the value of all Bitcoins whether or not they are secured with Glacier.
+impact the value of all crypto whether or not they are secured with
+CryptoGlacier.
 
-This list assumes no security measures from [Extend Glacier security](../extend/security.md) are implemented.
+This list assumes no security measures from [Extend CryptoGlacier security](../extend/security.md) are implemented.
 
-Most attacks require the presence of malware, either in or near the quarantined environment. We'll therefore inventory two layers of Glacier's attack surface:
+Most attacks require the presence of malware, either in or near the quarantined environment. We'll therefore inventory two layers of CryptoGlacier's attack surface:
 
 * Ways in which a malware infection might occur
 * Ways in which a critical failure might happen (possibly, but not necessarily, due to a malware infection)
@@ -23,16 +25,33 @@ Most attacks require the presence of malware, either in or near the quarantined 
 ## Malware infection vectors
 
 * Software
-  * OS/App software has malware (i.e. malicious code) built into official distributions. In particular, Glacier relies on the following packages and their dependencies NOT to distribute malicious code:
+  * OS/App software has malware (i.e. malicious code) built into official distributions. In particular, CryptoGlacier relies on the following packages and their dependencies NOT to distribute malicious code:
     * Ubuntu desktop
-    * Bitcoin Core
     * zbar-tools (via Ubuntu Package archive)
     * qrencode (via Ubuntu Package archive)
+    * libappindicator1 (via Ubuntu Package archive)
+    * libindicator7 (via Ubuntu Package archive)
+    * Electrum
+    * Electrum-LTC
+    * Electron-Cash
+    * Gnosis' MultiSigWallet
+    * nodejs (via Nodesource)
+    * Several node packages are required for CryptoGlacierScript (via npm):
+      * argparse
+      * bip39
+      * bitcoinjs-lib
+      * enquirer
+      * ethereumjs-wallet
+      * js-sha256
+      * lodash.clonedeep
+      * ripple-bip32
+      * ripple-keypairs
+      * ripple-sign-keypairs
   * Malware on Setup Computer infects Setup USB software AND malware on Setup USB infects Quarantined USB software AND checksum verifications produces false positives
     * Checksum false positives could happen because:
       * Malware might interfere with the verification process (or the display of its results).
       * The checksum verification software could be compromised.
-        * Verifying the integrity of GnuPG requires one have access to a trusted installation of GnuPG, but many Glacier users won't have that. Glacier currently recommends users simply trust the version of GnuPG they download.
+        * Verifying the integrity of GnuPG requires one have access to a trusted installation of GnuPG, but many CryptoGlacier users won't have that. Glacier currently recommends users simply trust the version of GnuPG they download.
   * Malware on Setup Computer infects OS/App USB software AFTER checksum verification produces a true positive (i.e. before/during copying of software to the USB, or during USB ejection)
 * Firmware
   * Malware on Setup Computer infects Setup Boot USB firmware AND malware on Setup Boot USB infects Quarantined Boot/App USB
@@ -68,20 +87,20 @@ e.g. a  [USB JTAG exploit](http://www.itnews.com.au/news/intel-debugger-interfac
 
 ### Physical failures
 
-* Two paper keys are stolen by an attacker
+* M paper keys are stolen by an attacker
 * All (or all but one) paper keys are lost or destroyed
 * An attacker with physical line-of-sight to the laptop takes a photo of the screen while sensitive data is displayed
 * Malware on the quarantined machines writes sensitive data to persistent media (USB or laptop hard drive) AND the hardware is physically stolen afterward
 
-### Glacier protocol failures
-* Glacier hosting (i.e. DNS, Github, website hosting, etc.) is compromised
-to inject weaknesses into the protocol documentation or GlacierScript
+### CryptoGlacier protocol failures
+* CryptoGlacier hosting (i.e. DNS, Github, website hosting, etc.) is compromised
+to inject weaknesses into the protocol documentation or CryptoGlacierScript
 * Protocol delivery is compromised (e.g. with
 a man-in-the-middle attack on the user's computer or network) to deliver
 or display a weakened version of the protocol documentation or
 software
 * Protocol hardcopy is compromised (e.g. by malware to alter the user's hardcopy as it is printed)
-* A flaw in GlacierScript causes sensitive data to be leaked or flawed
+* A flaw in CryptoGlacierScript causes sensitive data to be leaked or flawed
 * Human error during protocol execution
 * Design failure in the protocol misses or inadequately addresses a risk
 
@@ -104,6 +123,15 @@ creating the Quarantined App USBs), the user would probably not notice, even wit
 a forged signature.
 * Protocol hardcopy is compromised (e.g. by malware to alter the user's hardcopy as
 it is printed)
-* A flaw in GlacierScript causes sensitive data to be leaked or flawed
+* A flaw in CryptoGlacierScript causes sensitive data to be leaked or flawed
 * Human error during protocol execution
 * Design failure in the protocol misses or inadequately addresses a risk
+
+### Gnosis MultiSigWallet Failure
+The Gnosis MultiSigWallet is a smart contract deployed on the Ethereum network.
+Albeit being used to store significant funds, there is no guarantee that a flaw
+with the smart contract will not be found in the future. Funds in smart
+contracts have previously been compromised. Example [one](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach),
+[two](https://medium.com/swlh/the-story-of-the-dao-its-history-and-consequences-71e6a8a551ee),
+and [three](https://mashable.com/2017/11/08/ethereum-parity-bug/) should serve
+as cautionary tales.
