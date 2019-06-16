@@ -7,20 +7,24 @@ description: Overview of some of the key concepts leveraged by CryptoGlacier to 
 ## Private Key
 
 Your currency balances are effectively stored in crypto
-blockchain -- the global decentralized ledger. You can imagine a locked box
-with all of your bitcoins sitting inside of it. This box is unlocked with
-a piece of information known as "private key". (Some boxes require multiple
-private keys to unlock; see the section "Multisignature Security"
-below.)
+blockchains -- global decentralized ledgers. You can imagine a locked box
+with all of your funds sitting inside of it. This box is unlocked with
+a piece of information known as "private key". (The boxes we'll be creating
+require multiple private keys to unlock; see the section "Multisignature
+Security" below.)
 
 Unlike a password, a private key is not meant for you to remember.
-It's a long string of gibberish.
-The private key is what you need to keep
+It's a long string of gibberish. The private key is what you need to keep
 secure. If anyone gets it, they can take your money. Unlike traditional
 financial instruments, there is no recourse. There is no company that is
-liable, because Bitcoin is a decentralized system not run by any person or
+liable, because blockchains are decentralized systems not run by any person or
 entity. And no law enforcement agency is likely to investigate your
 case.
+
+The protocol makes use of [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
+and [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki).
+This will allow us to deterministically derive keys across blockchains from
+a 24-word mnemonic.
 
 ## Offline Key Storage ("Cold Storage")
 
