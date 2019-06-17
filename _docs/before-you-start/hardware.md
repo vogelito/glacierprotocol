@@ -6,6 +6,9 @@ description: Learn what hardware you need to acquire for using CryptoGlacier, th
 ---
 
 Glacier has been written and tested around these specific equipment recommendations.
+We have used similar equipment recommendations for CryptoGlacier.
+
+**Each signatory will need the following equipment**:
 
 ### Eternally quarantined hardware: Set 1
 
@@ -34,7 +37,8 @@ manufacturer than the drives for Set 1:
 
 * Two computers with Internet connectivity, administrator access, at least 4GB RAM, and about
 2GB of free disk space.  **Each computer must be running Windows 10, macOS, or
-Linux.**
+Linux.** At the time of writing there is poor support for Ubuntu in newer generation Macs
+(starting with 2016 models). We do not recommend you use a Mac device released after 2015.
 
   One of these two computers should be a computer that you do not own (unless
   purchased brand new), or that has spent much time on your home or office network.
@@ -80,3 +84,6 @@ TerraSlate paper is extremely rugged, but you might also consider laminating the
 paper for additional protection. You'll need a
 [thermal laminator](http://a.co/cZBN1YU) and
 [laminating pouches](http://a.co/ifISzje).
+
+Jameson Lopp has also done [extreme stress testing](https://medium.com/@lopp/metal-bitcoin-seed-storage-stress-test-part-ii-d309e04aefeb)
+for metal seed storage devices.
