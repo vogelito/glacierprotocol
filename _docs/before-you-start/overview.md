@@ -8,19 +8,20 @@ redirect_from: /docs/before-you-start/
 ---
 
 This section
-establishes a basic understanding of the Glacier protocol in order to
+establishes a basic understanding of the CryptoGlacier protocol in order to
 facilitate its execution. For more background on the protocol's design, see
 the Glacier [design document](../design-doc/overview.md).
 
-As described previously, the Glacier
-protocol involves putting bitcoins in cold storage, using multisignature
-security, with the keys stored only on paper.
+As described previously, the CryptoGlacier is based on the Glacier protocol.
+It's aim is to put crypto funds in cold storage, using multisignature
+security, with keys generated and accessible by distinct signatories stored
+only on paper.
 
 ## Eternally Quarantined Hardware
 
-This bulk of the Glacier protocol consists of ways to safeguard
+The bulk of the CryptoGlacier protocol consists of ways to safeguard
 against theft of private keys due to malware infection. To accomplish this,
-Glacier uses eternally quarantined hardware.
+CryptoGlacier uses eternally quarantined hardware.
 
 Quarantined hardware means
 we drastically limit the ways in which a piece of hardware interfaces with
@@ -56,8 +57,8 @@ manufacturer. For example, the Lenovo rootkit or this Dell firmware malware
 infection.
 
 The way to defeat these attacks is to detect them before
-we actually use the flawed data. We can detect such an attack by
-replicating the entire data generation process on two sets of eternally
+we actually use the flawed data. We can detect such an attack by making sure
+each signatory replicates the entire data generation process on two sets of eternally
 quarantined hardware, from different manufacturers. If the process
 generates identical data on both sets of hardware, we can be highly
 confident the data is not flawed because it would have to be an identical
@@ -65,41 +66,64 @@ attack present on both sets of hardware, factory-new from different
 manufacturers. This is exceptionally unlikely.
 
 
-## Bitcoin Core and GlacierScript
+## Electrum (and forks), Gnosis MultiSigWallet and CryptoGlacierScript
 
-Glacier uses the [Bitcoin Core](https://bitcoincore.org/)
-software for all cryptographic and financial operations, as its open source code
-is the most trustworthy. This is due to its track record of securing large amounts
-of money for many years, and the high degree of code review scrutiny it has
-received.
+The original Glacier Protocol relies on [Bitcoin Core](https://bitcoincore.org/)
+for for all cryptographic and financial operations because "its open source
+code is the most trustworthy... due to its track record of securing large
+amounts of money for many years, and the high degree of code review scrutiny
+it has received." Unfortunately Bitcoin Core only supports Bitcoin transactions
+and it lacks support for BIP39 mnemonics.
 
-Glacier also utilizes GlacierScript, a software program that
-automates much of the manual work involved in executing the protocol.
-GlacierScript's [open source code](https://github.com/GlacierProtocol/GlacierProtocol) is straightforward and extensively
-commented to facilitate easy review for flaws or vulnerabilities.
+CryptoGlacier relies on [Electrum](https://electrum.org) for Bitcoin
+transactions, [Electrum-LTC](https://electrum-ltc.org) (a fork of Electrum) for
+Litecoin transactions, [Electron-Cash](https://electroncash.org/) for Bitcoin
+Cash transactions and [Gnosis MultiSignatureWallet](https://github.com/gnosis/MultiSigWallet)
+for Ethereum and ERC20 transactions. Although none of these projects have
+received the amount of code review scrutiny that Bitcoin Core has received,
+they are all popular open-source projects with significant contributions and
+code reviews.
+
+CryptoGlacier also utilizes CryptoGlacierScript, a software program that
+automates much of the manual work involved in executing the protocol. It is
+also used for all cryptographic and financial operations for XRP transactions.
+CryptoGlacierScript's [open source code](https://github.com/vogelito/CryptoGlacierProtocol)
+aims to be straightforward and be extensively commented to facilitate easy
+review for flaws or vulnerabilities.
 
 ## Protocol Output
 
-The end result of the Glacier protocol is a set of paper information
-packets, one for each private key needed for the multisignature withdrawal
-policy. Each packet includes the following information:
+The end result of the CryptoGlacier protocol is a set of paper information
+packets for each private key needed for the chosen multisignature withdrawal
+policy. Packets will be created by each signatory independently.
 
-* One **private key** -- an alphanumeric string used to secure the funds
-* The **cold storage address** -- an alphanumeric string designating the virtual "location" of the funds
-* The **"redemption script"** -- an additional code needed to access funds, shared
-by all private keys.
+There will be a **private and never to be shared** package containing:
 
-Technical details: The Glacier protocol reuses Bitcoin addresses. See the
-[design document](../design-doc/overview.md) for a detailed analysis.
+* A *24-word seed mnemonic* based on BIP39 -- these 24 words will be used to
+derive the private keys that will ultimately secure your funds.
+
+There will be a **public** package that will need to be shared with the other
+signatories containing:
+* **Three Master Public Keys** -- an alphanumeric string for Bitcoin, Bitcoin
+Cash, and Litecoin used in the multisignature protocol.
+* The **Ethereum account address** -- a hex string designating the Ethereum
+account to be used in the Gnosis MultiSignatureWallet.
+* The **Ripple address** -- an alphanumeric string designating the Ripple
+account to be used when setting up the Ripple Multi-Signing account.
+
+Technical details: The CryptoGlacier protocol reuses Ethereum and Ripple
+addresses but uses HD wallets for Bitcoin, Bitcoin Cash, and Litecoin.
 
 ## Protocol Cost
 
-The Glacier protocol requires over $600 in equipment, and approximately 8 hours of work to perform an initial cold storage deposit. This excludes time for:
+The CryptoGlacier protocol requires over $600 in equipment per key, and
+approximately 12 hours of work to perform an initial cold storage deposit. This
+excludes time for:
 
 * Obtaining equipment
 * Printing documents
 * Downloading files
-* Physically storing the resulting Bitcoin keys
+* Physically storing the resulting keys
 
 Subsequent deposits and withdrawals re-use the same equipment and take a
 fraction of the time.
@@ -107,18 +131,17 @@ fraction of the time.
 ## No Formal Support
 
 As a free, volunteer-developed community project, there is no formal support
-channel for Glacier should you encounter any issues. However, you may be able to
-ask advice of community members on our [Gitter chat room](https://gitter.im/glacierprotocol/Lobby)
-or other Bitcoin community forums.
+channel for CryptoGlacier should you encounter any issues. However, you may be able to
+ask advice from Glacier's community members on their [Gitter chat room](https://gitter.im/glacierprotocol/Lobby)
+or other Bitcoin or crypto community forums.
 
 ## Privacy Considerations
 
-Because the Bitcoin blockchain is public, the way you route and store funds has
+Because blockchains are public, the way you route and store funds has
 privacy implications. For example, any person to whom you give your cold storage
-address (because, for example, they're sending you funds which you want to keep
-in cold storage) can see your total cold storage balance. This is easy to do
-with many free services (e.g.
-[Blockr](https://www.coinbase.com/) ).
+address for Ripple or Ethereum (because, for example, they're sending you funds
+which you want to keep in cold storage) can see your total cold storage balance.
+This is easy to do with many free services (e.g. [Etherscan](https://etherscan.io/) ).
 
 This is true not just of individuals, but entities. That is, any online wallet
 service which you use to send funds to cold storage can see your cold storage
@@ -132,6 +155,9 @@ your cold storage address, with a few transactions going to each
 intermediate address. This does not provide perfect privacy, but each
 intermediate address provides increasing levels of obfuscation and
 uncertainty.
+
+CryptoGlacier utilizes HD wallets for Bitcoin, Litecoin, and Bitcoin Cash,
+thereby improving privacy over the original Glacier protocol.
 
 If privacy is very important to you, you might consider using
 a service like
@@ -151,8 +177,8 @@ Tor.
 
 If you are willing to accept lower security for lower cost, you can do so with only slight modifications:
 
-1. **Perform this protocol using only one quarantined computer**. Glacier protocol
-repeats all operations on two computers to detect defects or tampering in
+1. **Perform this protocol using only one quarantined computer**. CryptoGlacier protocol
+repeats all operations on two computers per signatory to detect defects or tampering in
 the key generation process. However, this is costly and adds significantly
 to the labor required to execute the protocol. The risks it mitigates are
 small: that malware conducting flawed key-generation attacks found its way
@@ -180,10 +206,10 @@ These modifications are left as an exercise to the reader.
 ## Out of scope
 
 There's always more one could do to increase security. While
-Glacier is designed to provide strong protection for almost everyone, some
+CryptoGlacier is designed to provide strong protection for almost everyone, some
 situations (e.g. being the focus of a targeted attack by a sophisticated,
 well-resourced criminal organization) are beyond its scope.
 
 For some
 additional security precautions beyond those provided in the standard
-protocol, see the [possible improvements to Glacier](../extend/improvements.md).
+protocol, see the [possible improvements to CryptoGlacier](../extend/improvements.md).

@@ -96,6 +96,9 @@ and supports multiple protocols.
 prevents a single entity from ever having unilateral access to funds. Glacier is
 meant for personal storage of Bitcoin where a single individual can always access
 funds unilaterally.
+* **HD wallets for Bitcoin, Bitcoin Cash and Litecoin**: CryptoGlacier
+increases privacy by utilizing HD wallets instead of reusing addresses as the
+original Glacier Protocol does.
 
 ### Self-Managed Storage vs. Managed by a third party
 
