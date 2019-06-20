@@ -6,6 +6,8 @@ description: Learn how to prepare your quarantined hardware for CryptoGlacier,
   based on the popular Glacier Protocol
 ---
 
+Each signatory should do the following:
+
 1. Separate your quarantined hardware into two parallel sets. Each set should contain:
   - One laptop
   - Two USB drives from the same manufacturer
@@ -47,6 +49,7 @@ the hardware.
         2. For the recommended Acer laptop, the process is similar to the Dell.
         Note there are two cover screws hidden underneath rubber feet on the
         bottom of the laptop.
+        3. For any other models, use youtube to learn how to remove the wireless card.
 
     4. After removing the wireless card, cover the ends of the internal wi-fi
     antennae with electrical tape.
