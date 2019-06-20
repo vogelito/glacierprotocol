@@ -130,16 +130,11 @@ https://en.wikipedia.org/wiki/Digital_signature.
        <pre>
        <span style="font-size: 10px;">gpg: Signature made Thu Jun 20 18:01:31 2019 CDT
        gpg:                using RSA key 3378240146B53C307FBA4B0D97F10485CCBACA30
-       gpg: Good signature from "Daniel Vogel <vogel@bitso.com>" [ultimate]
-       gpg:                 aka "Daniel Vogel <dvogel@cs.stanford.edu>" [ultimate]
-
-
-
-        gpg: Signature made Fri Jun 10 22:23:45 2019 PST using RSA key ID 4B43EAB0
-       gpg: Good signature from "Glacier Team <contact@glacierprotocol.org>"
+       gpg: Good signature from "Daniel Vogel <vogel@bitso.com>" [unknown]
+       gpg:                 aka "Daniel Vogel <dvogel@cs.stanford.edu>" [unknown]
        gpg: WARNING: This key is not certified with a trusted signature!
        gpg:          There is no indication that the signature belongs to the owner.
-       Primary key fingerprint: E1AA EBB7 AC90 C1FE 80F0  1034 9D1B 7F53 4B43 EAB0</span>
+       Primary key fingerprint: 3378 2401 46B5 3C30 7FBA  4B0D 97F1 0485 CCBA CA30</span>
        </pre>
        The warning message is expected, and is not cause
        <a href="#" class="popovers" data-toggle="popover" data-placement="top" title=""
@@ -171,15 +166,18 @@ https://en.wikipedia.org/wiki/Digital_signature.
 
             Expected output:
             ```
-            Glacier.pdf: OK glacierscript.py: OK
-            base58.py: OK README.md: OK
+            CryptoGlacier.pdf: OK
+            README.md: OK
+            mnemonic_entropy.py: OK
+            package.json: OK
+            setup.js: OK
             ```
 
         2. On Windows 10:
 
             ```
-            > Get-FileHash -a sha256 Glacier.pdf
-            > cat SHA256SUMS | select-string -pattern "Glacier.pdf"
+            > Get-FileHash -a sha256 CryptoGlacier.pdf
+            > cat SHA256SUMS | select-string -pattern "CryptoGlacier.pdf"
             ```
             Ensure that the hash output from the first command matches the output by the
             second command. Upper/lower case doesn't matter.
