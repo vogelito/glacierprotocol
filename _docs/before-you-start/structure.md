@@ -6,13 +6,15 @@ description: This page explains the overall structure of CryptoGlacier,
   popular Glacier Protocol
 ---
 
-The overall Glacier protocol consists of several distinct subprotocols:
+The overall CryptoGlacier protocol consists of several distinct subprotocols:
 
 * **Setup**: Prepares hardware,
 and downloads and verifies needed software & documentation.
-* **Deposit**: For securely storing bitcoins.
+* **Key Generation**: Private keys are generated and multisig wallets and
+accounts are setup.
+* **Deposit**: For securely storing crypto.
 * **Withdrawal**: For transferring some or all of your stored funds to another
-bitcoin address.
+crypto address.
 * **Viewing**: For viewing the balance of your funds in secure storage.
 * **Maintenance**: For ensuring funds in cold storage remain accessible and
 secure.
@@ -22,7 +24,7 @@ secure.
 *Critically-sensitive data* (e.g. private keys) will be highlighted in red,
 like this: <span class="danger">critically-sensitive-data-here</span>.
 
-*Critically* sensitive data can be used by thieves to to steal your bitcoins. If
+*Critically* sensitive data can be used by thieves to to steal your assets. If
 you follow the protocol precisely, your critically sensitive data will remain
 secure.
 
@@ -37,13 +39,13 @@ device
 * Never take a picture of it
 * Never let any untrusted person see it
 
-*Moderately-sensitive data* (e.g. a cold storage address or redemption
+*Moderately-sensitive data* (e.g. a cold storage addresses or redemption
 script) will be highlighted in yellow, like this:
 <span class="warning">moderately-sensitive-data-here</span>.
 
 *Moderately* sensitive data impacts
 privacy, but does not directly impact security. It cannot be used to
-steal your bitcoins, but it *can* be used to see how many bitcoins you own
+steal your funds, but it *can* be used to see how much crypto you own
 (if someone knows that the moderately sensitive data in question belongs
 to you).
 
@@ -54,12 +56,9 @@ to get it.
 The protocol recommends storing copies of moderately-sensitive
 data electronically, in a "conventionally secure" manner (for example, in
 a password manager such as
-[1Password](https://1password.com/)). If you're particularly
-concerned about privacy, you *can* forego electronic storage, because the protocol
-also stores copies of moderately-sensitive data in cold storage with each private
-key. However, this is not recommended.
+[1Password](https://1password.com/)).
 
-This means that knowledge of your cold storage balance will be as secure as
+This means that knowledge of your cold storage balances will be as secure as
 access to any accounts which have their credentials stored in your password
 manager. For most people, this is sufficient.
 
