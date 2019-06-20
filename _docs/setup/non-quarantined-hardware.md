@@ -6,6 +6,8 @@ description: Learn how to set up your non-quarantined hardware for CryptoGlacier
   based on the popular Glacier Protocol
 ---
 
+Each signatory will need to do the following:
+
 1. Select two (2) computers which will be used as "Setup Computers" to set up USB
 drives.
 
@@ -23,7 +25,7 @@ drives.
 3. With a permanent marker, label two USB drives "SETUP 1 BOOT" and "SETUP
 2 BOOT".
 
-    1. Remember that, per the equipment list, you should have 4 remaining USB
+    1. Remember that, per the equipment list, each signatory should have 4 remaining USB
     drives -- two from one manufacturer, and two from a *different* manufacturer.
 
 4. Run a virus scan on the Setup Computers. If you don't have virus scanning

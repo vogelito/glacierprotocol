@@ -20,6 +20,8 @@ accessible at all times during protocol execution due to reboots and other
 changes to the computing environment. Printing a hardcopy ensures there is
 always a verified copy of the document available.
 
+Each signatory will need to do the following:
+
 1. Find a computer which has Internet access, printer access, and which you have
 permission to install new software on. We'll refer to this computer as the
 "SETUP 1" computer.
