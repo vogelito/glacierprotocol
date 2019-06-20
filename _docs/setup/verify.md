@@ -11,7 +11,7 @@ The Setup Protocol is used to prepare hardware, and download and verify needed
 software & documentation.
 
 The first thing we need to do is verify the integrity of
-the Glacier protocol document (the one you are reading) to ensure that it
+the CryptoGlacier protocol document (the one you are reading) to ensure that it
 has not been tampered with. After verifying the document, we'll print
 a hardcopy.
 
@@ -24,22 +24,22 @@ always a verified copy of the document available.
 permission to install new software on. We'll refer to this computer as the
 "SETUP 1" computer.
 2. Review the errata for the version of Glacier you are using at
-https://github.com/GlacierProtocol/GlacierProtocol/releases.
-3. Download the latest full release of Glacier (*not* just the protocol document)
-at https://github.com/GlacierProtocol/GlacierProtocol/releases.
+https://github.com/vogelito/CryptoGlacierProtocol/releases.
+3. Download the latest full release of CryptoGlacier (*not* just the protocol document)
+at https://github.com/vogelito/CryptoGlacierProtocol/releases.
 4. If your browser does not automatically extract the ZIP file contents into a
 folder within your downloads directory, do so.
-5. Rename the folder to "glacier."
-6. If you have used Glacier before, *and* you know you have the Glacier public key
+5. Rename the folder to "cryptoglacier."
+6. If you have used CryptoGlacier before, *and* you know you have the CryptoGlacier public key
 imported into a local GPG keyring, skip the next step. (If you don't know,
 that's fine; proceed as normal.)
-7. Obtain the Glacier "public key," used to cryptographically verify the
+7. Obtain the CryptoGlacier "public key," used to cryptographically verify the
   <a href="#" class="popovers" data-toggle="popover" data-placement="top" title=""
   data-content="
-  Technical details: Glacier's GPG keys are handled with good security practices. They were generated while booting off an Ubuntu Live USB on a factory-new laptop with the wireless card removed, and transferred via USB to a MacBook. The private key is not stored in the cloud. The public key is hosted separately from our software distributions, on Keybase, secured with separate credentials (all of which are in password managers).
+  Technical details: CryptoGlacier's GPG keys are handled with good security practices. The private key is not stored in the cloud. The public key is hosted separately from our software distributions, on Keybase, secured with separate credentials (all of which are in password managers).
   ">protocol document</a>.
 
-   **If you are ever using Glacier in the future and notice that this step has
+   **If you are ever using CryptoGlacier in the future and notice that this step has
    changed (or that this warning has been removed), there is a security risk.**
    Stop and
    <a href="#" class="popovers" data-toggle="popover" data-placement="top" title=""
@@ -59,12 +59,12 @@ that's fine; proceed as normal.)
   individuals from the Bitcoin community.
   ">seek assistance</a>.
 
-    1. Access Glacier's Keybase profile at <https://keybase.io/glacierprotocol>.
+    1. Access CryptoGlacier's Keybase profile at <https://keybase.io/vogelito>.
     2. Click the string of letters and numbers next to the key icon.
     3. In the pop-up that appears, locate the link reading "this key".
     3. Right-click the link and select "Save Link As..." or "Download Linked File
     As..."
-    5. Name the file "glacier.asc".
+    5. Name the file "cryptoglacier.asc".
 
 8. Download and install [GnuPG](https://gnupg.org/), the
   software we'll use for doing the
@@ -105,9 +105,9 @@ that's fine; proceed as normal.)
 commands below are based on common default settings; if you put your downloads
 is in a different place, you will need to customize this command.
 
-    1. **Windows**:  `> cd $HOME/Downloads/glacier`
-    2. **macOS**:  `$ cd $HOME/Downloads/glacier`
-    3. **Linux**: `$ cd $HOME/Downloads/glacier`
+    1. **Windows**:  `> cd $HOME/Downloads/cryptoglacier`
+    2. **macOS**:  `$ cd $HOME/Downloads/cryptoglacier`
+    3. **Linux**: `$ cd $HOME/Downloads/cryptoglacier`
 
 11. Verify the integrity of the
 <a href="#" class="popovers" data-toggle="popover" data-placement="top" title=""
@@ -117,9 +117,9 @@ https://en.wikipedia.org/wiki/Digital_signature.
 ">downloaded document</a>.
 
 
-    1. Import the Glacier public key into your local GPG installation:
+    1. Import the CryptoGlacier public key into your local GPG installation:
        ```
-       $ gpg --import $HOME/Downloads/glacier.asc
+       $ gpg --import $HOME/Downloads/cryptoglacier.asc
        ```
 
     2. Use the public key to verify that the Glacier "fingerprint file" is legitimate:
@@ -128,7 +128,14 @@ https://en.wikipedia.org/wiki/Digital_signature.
        ```
        Expected output (timestamp will vary, but e-mail and fingerprint should match):
        <pre>
-       <span style="font-size: 10px;">gpg: Signature made Fri Feb 10 22:23:45 2017 PST using RSA key ID 4B43EAB0
+       <span style="font-size: 10px;">gpg: Signature made Thu Jun 20 18:01:31 2019 CDT
+       gpg:                using RSA key 3378240146B53C307FBA4B0D97F10485CCBACA30
+       gpg: Good signature from "Daniel Vogel <vogel@bitso.com>" [ultimate]
+       gpg:                 aka "Daniel Vogel <dvogel@cs.stanford.edu>" [ultimate]
+
+
+
+        gpg: Signature made Fri Jun 10 22:23:45 2019 PST using RSA key ID 4B43EAB0
        gpg: Good signature from "Glacier Team <contact@glacierprotocol.org>"
        gpg: WARNING: This key is not certified with a trusted signature!
        gpg:          There is no indication that the signature belongs to the owner.
