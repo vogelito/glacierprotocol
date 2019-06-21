@@ -288,14 +288,14 @@ already. (See the instructions in Section III for details.)
             ```
             $ cp /var/cache/apt/archives/*.deb ~/apps
             $ cp ~/dls/electrum-3.3.6-x86_64.AppImage ~/apps
-            $ cp ~/dls/Electron-Cash-4.0.5-x86_64.AppImage ~/apps
+            $ cp ~/dls/Electron-Cash-4.0.6-x86_64.AppImage ~/apps
             $ cp ~/dls/electrum-ltc-3.3.6.1-x86_64.AppImage ~/apps
             $ cp ~/dls/bip39-standalone.html ~/apps
             ```
         3. Make the AppImage files executable
             ```
             $ chmod +x ~/apps/electrum-3.3.6-x86_64.AppImage
-            $ chmod +x ~/apps/Electron-Cash-4.0.5-x86_64.AppImage
+            $ chmod +x ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
             $ chmod +x ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
             ```
         4. Copy the contents of the apps folder to the Q1 APP USB:
@@ -315,7 +315,7 @@ contents should look like this
 
     ```
     bip39-standalone.html
-    Electron-Cash-4.0.5-x86_64.AppImage
+    Electron-Cash-4.0.6-x86_64.AppImage
     electrum-3.3.6-x86_64.AppImage
     electrum-ltc-3.3.6.1-x86_64.AppImage
     libboost-chrono1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
