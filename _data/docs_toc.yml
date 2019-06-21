@@ -19,7 +19,7 @@
   - setup/quarantined-workspace
 - title: Key Generation
   docs:
-  - key-generation/generate-bip39-key
+  - key-generation/generate-bip39-mnemonic
   - key-generation/transfer-to-paper
 - title: Deposit
   docs:

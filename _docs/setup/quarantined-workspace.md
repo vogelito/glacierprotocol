@@ -73,10 +73,9 @@ Deposit or Withdrawal protocol now, you can stop here.
     $ chmod +x ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
     ```
 10. Change into the cryptoglacier directory. You'll be using this directory to execute
-software for the protocol and prepare the MnemonicEntropy file for execution
+software for the protocol
     ```
     $ cd ~/cryptoglacier
-    $ chmod +x mnemonic_entropy.py
     ```
 11. Prepare the "Quarantined Scratchpad" -- an empty file you'll use as a place
 to jot notes.

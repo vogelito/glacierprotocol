@@ -170,7 +170,6 @@ https://en.wikipedia.org/wiki/Digital_signature.
             ```
             CryptoGlacier.pdf: OK
             README.md: OK
-            mnemonic_entropy.py: OK
             package.json: OK
             setup.js: OK
             ```
