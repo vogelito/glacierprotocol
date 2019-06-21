@@ -66,13 +66,16 @@ Deposit or Withdrawal protocol now, you can stop here.
     $ cd ~/apps
     $ sudo dpkg -i *.deb
     ```
-9. Change into the cryptoglacier directory. You'll be using this directory to execute
-software for the protocol.
+9. Prepare the AppImage files for exection
+    ```
+    $ chmod +x ~/apps/electrum-3.3.6-x86_64.AppImage
+    $ chmod +x ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
+    $ chmod +x ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
+    ```
+10. Change into the cryptoglacier directory. You'll be using this directory to execute
+software for the protocol and prepare the MnemonicEntropy file for execution
     ```
     $ cd ~/cryptoglacier
-    ```
-10. Prepare the MnemonicEntropy file for execution.
-    ```
     $ chmod +x mnemonic_entropy.py
     ```
 11. Prepare the "Quarantined Scratchpad" -- an empty file you'll use as a place

@@ -24,8 +24,87 @@ already. (See the instructions in Section III for details.)
        This setup process is the ONE exception.
 
 3. Press Ctrl-Alt-T to open a terminal window.
-4. Open the CryptoGlacier protocol document so that it is available for copy-pasting terminal commands.
-5. Install the remaining application software on the Q1 APP USB.
+4. Download the CryptoGlacier protocol document and accompanying scripts
+    1. Download the latest full release of CryptoGlacier (*not* just the protocol
+    document) at
+    [https://github.com/vogelito/CryptoGlacierProtocol/releases](https://github.com/vogelito/CryptoGlacierProtocol/releases).
+    2. Unpack the CryptoGlacier ZIP file into a staging area.
+
+        1. When the download starts, Firefox will ask you if you want to open the
+        ZIP file with Archive Manager. Click OK.
+
+           When the ZIP file download completes, it will be opened with Archive Manager.
+
+        2. There will be a single entry in a list named
+        "CryptoGlacierProtocol-<span class="primary">version-here</span>", where
+        <span class="primary">version-here</span> is replaced with
+        the current version number (like "v0.02"). Click on that and then click
+        the "Extract" button.
+        3. The Archive Manager will ask you where you want to extract the ZIP
+        file to. Select "Home" on the left panel and then press the extract button.
+        4. When the Archive Manager is finished extracting the ZIP archive it
+        will ask you what to do next. Click "Show the Files".
+        5. Rename the unzipped folder from "CryptoGlacierProtocol-<span class="primary">version-here</span>" to
+        "cryptoglacier".
+
+    3. Obtain the CryptoGlacier "public key," used to cryptographically verify the
+    CryptoGlacier document and CryptoGlacierScript.
+
+        **If you are ever using CryptoGlacier in the future and notice that this step
+        has changed (or that this warning has been removed), there is a
+        security risk.** Stop and seek assistance.
+
+        1. Access CryptoGlacier's Keybase profile at https://keybase.io/vogelito.
+        2. Click the string of letters and numbers next to the key icon.
+        3. In the pop-up that appears, locate the link reading "this key".
+        4. Right-click the link and select "Save Link As..."
+        5. Name the file "cryptoglacier.asc".
+
+    4. Verify the integrity of the CryptoGlacier download.
+
+        1. Import the CryptoGlacier public key into your local GPG installation:
+           ```
+           $ gpg --import ~/Downloads/cryptoglacier.asc
+           ```
+        2. Switch to the cryptoglacier folder:
+           ```
+           $ cd ~/cryptoglacier
+           ```
+        3. Use the public key to verify that the CryptoGlacier "fingerprint file" is
+        legitimate:
+           ```
+           $ gpg --verify SHA256SUMS.sig SHA256SUMS
+           ```
+           Expected output (timestamp will vary, but
+           e-mail and fingerprint should match):
+           <pre>
+           <span style="font-size: 10px;">gpg: Signature made Thu Jun 20 18:01:31 2019 CDT
+           gpg:                using RSA key 3378240146B53C307FBA4B0D97F10485CCBACA30
+           gpg: Good signature from "Daniel Vogel <vogel@bitso.com>" [unknown]
+           gpg:                 aka "Daniel Vogel <dvogel@cs.stanford.edu>" [unknown]
+           gpg: WARNING: This key is not certified with a trusted signature!
+           gpg:          There is no indication that the signature belongs to the owner.
+           Primary key fingerprint: 3378 2401 46B5 3C30 7FBA  4B0D 97F1 0485 CCBA CA30
+           </span>
+           </pre>
+
+           The warning message is expected, and is not cause for alarm.
+
+        4. Verify the fingerprints in the fingerprint file match the fingerprints
+        of the downloaded CryptoGlacier files:
+           ```
+           $ sha256sum -c SHA256SUMS 2>&1
+           ```
+           Expected output:
+           ```
+           CryptoGlacier.pdf: OK
+           README.md: OK
+           mnemonic_entropy.py: OK
+           package.json: OK
+           setup.js: OK
+           ```
+5. Open the CryptoGlacier protocol document so that it is available for copy-pasting terminal commands.
+6. Install the remaining application software on the Q1 APP USB.
     1. Configure our system to enable access to the software we need in Ubuntu's
     "package repository".On Ubuntu 16.04.01  [there is a bug](https://bugs.launchpad.net/ubuntu/+source/appstream/+bug/1601971) in Ubuntu's package manager that affects systems
     running off a bootable Ubuntu USB. The commands in steps a and b are a
@@ -191,106 +270,22 @@ already. (See the instructions in Section III for details.)
             $ cp ~/dls/Electron-Cash-4.0.6-x86_64.AppImage ~/apps
             $ cp ~/dls/electrum-ltc-3.3.6.1-x86_64.AppImage ~/apps
             $ cp ~/dls/bip39-standalone.html ~/apps
+            $ cp ~/dls/multisigweb-1.6.0-amd64.deb ~/apps
             ```
-        3. Make the AppImage files executable
-            ```
-            $ chmod +x ~/apps/electrum-3.3.6-x86_64.AppImage
-            $ chmod +x ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
-            $ chmod +x ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
-            ```
-        4. Copy the contents of the apps folder to the Q1 APP USB:
+        3. Copy the contents of the apps folder to the Q1 APP USB:
             1. Click on the File Manager icon in the launching dock:
             2. Navigate to the "Home" folder.
             3. Click and drag "apps" folder to the icon representing
             the USB drive on the left panel.
 
-6. Install the CryptoGlacier document and CryptoGlacierScript on the Q1 APP USB.
-
-    1. Download the latest full release of CryptoGlacier (*not* just the protocol
-    document) at
-    [https://github.com/vogelito/CryptoGlacierProtocol/releases](https://github.com/vogelito/CryptoGlacierProtocol/releases).
-    2. Unpack the CryptoGlacier ZIP file into a staging area.
-
-        1. When the download starts, Firefox will ask you if you want to open the
-        ZIP file with Archive Manager. Click OK.
-
-           When the ZIP file download completes, it will be opened with Archive Manager.
-
-        2. There will be a single entry in a list named
-        "CryptoGlacierProtocol-<span class="primary">version-here</span>", where
-        <span class="primary">version-here</span> is replaced with
-        the current version number (like "v0.02"). Click on that and then click
-        the "Extract" button.
-        3. The Archive Manager will ask you where you want to extract the ZIP
-        file to. Select "Home" on the left panel and then press the extract button.
-        4. When the Archive Manager is finished extracting the ZIP archive it
-        will ask you what to do next. Click "Show the Files".
-        5. Rename the unzipped folder from "CryptoGlacierProtocol-<span class="primary">version-here</span>" to
-        "cryptoglacier".
-
-    3. Obtain the CryptoGlacier "public key," used to cryptographically verify the
-    CryptoGlacier document and CryptoGlacierScript.
-
-        **If you are ever using CryptoGlacier in the future and notice that this step
-        has changed (or that this warning has been removed), there is a
-        security risk.** Stop and seek assistance.
-
-        1. Access CryptoGlacier's Keybase profile at https://keybase.io/vogelito.
-        2. Click the string of letters and numbers next to the key icon.
-        3. In the pop-up that appears, locate the link reading "this key".
-        4. Right-click the link and select "Save Link As..."
-        5. Name the file "cryptoglacier.asc".
-
-    4. Verify the integrity of the CryptoGlacier download.
-
-        1. Import the CryptoGlacier public key into your local GPG installation:
-           ```
-           $ gpg --import ~/Downloads/cryptoglacier.asc
-           ```
-        2. Switch to the cryptoglacier folder:
-           ```
-           $ cd ~/cryptoglacier
-           ```
-        3. Use the public key to verify that the CryptoGlacier "fingerprint file" is
-        legitimate:
-           ```
-           $ gpg --verify SHA256SUMS.sig SHA256SUMS
-           ```
-           Expected output (timestamp will vary, but
-           e-mail and fingerprint should match):
-           <pre>
-           <span style="font-size: 10px;">gpg: Signature made Thu Jun 20 18:01:31 2019 CDT
-           gpg:                using RSA key 3378240146B53C307FBA4B0D97F10485CCBACA30
-           gpg: Good signature from "Daniel Vogel <vogel@bitso.com>" [unknown]
-           gpg:                 aka "Daniel Vogel <dvogel@cs.stanford.edu>" [unknown]
-           gpg: WARNING: This key is not certified with a trusted signature!
-           gpg:          There is no indication that the signature belongs to the owner.
-           Primary key fingerprint: 3378 2401 46B5 3C30 7FBA  4B0D 97F1 0485 CCBA CA30
-           </span>
-           </pre>
-
-           The warning message is expected, and is not cause for alarm.
-
-        4. Verify the fingerprints in the fingerprint file match the fingerprints
-        of the downloaded CryptoGlacier files:
-           ```
-           $ sha256sum -c SHA256SUMS 2>&1
-           ```
-           Expected output:
-           ```
-           CryptoGlacier.pdf: OK
-           README.md: OK
-           mnemonic_entropy.py: OK
-           package.json: OK
-           setup.js: OK
-           ```
-
-    5. Install the required packages for the node script:
+7. Install the required packages for the CryptoGlacier scripts and install CryptoGlacier on the Q1 APP USB.
+    1. Install the required packages for the node script:
        ```
+       cd ~/cryptoglacier
        npm install
        ```
 
-    6. Copy the cryptoglacier folder to the Q1 APP USB.
+    2. Copy the cryptoglacier folder to the Q1 APP USB.
         1. Click on the File Manager icon in the launching dock along the left
         side of the screen.
         2. Find the "cryptoglacier" folder under "Home".
@@ -310,7 +305,7 @@ already. (See the instructions in Section III for details.)
             screen and select "logout" from the drop-down menu.
             3. Login again with user "ubuntu" and leave the password blank.
 
-7. Click on the USB drive icon to verify that it has the correct files. The
+8. Click on the USB drive icon to verify that it has the correct files. The
 contents should look like this
     ```
     apps
@@ -329,6 +324,7 @@ contents should look like this
     libindicator7_12.10.2+16.04.20151208-0ubuntu1_amd64.deb
     libqrencode3_3.4.4-1_amd64.deb
     libzbar0_0.10+doc-10ubuntu1_amd64.deb
+    multisigweb-1.6.0-amd64.deb
     nodejs_10.16.0-1nodesource1_amd64.deb
     qrencode_3.4.4-1_amd64.deb
     zbar-tools_0.10+doc-10ubuntu1_amd64.deb
@@ -341,12 +337,12 @@ contents should look like this
     package.json: OK
     setup.js: OK
     ```
-8. Eject and physically remove the Q1 APP USB from the SETUP 1 computer.
+9. Eject and physically remove the Q1 APP USB from the SETUP 1 computer.
 
     **The Q1 APP USB is now eternally quarantined. It should never again be
     plugged into anything besides the Q1 computer.**
 
-9. Repeat all above steps using the SETUP 2 computer, SETUP 2 BOOT USB, and Q2
+10. Repeat all above steps using the SETUP 2 computer, SETUP 2 BOOT USB, and Q2
 APP USB.
-10. Find a container in which to store all of your labeled hardware, along
+11. Find a container in which to store all of your labeled hardware, along
 with the CryptoGlacier document hardcopy, when you are finished.
