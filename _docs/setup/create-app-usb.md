@@ -6,6 +6,8 @@ description: Learn how to prepare your USB drives for CryptoGlacier,
   based on the popular Glacier Protocol
 ---
 
+Each signatory should do the following:
+
 We will prepare two (2) "Quarantined App USB"
 drives with the software needed to execute the remainder of the protocol.
 These are the USB drives you labeled "Q1 APP" and "Q2 APP" in Section
@@ -22,12 +24,12 @@ already. (See the instructions in Section III for details.)
        This setup process is the ONE exception.
 
 3. Press Ctrl-Alt-T to open a terminal window.
-4. Install the Glacier document and GlacierScript on the Q1 APP USB.
+4. Install the CryptoGlacier document and CryptoGlacierScript on the Q1 APP USB.
 
-    1. Download the latest full release of Glacier (*not* just the protocol
+    1. Download the latest full release of CryptoGlacier (*not* just the protocol
     document) at
-    [https://github.com/GlacierProtocol/GlacierProtocol/releases](https://github.com/GlacierProtocol/GlacierProtocol/releases).
-    2. Unpack the Glacier ZIP file into a staging area.
+    [https://github.com/vogelito/CryptoGlacierProtocol/releases](https://github.com/vogelito/CryptoGlacierProtocol/releases).
+    2. Unpack the CryptoGlacier ZIP file into a staging area.
 
         1. When the download starts, Firefox will ask you if you want to open the
         ZIP file with Archive Manager. Click OK.
@@ -35,41 +37,41 @@ already. (See the instructions in Section III for details.)
            When the ZIP file download completes, it will be opened with Archive Manager.
 
         2. There will be a single entry in a list named
-        "GlacierProtocol-<span class="primary">version-here</span>", where
+        "CryptoGlacierProtocol-<span class="primary">version-here</span>", where
         <span class="primary">version-here</span> is replaced with
-        the current version number (like "v1.0"). Click on that and then click
+        the current version number (like "v0.02"). Click on that and then click
         the "Extract" button.
         3. The Archive Manager will ask you where you want to extract the ZIP
         file to. Select "Home" on the left panel and then press the extract button.
         4. When the Archive Manager is finished extracting the ZIP archive it
         will ask you what to do next. Click "Show the Files".
-        5. Rename the unzipped folder from "GlacierProtocol-<span class="primary">version-here</span>" to
-        "glacier".
+        5. Rename the unzipped folder from "CryptoGlacierProtocol-<span class="primary">version-here</span>" to
+        "cryptoglacier".
 
-    3. Obtain the Glacier "public key," used to cryptographically verify the
-    Glacier document and GlacierScript.
+    3. Obtain the CryptoGlacier "public key," used to cryptographically verify the
+    CryptoGlacier document and CryptoGlacierScript.
 
-        **If you are ever using Glacier in the future and notice that this step
+        **If you are ever using CryptoGlacier in the future and notice that this step
         has changed (or that this warning has been removed), there is a
         security risk.** Stop and seek assistance.
 
-        1. Access Glacier's Keybase profile at https://keybase.io/glacierprotocol.
+        1. Access CryptoGlacier's Keybase profile at https://keybase.io/vogelito.
         2. Click the string of letters and numbers next to the key icon.
         3. In the pop-up that appears, locate the link reading "this key".
         4. Right-click the link and select "Save Link As..."
-        5. Name the file "glacier.asc".
+        5. Name the file "cryptoglacier.asc".
 
-    4. Verify the integrity of the Glacier download.
+    4. Verify the integrity of the CryptoGlacier download.
 
-        1. Import the Glacier public key into your local GPG installation:
+        1. Import the CryptoGlacier public key into your local GPG installation:
            ```
-           $ gpg --import ~/Downloads/glacier.asc
+           $ gpg --import ~/Downloads/cryptoglacier.asc
            ```
-        2. Switch to the glacier folder:
+        2. Switch to the cryptoglacier folder:
            ```
-           $ cd ~/glacier
+           $ cd ~/cryptoglacier
            ```
-        3. Use the public key to verify that the Glacier "fingerprint file" is
+        3. Use the public key to verify that the CryptoGlacier "fingerprint file" is
         legitimate:
            ```
            $ gpg --verify SHA256SUMS.sig SHA256SUMS
@@ -77,33 +79,37 @@ already. (See the instructions in Section III for details.)
            Expected output (timestamp will vary, but
            e-mail and fingerprint should match):
            <pre>
-           <span style="font-size: 10px;">gpg: Signature made Thu Jan 19 13:45:48 2017 PST using RSA key ID 4B43EAB0
-           gpg: Good signature from "Glacier Team <contact@glacierprotocol.org>"
+           <span style="font-size: 10px;">gpg: Signature made Thu Jun 20 18:01:31 2019 CDT
+           gpg:                using RSA key 3378240146B53C307FBA4B0D97F10485CCBACA30
+           gpg: Good signature from "Daniel Vogel <vogel@bitso.com>" [unknown]
+           gpg:                 aka "Daniel Vogel <dvogel@cs.stanford.edu>" [unknown]
            gpg: WARNING: This key is not certified with a trusted signature!
-           gpg: There is no indication that the signature belongs to the owner.
-           Primary key fingerprint: E1AA EBB7 AC90 C1FE 80F0 1034 9D1B 7F53 4B43</span>
+           gpg:          There is no indication that the signature belongs to the owner.
+           Primary key fingerprint: 3378 2401 46B5 3C30 7FBA  4B0D 97F1 0485 CCBA CA30
+           </span>
            </pre>
 
            The warning message is expected, and is not cause for alarm.
 
         4. Verify the fingerprints in the fingerprint file match the fingerprints
-        of the downloaded Glacier files:
+        of the downloaded CryptoGlacier files:
            ```
            $ sha256sum -c SHA256SUMS 2>&1
            ```
            Expected output:
            ```
-           Glacier.pdf: OK
-           glacierscript.py: OK
-           base58.py: OK
+           CryptoGlacier.pdf: OK
            README.md: OK
+           mnemonic_entropy.py: OK
+           package.json: OK
+           setup.js: OK
            ```
 
-    5. Copy the glacier folder to the Q1 APP USB.
+    5. Copy the cryptoglacier folder to the Q1 APP USB.
         1. Click on the File Manager icon in the launching dock along the left
         side of the screen.
-        2. Find the "glacier" folder under "Home".
-        3. Click and drag the glacier folder to the icon representing the USB
+        2. Find the "cryptoglacier" folder under "Home".
+        3. Click and drag the cryptoglacier folder to the icon representing the USB
         drive on the left. The USB drive will look like this, but may have a
         different name:
         4. If you see an "Error while copying" pop-up, you may be suffering from
@@ -118,7 +124,7 @@ already. (See the instructions in Section III for details.)
             screen and select "logout" from the drop-down menu.
             3. Login again with user "ubuntu" and leave the password blank.
 
-5. Open the Glacier protocol document so that it is available for copy-pasting terminal commands.
+5. Open the CryptoGlacier protocol document so that it is available for copy-pasting terminal commands.
 6. Install the remaining application software on the Q1 APP USB.
     1. Configure our system to enable access to the software we need in Ubuntu's
     "package repository".On Ubuntu 16.04.01  [there is a bug](https://bugs.launchpad.net/ubuntu/+source/appstream/+bug/1601971) in Ubuntu's package manager that affects systems
@@ -302,17 +308,13 @@ already. (See the instructions in Section III for details.)
 contents should look like this
     ```
     apps
-    glacier
+    cryptoglacier
     ```
 
-    Click the apps folder. It will have the following content.
-    Note that the version number of the Bitcoin package may change as new
-    versions are released. Future versions of Glacier may pin to a specific
-    version.
+    Click the apps folder. It will have the following content:
 
     ```
     bip39-standalone.html
-    bitcoind_0.13.2-xenial1_amd64.deb
     Electron-Cash-4.0.5-x86_64.AppImage
     electrum-3.3.6-x86_64.AppImage
     electrum-ltc-3.3.6.1-x86_64.AppImage
@@ -330,14 +332,13 @@ contents should look like this
     qrencode_3.4.4-1_amd64.deb
     zbar-tools_0.10+doc-10ubuntu1_amd64.deb
     ```
-    Click the glacier folder. It will have the following content:
+    Click the cryptoglacier folder. It will have the following content:
     ```
-    base58.py
-    Glacier.pdf
-    glacierscript.py
-    LICENSE README.md
-    SHA256SUMS
-    SHA256SUMS.sig
+    CryptoGlacier.pdf: OK
+    README.md: OK
+    mnemonic_entropy.py: OK
+    package.json: OK
+    setup.js: OK
     ```
 8. Eject and physically remove the Q1 APP USB from the SETUP 1 computer.
 
@@ -347,4 +348,4 @@ contents should look like this
 9. Repeat all above steps using the SETUP 2 computer, SETUP 2 BOOT USB, and Q2
 APP USB.
 10. Find a container in which to store all of your labeled hardware, along
-with the Glacier document hardcopy, when you are finished.
+with the CryptoGlacier document hardcopy, when you are finished.
