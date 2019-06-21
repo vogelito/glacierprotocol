@@ -17,11 +17,12 @@
   - setup/create-boot-usb
   - setup/create-app-usb
   - setup/quarantined-workspace
-  - setup/verifying-setup-integrity
+- title: Key Generation
+  docs:
+  - key-generation/generate-bip39-key
+  - key-generation/transfer-to-paper
 - title: Deposit
   docs:
-  - deposit/generate-cold-storage-keys
-  - deposit/transfer-to-paper
   - deposit/test-deposit-withdrawal
   - deposit/deposit-execution
   - deposit/store-data
