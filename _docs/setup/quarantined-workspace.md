@@ -6,9 +6,10 @@ description: Learn how to prepare your quarantined hardware for CryptoGlacier,
   based on the popular Glacier Protocol
 ---
 
-This section is meant to be done immediately before executing the Deposit or
-Withdrawal protocols. If you are executing the Setup Protocol for the
-first time and do **not** plan on executing the Deposit or Withdrawal protocol now, you can stop here.
+**Each signatory must always prepare a quarantined workspace before executing the
+Key Generation, Deposit or Withdrawal protocols**. If you are executing the Setup
+Protocol for the first time and do **not** plan on executing the Key Generation,
+Deposit or Withdrawal protocol now, you can stop here.
 
 1. Block side channels
 
@@ -51,8 +52,8 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
     3. Drag the contents of the USB to the "Home" directory on the left side of
     file manager.
 6. Open a copy of this document on the Q1 computer.
-    1. In the File Manager find the glacier folder. The PDF file for this
-    document should be visible with the name "Glacier.pdf." Open it.
+    1. In the File Manager find the cryptoglacier folder. The PDF file for this
+    document should be visible with the name "CryptoGlacier.pdf." Open it.
 
         You won't be able to click any external links in the document, since you
         don't have a network connection. If you need to look something up on the
@@ -65,14 +66,14 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
     $ cd ~/apps
     $ sudo dpkg -i *.deb
     ```
-9. Change into the glacier directory. You'll be using this directory to execute
+9. Change into the cryptoglacier directory. You'll be using this directory to execute
 software for the protocol.
     ```
-    $ cd ~/glacier
+    $ cd ~/cryptoglacier
     ```
-10. Prepare GlacierScript for execution.
+10. Prepare the MnemonicEntropy file for execution.
     ```
-    $ chmod +x glacierscript.py
+    $ chmod +x mnemonic_entropy.py
     ```
 11. Prepare the "Quarantined Scratchpad" -- an empty file you'll use as a place
 to jot notes.
