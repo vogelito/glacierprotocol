@@ -10,6 +10,8 @@ Because the eternally quarantined computers cannot connect to a network, they
 cannot download software. We'll be using USB drives to transfer the necessary
 software to them.
 
+Each signatory should do the following:
+
 We will prepare four bootable
 [Ubuntu](https://en.wikipedia.org/wiki/Ubuntu_(operating_system))
 USB drives. ("Bootable" means that the Ubuntu operating system will be booted
@@ -238,6 +240,10 @@ copy there.
                 Computer.
 
 7. Create the Q1 BOOT USB
+    **We do not recommend you boot Ubuntu on Mac devices released after 2015. Ubuntu
+    support for newer generation Macs and vice-versa is still very poor at the time
+    of writting and you might find your mouse, keyboard, or network to be unusable.**
+
     1. Boot the SETUP 1 computer from the SETUP 1 BOOT USB.
         1. Reboot the computer.
         2. Press your laptop's key sequence to bring up the boot device
