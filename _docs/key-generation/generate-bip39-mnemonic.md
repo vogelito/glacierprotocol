@@ -1,5 +1,5 @@
 ---
-title: Generating BIP39 Mnemonic
+title: Generate BIP39 Mnemonic
 description: Learn how to generate a BIP39 mnemonic to use with CryptoGlacier,
   the step-by-step, secure, multi-blockchain, multi-signature,
   cold storage protocol for long-term storage of crypto assets
