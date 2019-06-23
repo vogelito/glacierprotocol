@@ -4,7 +4,7 @@ description: Learn how to generate a BIP39 mnemonic to use with CryptoGlacier,
   the step-by-step, secure, multi-blockchain, multi-signature,
   cold storage protocol for long-term storage of crypto assets
   based on the popular Glacier Protocol
-redirect_from: /docs/deposit/
+redirect_from: /docs/key-generation/
 ---
 
 The Key Generation Protocol will securely generate a <span class="danger">24-word seed phrase</span> that will
@@ -19,8 +19,8 @@ By the end of this section, each signatory will generate the following informati
 
 * A <span class="danger">BIP39 Seed Phrase</span>: Each seed phrase is a 24-word combination that will later
 be used to unlock your funds across BTC, BCH, LTC, XRP & ETH. Each seed phrase should be created in a different
-device by a different signatory. In your M-of-N policy there should be N seed phrases. These phrases should always
-be separated and signatories should never see each other seed phrases.
+device by a different signatory. In your M-of-N policy there should be N signatories each with 1 seed phrase.
+**These phrases should always be separated and signatories should never see each other's seed phrases.**
 * A <span class="warning">Master public key for Bitcoin</span>: An alphanumeric
 string to allow Electrum to generate the public keys for the BTC cold HD wallet
 * A <span class="warning">Master public key for Bitcoin Cash</span>: An alphanumeric
@@ -95,6 +95,7 @@ prepare your quarantined workspace.
           * <span class="warning">Bitcoin Cash Master Public Key</span>
           * <span class="warning">Ethereum Address</span>
           * <span class="warning">Ripple Address</span>
+          * <span class="danger">Ripple Private Key</span>
 
            Example output:
            <pre><span class="danger" style="font-size: 11px;">Dice entropy:                         1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 11
@@ -105,7 +106,8 @@ prepare your quarantined workspace.
            Litecoin Master Public Key (Zpub):    Zpub75CcoXN1LVH6qE3MNYAAbd8f6c3pgJC8aT1L8crzZTifZQcjrJcJxRxL1o4UxLMHGg4YvBjDN8hHQaHrKsxsSwwApiX7b7goVDRQrpLLmB9
            BitcoinCash Master Public Key (xpub): xpub6BjfaUaRAzkDfaYWKGNDxewXDUpgkJdPTB7jo4hcDfFG5QwX6JqJEEKg1at6FkwMVsFYPKf3KyKBSiK7i3gXdYaBNc8m2TEHNARwfWasdcX
            Ethereum Address:                     0x6bff50edf67a2eae30e9eef7007b31292405ab2d
-           Ripple Address:                       rHzjZTF4nD1ta2oPz7EYvYKXx26n8ZKFUv</span></pre>
+           Ripple Address:                       rHzjZTF4nD1ta2oPz7EYvYKXx26n8ZKFUv</span>
+           <span class="danger" style="font-size: 11px;">Ripple private key:                   F477BA0925608BCBBF870078E17030DB132CBD7D3286B305A60312B9FB9D9729</span></pre>
         5. Type "COMPUTER ENTROPY" into both computers' Quarantined Scratchpads.
         (This is a descriptive heading to keep your notes organized and minimize
         risk of error.)
@@ -115,48 +117,106 @@ prepare your quarantined workspace.
         into the Quarantined Scratchpad on the other quarantined computer.
 
     3. Verify the integrity of the cold storage data
+
+        **<span style="color: red;">If there are discrepancies in any of the verification steps,
+        please restart the protocol. If discrepancies continue, please DO NOT PROCEED and seek
+        assistance.</span>**
+
         1. **On the Q2 computer** enter the following command:
         ```
         $ node setup.js --check
         ```
         2. The script will prompt you to enter the 62-number dice entropy and
         the Generated computer entropy.
-        3. Verify that the output of the script shown in the terminal window is
-        identical on both computers:
-            1. <span class="danger">BIP39 Mnemonic</span>
-            2. <span class="warning">The Master Public Keys for Bitcoin
-            Litecoin, and BitcoinCash</span>
-            3. <span class="warning">Ethereum and Ripple Addresses</span>
+        3. Verify that the <span class="danger">BIP39 Mnemonic</span> shown in
+        the terminal window is identical on both computers.
 
-            **For the BIP39 Mnemonic, the Master Public Key of Bitcoin, Litecoin
-            BitcoinCash, and the Ethereum and Ripple address, verify every
-            character**.
+            **Make sure you carefuly verify every word**.
 
-            There are attack vectors which could replace just a portion of private
-            keys or a cold storage address, making the private keys easier to brute
-            force, so it's important to check them thoroughly.
-        4. In any one of the quarantined computers open bip39-standalone.html
+            There are attack vectors which could replace just a portion of BIP39
+            seed phrase, making the private keys easier to brute force, so it's
+            important to check them thoroughly.
+        4. **On the Q2 computer** open bip39-standalone.html
            ```
            $ firefox ~/apps/bip39-standalone.html
            ```
-        5. Check the `Show entropy details` checkbox
-        6. Copy the <span class="danger">Final entropy</span> output of the
-        script into the `Entropy` box and verify that the BIP39 seed matches
+            1. Check the `Show entropy details` checkbox
+            2. Copy the <span class="danger">Final entropy</span> output of the
+            script into the `Entropy` box in Firefox and verify that the BIP39 seed
+            matches
 
-           Example output in the `BIP39 Mnemonic` section:
+              Example output in the `BIP39 Mnemonic` section in Firefox:
 
-           <pre><span class="danger">purchase emerge find gloom dismiss special usual moon update draft crunch chunk large degree tray hint repeat gaze potato beach sick tuna engage hand</span></pre>
+              <pre><span class="danger">purchase emerge find gloom dismiss special usual moon update draft crunch chunk large degree tray hint repeat gaze potato beach sick tuna engage hand</span></pre>
 
-           **Verify every word of the BIP39 Mnemonic so it matches the output
-           of the scripts on both computers**.
+              **Verify every word of the BIP39 Mnemonic so it matches the output
+              of the scripts on both computers**.
 
-        7. **If there are any discrepancies, do not proceed.**
-            1. Check whether the dice and the entropy in both Quarantined Scratchpads matches
-            precisely.
-                1. If they are different by 1-3 characters (presumably due to
-                transcription errors), manually tweak them to make them match.
-                It doesn't matter which scratchpad is tweaked.
-                2. If they are different by more than 3 characters, restart the
-                Key Generation Protocol.
-                3. If they are identical, restart the Key Generation Protocol.
-            2. Seek assistance if discrepancies persist.
+            3. In the `Coin` dropdown menu in Firefox, select `ETH - Ethereum` and verify
+            that the <span class="warning">derived Ethereum address</span> for the `m/44'/60'/0'/0/0`
+            Path matches the <span class="warning">Ethereum address</span> output of the script
+            **on the Q1 computer**.
+            4. In the `Coin` dropdown menu in Firefox, select `XRP - Ripple`
+                1. Verify that the <span class="warning">derived Ripple address</span>
+                for the `m/44'/144'/0'/0/0` Path matches the <span class="warning">Ripple address</span>
+                output of the script **on the Q1 computer**.
+                2. Verify that the <span class="danger">derived Ripple Private Key</span>
+                for the `m/44'/144'/0'/0/0` Path matches the <span class="warning">Ripple Private Key</span>
+                output of the script **on the Q1 computer**.
+
+                **For the Ripple private key, verify each character**. Again, there are
+                attack vectors which could replace just a portion of private keys,
+                making the private keys easier to brute force so it's important to
+                check them thoroughly.
+        5. **On the Q2 computer** open Electrum
+           ```
+           ~/apps/electrum-3.3.6-x86_64.AppImage
+           ```
+            1. Leave `default_wallet` and click `Next`.
+            2. Select `Multi-signature wallet` and click `Next`.
+            3. Select your `M-of-N` policy. The top bar, `cosigners` is the `N`
+            and the lower bar, `Required signatures` is the `M`. Click `Next`.
+            4. Select `I already have a seed` and click `Next`.
+            5. Click on `Options`, select `BIP39 seed` and click `OK`.
+            6. Enter your <span class="danger">BIP39 seed phrase</span> and
+            click `Next`.
+            7. Leave `native segwit multisig (p2wsh)` selected and click `Next`.
+            8. Verify that the <span class="warning">Master Public Key</span>
+            is the same as the output of the script **on the Q1 computer**.
+
+              **Again, please make sure you verify each character.**
+        6. **On the Q2 computer** open Electrum-LTC
+           ```
+           ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
+           ```
+            1. Leave `default_wallet` and click `Next`.
+            2. Select `Multi-signature wallet` and click `Next`.
+            3. Select your `M-of-N` policy. The top bar, `cosigners` is the `N`
+            and the lower bar, `Required signatures` is the `M`. Click `Next`.
+            4. Select `I already have a seed` and click `Next`.
+            5. Click on `Options`, select `BIP39 seed` and click `OK`.
+            6. Enter your <span class="danger">BIP39 seed phrase</span> and
+            click `Next`.
+            7. Leave `native segwit multisig (p2wsh)` selected and click `Next`.
+            8. Verify that the <span class="warning">Master Public Key</span>
+            is the same as the output of the script **on the Q1 computer**.
+
+              **Again, please make sure you verify each character.**
+        7. **On the Q2 computer** open Electron-Cash
+           ```
+           ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
+           ```
+            1. Leave `default_wallet` and click `Next`.
+            2. Select `Multi-signature wallet` and click `Next`.
+            3. Select your `M-of-N` policy. The top bar, `cosigners` is the `N`
+            and the lower bar, `Required signatures` is the `M`. Click `Next`.
+            4. Select `I already have a seed` and click `Next`.
+            5. Click on `Options`, select `BIP39 seed` and click `OK`.
+            6. Enter your <span class="danger">BIP39 seed phrase</span> and
+            click `Next`.
+            7. Leave the default `m/44'/145'/0'` derivation pathselected and
+            click `Next`.
+            8. Verify that the <span class="warning">Master Public Key</span>
+            is the same as the output of the script **on the Q1 computer**.
+
+              **Again, please make sure you verify each character.**
