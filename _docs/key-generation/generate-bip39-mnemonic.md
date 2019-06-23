@@ -97,6 +97,7 @@ prepare your quarantined workspace.
           * <span class="warning">Litecoin Master Public Key</span>
           * <span class="warning">Bitcoin Cash Master Public Key</span>
           * <span class="warning">Ethereum Address</span>
+          * <span class="danger">Ethereum Private Key</span>
           * <span class="warning">Ripple Address</span>
           * <span class="danger">Ripple Private Key</span>
 
@@ -108,8 +109,9 @@ prepare your quarantined workspace.
            <span class="warning" style="font-size: 11px;">Bitcoin Master Public Key (Zpub):     Zpub75EpZYVWcoTQ1WChsnabzLUAm91t379iNBPM647HvyuXg2Pn9DtkyVkLWicg4CJzbLKYcSzYV6B1yLTUbjq5LMqkhrzRDW7ebTEaUvxHhUL
            Litecoin Master Public Key (Zpub):    Zpub75CcoXN1LVH6qE3MNYAAbd8f6c3pgJC8aT1L8crzZTifZQcjrJcJxRxL1o4UxLMHGg4YvBjDN8hHQaHrKsxsSwwApiX7b7goVDRQrpLLmB9
            BitcoinCash Master Public Key (xpub): xpub6BjfaUaRAzkDfaYWKGNDxewXDUpgkJdPTB7jo4hcDfFG5QwX6JqJEEKg1at6FkwMVsFYPKf3KyKBSiK7i3gXdYaBNc8m2TEHNARwfWasdcX
-           Ethereum Address:                     0x6bff50edf67a2eae30e9eef7007b31292405ab2d
-           Ripple Address:                       rHzjZTF4nD1ta2oPz7EYvYKXx26n8ZKFUv</span>
+           Ethereum Address:                     0x6bff50edf67a2eae30e9eef7007b31292405ab2d</span>
+           <span class="danger" style="font-size: 11px;">Ethereum Private Key:                 0xB31B0A016562839D6D6D137489924C56566312DD0167B197295DFF89D89C1C48</span>
+           <span class="warning" style="font-size: 11px;">Ripple Address:                       rHzjZTF4nD1ta2oPz7EYvYKXx26n8ZKFUv</span>
            <span class="danger" style="font-size: 11px;">Ripple private key:                   F477BA0925608BCBBF870078E17030DB132CBD7D3286B305A60312B9FB9D9729</span></pre>
         5. Type "COMPUTER ENTROPY" into both computers' Quarantined Scratchpads.
         (This is a descriptive heading to keep your notes organized and minimize
@@ -126,52 +128,76 @@ prepare your quarantined workspace.
         assistance.</span>**
 
         1. **On the Q2 computer** enter the following command:
-        ```
-        $ node setup.js --check
-        ```
-        2. The script will prompt you to enter the 62-number dice entropy and
-        the Generated computer entropy.
-        3. Verify that the <span class="danger">BIP39 Mnemonic</span> shown in
-        the terminal window is identical on both computers.
+           ```
+           $ node setup.js --check
+           ```
+            1. The script will prompt you to enter the <span class="danger">
+            62-number dice entropy</span> and the <span class="danger">Generated
+            computer entropy</span>.
+            2. Verify that the <span class="danger">BIP39 Mnemonic</span> shown in
+            the terminal window is identical on both computers.
 
-            **Make sure you carefuly verify every word**.
+                **Make sure you carefuly verify every word**.
 
-            There are attack vectors which could replace just a portion of BIP39
-            seed phrase, making the private keys easier to brute force, so it's
-            important to check them thoroughly.
-        4. **On the Q2 computer** open bip39-standalone.html
+                There are attack vectors which could replace just a portion of BIP39
+                seed phrase, making the private keys easier to brute force, so it's
+                important to check them thoroughly.
+        2. **On the Q2 computer** enter the following command:
+           ```
+           $ python mnemonic_entropy.py entropy --integrity
+           ```
+            1. The script will prompt you to enter the <span class="danger">
+            62-number dice entropy</span> and the <span class="danger">Generated
+            computer entropy</span>.
+
+                Example output of the python script:
+
+                <pre><span class="danger">Generated Entropy (copy this string into bip39-standalone.html): ae29155ab1b3f5a1fc0c7cee883cd39457d273b9eb5eb6ac16a309bc7dd4d293</span></pre>
+
+            2. Verify that the <span class="danger">Generated Entropy</span> string shown in
+            the terminal window is identical to the <span class="danger">Generated Computer entropy</span>
+            string shown in the node script terminal output of the **Q1 Computer**.
+        3. **On the Q2 computer** open bip39-standalone.html
            ```
            $ firefox ~/apps/bip39-standalone.html
            ```
             1. Check the `Show entropy details` checkbox
-            2. Copy the <span class="danger">Final entropy</span> output of the
-            script into the `Entropy` box in Firefox and verify that the BIP39 seed
-            matches
+            2. Copy the <span class="danger">Generated Entropy</span> output of the
+            pythong script into the `Entropy` box in Firefox and verify that the BIP39 seed
+            matches that of the node script terminal output of the **Q1 Computer**.
 
-              Example output in the `BIP39 Mnemonic` section in Firefox:
+                Example output in the `BIP39 Mnemonic` section in Firefox:
 
-              <pre><span class="danger">purchase emerge find gloom dismiss special usual moon update draft crunch chunk large degree tray hint repeat gaze potato beach sick tuna engage hand</span></pre>
+                <pre><span class="danger">purchase emerge find gloom dismiss special usual moon update draft crunch chunk large degree tray hint repeat gaze potato beach sick tuna engage hand</span></pre>
 
-              **Verify every word of the BIP39 Mnemonic so it matches the output
-              of the scripts on both computers**.
+                **Verify every word of the BIP39 Mnemonic so it matches the output
+                of the scripts on both computers**.
 
-            3. In the `Coin` dropdown menu in Firefox, select `ETH - Ethereum` and verify
-            that the <span class="warning">derived Ethereum address</span> for the `m/44'/60'/0'/0/0`
-            Path matches the <span class="warning">Ethereum address</span> output of the script
-            **on the Q1 computer**.
+            3. In the `Coin` dropdown menu in Firefox, select `ETH - Ethereum`
+                1. Verify that the <span class="warning">derived Ethereum address</span>
+                for the `m/44'/60'/0'/0/0` Path matches the <span class="warning">Ethereum address</span>
+                output of the script **on the Q1 computer**.
+                2. Verify that the <span class="danger">derived Ethereum Private Key</span>
+                for the `m/44'/60'/0'/0/0` Path matches the <span class="danger">Ripple Private Key</span>
+                output of the script **on the Q1 computer**.
+
+                    **For the Ethereum private key, verify each character**. Again, there are
+                    attack vectors which could replace just a portion of private keys,
+                    making the private keys easier to brute force so it's important to
+                    check them thoroughly.
             4. In the `Coin` dropdown menu in Firefox, select `XRP - Ripple`
                 1. Verify that the <span class="warning">derived Ripple address</span>
                 for the `m/44'/144'/0'/0/0` Path matches the <span class="warning">Ripple address</span>
                 output of the script **on the Q1 computer**.
                 2. Verify that the <span class="danger">derived Ripple Private Key</span>
-                for the `m/44'/144'/0'/0/0` Path matches the <span class="warning">Ripple Private Key</span>
+                for the `m/44'/144'/0'/0/0` Path matches the <span class="danger">Ripple Private Key</span>
                 output of the script **on the Q1 computer**.
 
-                **For the Ripple private key, verify each character**. Again, there are
-                attack vectors which could replace just a portion of private keys,
-                making the private keys easier to brute force so it's important to
-                check them thoroughly.
-        5. **On the Q2 computer** open Electrum
+                    **For the Ripple private key, verify each character**. Again, there are
+                    attack vectors which could replace just a portion of private keys,
+                    making the private keys easier to brute force so it's important to
+                    check them thoroughly.
+        4. **On the Q2 computer** open Electrum
            ```
            ~/apps/electrum-3.3.6-x86_64.AppImage
            ```
@@ -187,8 +213,8 @@ prepare your quarantined workspace.
             8. Verify that the <span class="warning">Master Public Key</span>
             is the same as the output of the script **on the Q1 computer**.
 
-              **Again, please make sure you verify each character.**
-        6. **On the Q2 computer** open Electrum-LTC
+                **Again, please make sure you verify each character.**
+        5. **On the Q2 computer** open Electrum-LTC
            ```
            ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
            ```
@@ -204,8 +230,8 @@ prepare your quarantined workspace.
             8. Verify that the <span class="warning">Master Public Key</span>
             is the same as the output of the script **on the Q1 computer**.
 
-              **Again, please make sure you verify each character.**
-        7. **On the Q2 computer** open Electron-Cash
+                **Again, please make sure you verify each character.**
+        6. **On the Q2 computer** open Electron-Cash
            ```
            ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
            ```
@@ -222,7 +248,7 @@ prepare your quarantined workspace.
             8. Verify that the <span class="warning">Master Public Key</span>
             is the same as the output of the script **on the Q1 computer**.
 
-              **Again, please make sure you verify each character.**
+                **Again, please make sure you verify each character.**
         7. **On the Q2 computer** open multisigweb
            ```
            multisigweb
@@ -237,4 +263,4 @@ prepare your quarantined workspace.
             7. Verify that the <span class="warning">Ethereum Address</span>
             is the same as the output of the script **on the Q1 computer**.
 
-              **Again, please make sure you verify each character.**
+                **Again, please make sure you verify each character.**
