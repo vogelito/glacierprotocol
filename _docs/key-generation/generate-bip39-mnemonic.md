@@ -7,20 +7,23 @@ description: Learn how to generate a BIP39 mnemonic to use with CryptoGlacier,
 redirect_from: /docs/key-generation/
 ---
 
-The Key Generation Protocol will securely generate a <span class="danger">24-word seed phrase</span> that will
+The Key Generation Protocol will securely generate a <span class="danger">BIP39 Mnemonic</span> that will
 be used to store all your assets.
 
-We will be using the [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
-standard to create a <span class="danger">24-word mnemonic</span>. We will then derive private keys for each protocol
-using this 24-word mnemonic. Each signatory will only need to secure their 24-word phrase
-in order to be able to access funds 
+Thgrough the [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
+standard we will create 24 words (a mnemonic) which will then be used to derive
+private keys for each protocol. Each signatory will only need to secure their
+24-word phrase in order to be able to access funds .
 
 By the end of this section, each signatory will generate the following information:
 
-* A <span class="danger">BIP39 Seed Phrase</span>: Each seed phrase is a 24-word combination that will later
-be used to unlock your funds across BTC, BCH, LTC, XRP & ETH. Each seed phrase should be created in a different
-device by a different signatory. In your M-of-N policy there should be N signatories each with 1 seed phrase.
-**These phrases should always be separated and signatories should never see each other's seed phrases.**
+* A <span class="danger">BIP39 Mnemonic</span>: Also called a seed phrase, this
+is a 24-word combination that will later be used to unlock your funds across BTC,
+BCH, LTC, XRP & ETH. Each seed phrase should be created in a different device by
+a different signatory. In your M-of-N policy there should be N signatories each
+with 1 seed phrase.
+**These phrases should always be separated and signatories should never see each
+other's seed phrases.**
 * A <span class="warning">Master public key for Bitcoin</span>: An alphanumeric
 string to allow Electrum to generate the public keys for the BTC cold HD wallet
 * A <span class="warning">Master public key for Bitcoin Cash</span>: An alphanumeric
@@ -217,6 +220,21 @@ prepare your quarantined workspace.
             7. Leave the default `m/44'/145'/0'` derivation pathselected and
             click `Next`.
             8. Verify that the <span class="warning">Master Public Key</span>
+            is the same as the output of the script **on the Q1 computer**.
+
+              **Again, please make sure you verify each character.**
+        7. **On the Q2 computer** open multisigweb
+           ```
+           multisigweb
+           ```
+            1. Go to the `Accounts` tab and click `Import`
+            2. Click `Browse...` and go to Home -> cryptoglacier
+            3. Select the `ethereum.json` file
+            4. In the password field end `cryptoglacier`
+            5. In the account name field enter anything you'd like, such as
+            `coolest signatory`
+            6. Click `Import Account`
+            7. Verify that the <span class="warning">Ethereum Address</span>
             is the same as the output of the script **on the Q1 computer**.
 
               **Again, please make sure you verify each character.**

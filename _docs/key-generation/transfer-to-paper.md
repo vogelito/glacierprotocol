@@ -11,37 +11,31 @@ from the quarantined computing environments onto physical paper. This will be
 done using a combination hand transcription and
 [QR codes](https://en.wikipedia.org/wiki/QR_code).
 
-1. Transfer the <span class="danger">private keys</span> to paper.
-    1. Write each <span class="danger">private key</span> on a **separate** piece
+Each signatory will need to do the following:
+
+1. Transfer the <span class="danger">BIP39 Mnemonic</span> to paper.
+    1. Write the <span class="danger">24-word BIP39 Mnemonic</span> on piece
     of TerraSlate paper (**one** key per page).
         1. Do **not** write anything else on the paper unless specifically
-        instructed (such as "Bitcoin", "Glacier", "private key", etc.) In the
+        instructed (such as "Bitcoin", "CryptoGlacier", "private key", etc.) In the
         event the key is seen by someone untrustworthy or stolen by a random
         thief, such clues help them understand the significance of the key and
         give them an incentive to plot further thefts or attacks.
         2. Transcribe **by hand**. Do not use QR codes or any other method to transfer.
-        3. Private keys **are** case-sensitive.
+        3. Seed phrases **are not** case-sensitive.
         4. **Write clearly**.
-            1. Use care when transcribing "o" (lower-case "o"). Note that
-            private keys do **not** contain "O" (upper-case "o") or "0" (number zero).
-            2. Use care when transcribing "1" (number one). Note that private
-            keys do **not** contain "I" (uper case "i") or "l" (lower-case "L")
-            3. Use care to distinguish between "t" and "+" (private keys do
-            not contain plus signs)
-            4. Use care to distinguish between "2" and "Z"
-            5. Use care to distinguish between "5" and "S"
-            6. Use care to distinguish between "6" and "b"
-            7. Use care to distinguish between "6" and "G"
-            8. Use care to distinguish between "K" and "k"
-            9. Use care to distinguish between "5" and "S"
-            10. Use care to distinguish between "u" and "v"
-            11. Use care to distinguish between "U" and "v"
-    2. **Double-check that you transcribed all
-    <span class="danger">private keys</span> correctly.** If you make a mistake,
+            1. Use care to distinguish between "l" (lower-case "L") and "I"
+            (upper case "i")
+            2. Use care to distinguish between "u" and "v"
+            3. Use care to distinguish between "U" and "v"
+    2. **Double-check that you transcribed all 24 words in the
+    <span class="danger">BIP39 Mnemonic</span> correctly.** If you make a mistake,
     you'll have to redo a lot of work.
-    3. Label each page with:
+    3. Manually count that you have transcribed 24 words.
+    5. Label each page with:
         1. Today's date
-        2. The version of Glacier used (listed on the front page of this document)
+        2. The **version** of CryptoGlacier used (listed on the front page of this document)
+        Do not write "CryptoGlacier", simply the version of CryptoGlacier used (e.g. `0.94.1`)
 2. Visually hide all critically sensitive data.
 
     We'll be using a smartphone with a live Internet connection to read QR
@@ -51,7 +45,7 @@ done using a combination hand transcription and
     **<span style="color: red;">This step is important. Failing to execute it properly creates a substantial
     security risk.</span>**
 
-    1. Put your <span class="danger">handwritten private keys</span> out of
+    1. Put your <span class="danger">handwritten BIP39 Mnemonic</span> out of
     sight (don't just turn them face down; paper is not completely opaque).
     This prevents a smartphone camera from accidentally seeing them.
     2. Delete all text from the Quarantined Scratchpad on the **Q1 and Q2**
