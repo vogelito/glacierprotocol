@@ -15,7 +15,7 @@ Each signatory will need to do the following:
 
 1. Transfer the <span class="danger">BIP39 Mnemonic</span> to paper.
     1. Write the <span class="danger">24-word BIP39 Mnemonic</span> on piece
-    of TerraSlate paper (**one** key per page).
+    of TerraSlate paper.
         1. Do **not** write anything else on the paper unless specifically
         instructed (such as "Bitcoin", "CryptoGlacier", "private key", etc.) In the
         event the key is seen by someone untrustworthy or stolen by a random
@@ -32,7 +32,7 @@ Each signatory will need to do the following:
     <span class="danger">BIP39 Mnemonic</span> correctly.** If you make a mistake,
     you'll have to redo a lot of work.
     3. Manually count that you have transcribed 24 words.
-    5. Label each page with:
+    4. Label each page with:
         1. Today's date
         2. The **version** of CryptoGlacier used (listed on the front page of this document)
         Do not write "CryptoGlacier", simply the version of CryptoGlacier used (e.g. `0.94.1`)
@@ -50,22 +50,26 @@ Each signatory will need to do the following:
     This prevents a smartphone camera from accidentally seeing them.
     2. Delete all text from the Quarantined Scratchpad on the **Q1 and Q2**
     computers.
-    3. **On the Q1 computer:**
-        1. Type "COLD STORAGE ADDRESS" into the Quarantined Scratchpad.
-        2. Copy-paste the <span class="warning">cold storage address</span>
-        from the terminal window to the Quarantined Scratchpad.
-        3. Type "REDEMPTION SCRIPT" into the Quarantined Scratchpad.
-        4. Copy-paste the <danger class="warning">redemption script</danger>
-        from the terminal window to the Quarantined Scratchpad.
-        5. Enable line wrapping so the entire <span class="warning">redemption
-        script</span> can be seen.
+    3. **On the Q1 computer Quarantined Scratchpad:**
+        1. Copy-paste the following items from the node script's terminal
+        window output:
+        * <span class="warning">Bitcoin Master Public Key</span>
+        * <span class="warning">Litecoin Master Public Key</span>
+        * <span class="warning">Bitcoin Cash Master Public Key</span>
+        * <span class="warning">Ethereum Address</span>
+        * <span class="warning">Ripple Address</span>
+        2. Double check that only the items above are included in the
+        Scratchpad.
+        3. No really, triple check that.
+        4. Enable line wrapping so the entire contents can be seen.
             1. With the Quarantined Scratchpad window active, go to the menu
             bar at the top of the screen.
             2. Select Edit.
             3. Select Preferences.
             4. Select the View tab.
             5. Uncheck "Do not split words over two lines".
-    4. Clear the terminal windows on the **Q1 and Q2** computers.
+    4. **On the Q2 computer** close firefox.
+    5. Clear the terminal windows on the **Q1 and Q2** computers.
        ```
        $ clear
        ```
@@ -78,35 +82,38 @@ Each signatory will need to do the following:
     [iOS](https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8),
     [Android](https://play.google.com/store/apps/details?id=com.application_4u.qrcode.barcode.scanner.reader.flashlight&hl=en).
 
-4. Transfer the <span class="warning">cold storage address</span> to a
+4. Transfer the <span class="warning">Bitcoin Master Public Key</span> to a
 non-quarantined computer.
     1. **On the Q1 computer**, display the
-    <span class="warning">cold storage address</span> as a
+    <span class="warning">Bitcoin Master Public Key</span> as a
     <span class="warning">QR code</span> on the screen:
-        1. In File Manager, navigate to the "Home" folder, then the "glacier"
-        folder, and double-click "address.png".
+        1. In File Manager, navigate to the "Home" folder, then the "cryptoglacier"
+        folder, and double-click "bitcoin_master_public_key.png".
     2. Use the smartphone's QR code reader to read the <span class="warning">QR
     code</span>. When the <span class="warning">QR code</span> is
     successfully read, the smartphone should display the text
-    <span class="warning">cold storage address</span>.
-    3. Verify the <span class="warning">cold storage</span> address on the
-    smartphone matches the <span class="warning">cold storage address</span> in the Quarantined Scratchpad.
+    <span class="warning">Bitcoin Master Public Key</span>.
+    3. Verify the <span class="warning">Bitcoin Master Public Key</span> address on the
+    smartphone matches the <span class="warning">Bitcoin Master Public Key</span> in the Quarantined Scratchpad.
 
         **If it does not match, do not proceed**. Try using a different QR reader application or restarting the Deposit Protocol. Seek
         assistance if discrepancies persist.
 
     4. Use the smartphone to send the
-    <span class="warning">cold storage address</span> to yourself using a
+    <span class="warning">Bitcoin Master Public Key</span> to yourself using a
+    messaging app which you'll be able to access from a laptop.
+    (E-mail is not recommended for security reasons.)
+    5. Take a picture of the QR Code
+    6. Use the smartphone to send the
+    <span class="warning">QR Code</span> to yourself using a
     messaging app which you'll be able to access from a laptop.
     (E-mail is not recommended for security reasons.)
 
-5. Repeat the previous step for the
-<span class="warning">redemption script</span>, stored in "redemption.png."
-
-    When comparing the <span class="warning">redemption script</span> shown on the smartphone to the
-    <span class="warning">redemption script</span> in the Quarantined Scratchpad, it's sufficient to check
-    the first 8 characters, the last 8 characters, and a handful of characters
-    somewhere in the middle.
+5. Repeat the previous step for the following:
+* <span class="warning">Litecoin Master Public Key</span>, stored in "litecoin_master_public_key.png"
+* <span class="warning">Bitcoin Cash Master Public Key</span>, stored in "bitcoin_cash_master_public_key.png"
+* <span class="warning">Ethereum Address</span>, stored in "ethereum_address.png"
+* <span class="warning">Ripple Address</span>, stored in "ripple_address.png"
 
 6. Power down the smartphone and return it to the Faraday bag.
 7. Shut down **both** quarantined computers entirely. As a precaution against
@@ -117,39 +124,51 @@ when they absolutely need to be.
     ```
     The recommended Acer laptop may require you to hold down the power button for
     several seconds to complete the shutdown.
-8. Create <span class="warning">Cold Storage Information Pages</span>.
+8. Create your <span class="warning">Signatory Information Packet</span>.
 
-   **Using any Internet-connected computer:**
-    1. Access the copies of the <span class="warning">cold storage address</span>
-    and <span class="warning">redemption script</span> you sent yourself from
-    your smartphone previously.
-    2. Open an empty document in any text editing application. This will be used
-    to create the <span class="warning">Cold Storage Information Page</span>.
+   **Using your setup (Internet-connected) computer:**
+    1. Access the material you sent yourself from your smartphone previously.
+    In total you should have 10 pieces of information:
+    * <span class="warning">Bitcoin Master Public Key</span>
+    * <span class="warning">Bitcoin Master Public Key QR Code</span>
+    * <span class="warning">Litecoin Master Public Key</span>
+    * <span class="warning">Litecoin Master Public Key QR Code</span>
+    * <span class="warning">Bitcoin Cash Master Public Key</span>
+    * <span class="warning">Bitcoin Cash Master Public Key QR Code</span>
+    * <span class="warning">Ethereum Address</span>
+    * <span class="warning">Ethereum Address QR Code</span>
+    * <span class="warning">Ripple Address</span>
+    * <span class="warning">Ripple Address QR Code</span>
+    2. Open an empty document in any word processing application (Word, Pages, etc...) This will be used
+    to create the <span class="warning">Signatory Information Packet</span>.
     3. Put the following information into the document:
-        1. Copy-paste the <span class="warning">cold storage address</span>
-        2. Copy-paste the <span class="warning">redemption script</span>
-        3. Type today's date
-        4. Type the version of Glacier used (listed on the first page of this document)
+        1. Paste each QR-code followed by its clear-text version
+        2. On the header:
+        * Type today's date
+        * Type the version of CryptoGlacier used (listed on the first page of this document)
     4. Do **not** put anything else in the document (such as "Bitcoin",
-        "Glacier", "private key", etc.)
-    5. Save an electronic copy of the <span class="warning">Cold Storage
-        Information Page</span> in a "conventionally secure" location of your choosing,
+        "CryptoGlacier", "private key", etc.)
+    5. Save an electronic copy of the <span class="warning">Signatory
+        Information Packet</span> in a "conventionally secure" location of your choosing,
         such as a "Secure Note" in [1Password](https://1password.com/) or a comparable password
-        manager. Because the Cold Storage Information Page contains
+        manager. Because the <span class="warning">Signatory Information Page</span> contains
         moderately-sensitive data, there are some privacy considerations with keeping and
-        electronic copy of it. See the Sensitive Data subsection for details.
-    6. Print *N* copies of the
-        <span class="warning">Cold Storage Information Page</span>.
-    7. Shut down the computer. (It has a camera, and you will be working with
+        electronic copy of it. See the Sensitive Data subsection for details. You may also
+        choose to gpg-encrypt it.
+    6. Print a copy of the
+        <span class="warning">Signatory Information Packet</span>.
+    7. GPG encrypt your document using the other signatory's private keys
+        and send the document to all of them electronically. (TODO: expand this)
+    8. Shut down the computer. (It has a camera, and you will be working with
         critically sensitive data in a moment.)
-9. Prepare <span class="danger">Cold Storage Information Packets</span>
-    1. Put each <span class="danger">handwritten private key page</span> along
-    with one Cold <span class="warning">Storage Information Page</span> in its own
+9. Prepare the *temporary* version of your <span class="danger">Cold Storage Information Packet</span>:
+    1. Put the <span class="danger">handwritten BIP39 Mnemonic page</span> along
+    with one <span class="warning">Signatory Information Packet</span> in its own
     opaque envelope. While this obviously won't deter a determined
     thief, it makes it quite difficult for a thief to steal a key without leaving
     evidence they have done so -- and noticing theft of a single key gives you a
     chance to move your funds away before the thief can steal a second key.
-    2. Each pair of pages will be referred to as a
+    2. Each set of pages will be referred to as a
     <span class="danger">Cold Storage Information Packet</span>.
-    3. Put your <span class="danger">Cold Storage Information Packets</span>
+    3. Put your <span class="danger">Cold Storage Information Packet</span>
     somewhere out of sight for the moment.
