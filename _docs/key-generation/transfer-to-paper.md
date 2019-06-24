@@ -148,17 +148,22 @@ when they absolutely need to be.
         * Type the version of CryptoGlacier used (listed on the first page of this document)
     4. Do **not** put anything else in the document (such as "Bitcoin",
         "CryptoGlacier", "private key", etc.)
-    5. Save an electronic copy of the <span class="warning">Signatory
-        Information Packet</span> in a "conventionally secure" location of your choosing,
-        such as a "Secure Note" in [1Password](https://1password.com/) or a comparable password
-        manager. Because the <span class="warning">Signatory Information Page</span> contains
-        moderately-sensitive data, there are some privacy considerations with keeping and
-        electronic copy of it. See the Sensitive Data subsection for details. You may also
-        choose to gpg-encrypt it.
-    6. Print a copy of the
+    5. Print a copy of the
         <span class="warning">Signatory Information Packet</span>.
-    7. GPG encrypt your document using the other signatory's private keys
-        and send the document to all of them electronically. (TODO: expand this)
+    6. Share the contents of the <span class="warning">Signatory Information Packet</span>:
+        1. Save the document as a <span class="warning">PDF</span>.
+        2. GPG encrypt the <span class="warning">PDF file</span> using your keys
+        and the keys of every other signatory (TODO: expand this).
+        3. Electronically send the gpg-encrypted file to the other signatories
+        4. You can also save an electronic copy of the <span class="warning">PDF</span>
+        in a "conventionally secure" location of your choosing. Most password
+        managers include a way to securely store files. Because the
+        <span class="warning">Signatory Information Packet</span> contains
+        moderately-sensitive data, there are some privacy considerations with
+        keeping an electronic copy of it. See the Sensitive Data subsection for
+        details.
+        5. Delete the unencrypted <span class="warning">PDF</span> from your
+        computer
     8. Shut down the computer. (It has a camera, and you will be working with
         critically sensitive data in a moment.)
 9. Prepare the *temporary* version of your <span class="danger">Cold Storage Information Packet</span>:
@@ -189,3 +194,9 @@ when they absolutely need to be.
     2. Close the quarantined laptops, and seal the screen shut with a
     tamper-resistant seal.
     3. Store the hardware somewhere where it is unlikely to be used by accident.
+12. Timing
+    It is crucial that only a small amount of time goes by (e.g. a few days)
+    between the execution of the Key Generation Protocol and the Multisig
+    Account Creation Protocol. Each of the signatory's
+    <span class="danger">Cold Storage Information Packet</span> will go into
+    long-term storage after the Multisig Account Creation Protocol is executed.
