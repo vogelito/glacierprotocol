@@ -194,10 +194,8 @@ when they absolutely need to be.
     2. Close the quarantined laptops, and seal the screen shut with a
     tamper-resistant seal.
     3. Store the hardware somewhere where it is unlikely to be used by accident.
-12. Timing
-
-        It is crucial that only a small amount of time goes by (e.g. a few days)
-        between the execution of the Key Generation Protocol and the Multisig
-        Account Creation Protocol. Each of the signatory's
-        <span class="danger">Cold Storage Information Packet</span> will go into
-        long-term storage after the Multisig Account Creation Protocol is executed.
+12. It's crucial that only a small amount of time goes by (e.g. a few days)
+    between the execution of the Key Generation Protocol and the Multisig
+    Account Creation Protocol. Each of the signatory's
+    <span class="danger">Cold Storage Information Packet</span> will go into
+    long-term storage after the Multisig Account Creation Protocol is executed.
