@@ -21,6 +21,12 @@
   docs:
   - key-generation/generate-bip39-mnemonic
   - key-generation/transfer-to-paper
+- title: Multisig Account Creation
+  docs:
+  - multisig-account-creation/overview
+  - multisig-account-creation/bitcoin-litecoin-bitcoin-cash
+  - multisig-account-creation/ethereum
+  - multisig-account-creation/xrp
 - title: Deposit
   docs:
   - deposit/test-deposit-withdrawal

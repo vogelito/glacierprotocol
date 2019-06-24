@@ -10,8 +10,9 @@ The overall CryptoGlacier protocol consists of several distinct subprotocols:
 
 * **Setup**: Prepares hardware,
 and downloads and verifies needed software & documentation.
-* **Key Generation**: Private keys are generated and multisig wallets and
-accounts are setup.
+* **Key Generation**: Private keys are generated..
+* **Multisig Account Creation**: Multisig wallets, contracts, and accounts
+are setup.
 * **Deposit**: For securely storing crypto.
 * **Withdrawal**: For transferring some or all of your stored funds to another
 crypto address.
