@@ -7,7 +7,7 @@ description: Learn how to create your multisig accounts using CryptoGlacier,
 redirect_from: /docs/multisig-account-creation/
 ---
 
-Before proceeding, every signatory (N of them) must have sent you their
+Before proceeding, every other signatory (N-1 of them) must have sent you their
 gpg-encrypted <span class="warning">Signatory Information Packets</span>.
 
 In the next few sections we will create Multisig wallets for Bitcoin,
