@@ -168,7 +168,24 @@ when they absolutely need to be.
     thief, it makes it quite difficult for a thief to steal a key without leaving
     evidence they have done so -- and noticing theft of a single key gives you a
     chance to move your funds away before the thief can steal a second key.
-    2. Each set of pages will be referred to as a
+    2. Your <span class="danger">Cold Storage Information Packet</span> is incomplete
+    because you still need to go through the Multisig Account Creation Protocol
+    3. Once complete, each set of pages will be referred to as a
     <span class="danger">Cold Storage Information Packet</span>.
-    3. Put your <span class="danger">Cold Storage Information Packet</span>
-    somewhere out of sight for the moment.
+10. Immediate storage of <span class="danger">Cold Storage Information Packet</span>:
+    1. While the other signatories finish the Key Generation Protocol, we need
+    to temporarily store the <span class="danger">Cold Storage Information Packet</span>
+    2. Double-check to make sure the envelope contains a <span class="danger">handwritten BIP39 Mnemonic page</span>
+    and your <span class="warning">Signatory Information Packet</span>.
+    3. Seal the envelope
+    4. Use tamper-resistant seals in addition to the envelope's normal
+    adhesive to seal it.
+    5. **Immediately** put the <span class="danger">Cold Storage Information Packet</span>
+    in the safest possible location in your home or office that is immediately accessible.
+    6. No, really. Like right now. That's basically one of the kys to a huge pile of
+    cash you have just sitting there in envelopes on your desk.
+11. Hardware storage
+    1. Put tamper-resistant seals on the ends of all USB drives.
+    2. Close the quarantined laptops, and seal the screen shut with a
+    tamper-resistant seal.
+    3. Store the hardware somewhere where it is unlikely to be used by accident.

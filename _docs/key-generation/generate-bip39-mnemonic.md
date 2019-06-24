@@ -26,10 +26,10 @@ with 1 seed phrase.
 other's seed phrases.**
 * A <span class="warning">Master public key for Bitcoin</span>: An alphanumeric
 string to allow Electrum to generate the public keys for the BTC cold HD wallet
-* A <span class="warning">Master public key for Bitcoin Cash</span>: An alphanumeric
-string to allow Electron-Cash to generate the public keys for the BCH cold HD wallet
 * A <span class="warning">Master public key for Litecoin</span>: An alphanumeric
 string to allow Electrum-LTC to generate the public keys for the LTC cold HD wallet
+* A <span class="warning">Master public key for Bitcoin Cash</span>: An alphanumeric
+string to allow Electron-Cash to generate the public keys for the BCH cold HD wallet
 * An <span class="warning">XRP address</span>: Address to give ownership of an
 XRP multisign account
 * An <span class="warning">ETH address</span>: Address to give ownership of an
