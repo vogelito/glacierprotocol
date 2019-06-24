@@ -97,19 +97,28 @@ The end result of the CryptoGlacier protocol is a set of paper information
 packets for each private key needed for the chosen multisignature withdrawal
 policy. Packets will be created by each signatory independently.
 
-There will be a **private and never to be shared** package containing:
+Each signatory will have a **private and never to be shared** package containing:
 
-* A *24-word seed mnemonic* based on BIP39 -- these 24 words will be used to
+* A **24-word seed mnemonic** based on BIP39 -- these 24 words will be used to
 derive the private keys that will ultimately secure your funds.
+* The **Master Public Keys for Bitcoin, Litecoin, and Bitcoin Cash from all
+signatories** - each key is an alphanumeric string used in the multisignature
+protocol.
+* The **Ethereum Multisig Smart Contract Address** -- a hex string designating
+the Ethereum contract deployed using the Gnosis MultiSignatureWallet.
+* The **XRP Multisign Account** -- an alphanumeric string designating the
+Multi-Signing XRP account.
 
-There will be a **public** package that will need to be shared with the other
+There will also be a package that will need to be shared with the other
 signatories containing:
-* **Three Master Public Keys** -- an alphanumeric string for Bitcoin, Bitcoin
-Cash, and Litecoin used in the multisignature protocol.
+* **Three Master Public Keys** -- an alphanumeric string for Bitcoin, Litecoin,
+and Bitcoin Cash used in the multisignature protocol.
 * The **Ethereum account address** -- a hex string designating the Ethereum
-account to be used in the Gnosis MultiSignatureWallet.
-* The **Ripple address** -- an alphanumeric string designating the Ripple
-account to be used when setting up the Ripple Multi-Signing account.
+account to be used as a signatory when setting up the Gnosis
+MultiSignatureWallet.
+* The **Ripple address** -- an alphanumeric string designating the XRP
+account to be used as a signatory when setting up the Ripple Multi-Signing
+account.
 
 Technical details: The CryptoGlacier protocol reuses Ethereum and Ripple
 addresses but uses HD wallets for Bitcoin, Bitcoin Cash, and Litecoin.
@@ -117,8 +126,8 @@ addresses but uses HD wallets for Bitcoin, Bitcoin Cash, and Litecoin.
 ## Protocol Cost
 
 The CryptoGlacier protocol requires over $600 in equipment per key, and
-approximately 12 hours of work to perform an initial cold storage deposit. This
-excludes time for:
+approximately 12 hours of work divided in two different sessions to perform an
+initial cold storage deposit. This excludes time for:
 
 * Obtaining equipment
 * Printing documents

@@ -6,4 +6,9 @@ description: Learn how to create your bitcoin, litecoin, and bitcoin-cash
   storage of crypto assets based on the popular Glacier Protocol
 ---
 
-This is a placeholder for Bitcoin, Litecoin, and Bitcoin Cash
+In this section you'll learn how to setup the Multisig Wallets for Bitcoin,
+Litecoin, and Bitcoin Cash. We will be using very similar software.
+
+Before proceeding, you will need to have N <span class="warning">Signatory Information Packets</span>.
+
+1. Create a new folder in your desktop
