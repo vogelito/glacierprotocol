@@ -99,6 +99,7 @@ already. (See the instructions in Section III for details.)
            ```
            CryptoGlacier.pdf: OK
            README.md: OK
+           mnemonic_entropy.py: OK
            package.json: OK
            setup.js: OK
            ```
@@ -332,6 +333,7 @@ contents should look like this
     ```
     CryptoGlacier.pdf: OK
     README.md: OK
+    mnemonic_entropy.py: OK
     package.json: OK
     setup.js: OK
     ```
