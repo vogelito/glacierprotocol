@@ -172,6 +172,7 @@ https://en.wikipedia.org/wiki/Digital_signature.
             README.md: OK
             mnemonic_entropy.py: OK
             package.json: OK
+            package-lock.json: OK
             setup.js: OK
             ```
 

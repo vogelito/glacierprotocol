@@ -101,6 +101,7 @@ already. (See the instructions in Section III for details.)
            README.md: OK
            mnemonic_entropy.py: OK
            package.json: OK
+           package-lock.json: OK
            setup.js: OK
            ```
 5. Open the CryptoGlacier protocol document so that it is available for copy-pasting terminal commands.
@@ -335,6 +336,7 @@ contents should look like this
     README.md: OK
     mnemonic_entropy.py: OK
     package.json: OK
+    package-lock.json: OK
     setup.js: OK
     ```
 9. Eject and physically remove the Q1 APP USB from the SETUP 1 computer.
