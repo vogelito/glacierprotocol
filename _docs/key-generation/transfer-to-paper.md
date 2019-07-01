@@ -14,7 +14,7 @@ done using a combination hand transcription and
 Each signatory will need to do the following:
 
 1. Transfer the <span class="danger">BIP39 Mnemonic</span> to paper.
-    1. Write the <span class="danger">24-word BIP39 Mnemonic</span> on piece
+    1. Write the <span class="danger">24-word BIP39 Mnemonic</span> on a piece
     of TerraSlate paper.
         1. Do **not** write anything else on the paper unless specifically
         instructed (such as "Bitcoin", "CryptoGlacier", "private key", etc.) In the
@@ -101,19 +101,23 @@ non-quarantined computer.
 
     4. Use the smartphone to send the
     <span class="warning">Bitcoin Master Public Key</span> to yourself using a
-    messaging app which you'll be able to access from a laptop.
+    messaging app which you'll be able to access from a laptop with **message "B"**.
     (E-mail is not recommended for security reasons.)
     5. Take a picture of the QR Code
     6. Use the smartphone to send the
-    <span class="warning">QR Code</span> to yourself using a
-    messaging app which you'll be able to access from a laptop.
+    <span class="warning">QR Code</span> picture to yourself using a
+    messaging app which you'll be able to access from a laptop with **message "B"**.
     (E-mail is not recommended for security reasons.)
 
 5. Repeat the previous step for the following:
-* <span class="warning">Litecoin Master Public Key</span>, stored in "litecoin_master_public_key.png"
-* <span class="warning">Bitcoin Cash Master Public Key</span>, stored in "bitcoin_cash_master_public_key.png"
-* <span class="warning">Ethereum Address</span>, stored in "ethereum_address.png"
-* <span class="warning">Ripple Address</span>, stored in "ripple_address.png"
+* <span class="warning">Litecoin Master Public Key</span>, stored in
+"litecoin_master_public_key.png", with **message "L"**.
+* <span class="warning">Bitcoin Cash Master Public Key</span>, stored in
+"bitcoin_cash_master_public_key.png", with **message "BC"**.
+* <span class="warning">Ethereum Address</span>, stored in
+"ethereum_address.png", with **message "E"**.
+* <span class="warning">Ripple Address</span>, stored in "ripple_address.png",
+with **message "X"**
 
 6. Power down the smartphone and return it to the Faraday bag.
 7. Shut down **both** quarantined computers entirely. As a precaution against
@@ -129,23 +133,25 @@ when they absolutely need to be.
    **Using your setup (Internet-connected) computer:**
     1. Access the material you sent yourself from your smartphone previously.
     In total you should have 10 pieces of information:
-    * <span class="warning">Bitcoin Master Public Key</span>
-    * <span class="warning">Bitcoin Master Public Key QR Code</span>
-    * <span class="warning">Litecoin Master Public Key</span>
-    * <span class="warning">Litecoin Master Public Key QR Code</span>
-    * <span class="warning">Bitcoin Cash Master Public Key</span>
-    * <span class="warning">Bitcoin Cash Master Public Key QR Code</span>
-    * <span class="warning">Ethereum Address</span>
-    * <span class="warning">Ethereum Address QR Code</span>
-    * <span class="warning">Ripple Address</span>
-    * <span class="warning">Ripple Address QR Code</span>
+    * <span class="warning">Bitcoin Master Public Key</span> (message "B")
+    * <span class="warning">Bitcoin Master Public Key QR Code</span> (message "B")
+    * <span class="warning">Litecoin Master Public Key</span> (message "L")
+    * <span class="warning">Litecoin Master Public Key QR Code</span> (message "L")
+    * <span class="warning">Bitcoin Cash Master Public Key</span> (message "BC")
+    * <span class="warning">Bitcoin Cash Master Public Key QR Code</span> (message "BC")
+    * <span class="warning">Ethereum Address</span> (message "E")
+    * <span class="warning">Ethereum Address QR Code</span> (message "E")
+    * <span class="warning">Ripple Address</span> (message "X")
+    * <span class="warning">Ripple Address QR Code</span> (message "X")
     2. Open an empty document in any word processing application (Word, Pages, etc...) This will be used
     to create the <span class="warning">Signatory Information Packet</span>.
     3. Put the following information into the document:
-        1. Paste each QR-code followed by its clear-text version
+        1. Paste each message code followed by its corresponding QR-code and
+        clear-text version
         2. On the header:
         * Type today's date
         * Type the version of CryptoGlacier used (listed on the first page of this document)
+        * Write down the chosen N-of-M configuration
     4. Do **not** put anything else in the document (such as "Bitcoin",
         "CryptoGlacier", "private key", etc.)
     5. Print a copy of the
