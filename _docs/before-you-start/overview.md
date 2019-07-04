@@ -46,7 +46,7 @@ your sensitive data (e.g. private keys), but in subverting the process of
 generating your sensitive data so it can be more easily guessed by a third
 party. We call this "flawed data."
 
-For example, a variant of the Trojan.Bitclip attack which replaces keys
+For example, a variant of the [Trojan.Coinbitclip](https://www.symantec.com/security-center/writeup/2016-020216-4204-99) attack which replaces keys
 displayed on your screen (or keys stored in your clipboard) with insecure keys.
 
 Because we are generating our data in
@@ -171,10 +171,10 @@ thereby improving privacy over the original Glacier protocol.
 If privacy is very important to you, you might consider using
 a service like
 [Shapeshift](https://shapeshift.io/#/coins)
-to exchange your Bitcoins for an more anonymous cryptocurrency, such as
+to exchange your Bitcoins for a more anonymous cryptocurrency, such as
 [Monero](http://monero.org/),
 and then exchange them back to Bitcoins.
-However, this will cost you fees, and importantly, it requires you trust the
+However, this will cost you fees, and more importantly, it requires you trust the
 operator of the exchange service not to steal or lose your
 funds.
 

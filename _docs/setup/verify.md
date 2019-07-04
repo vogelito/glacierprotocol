@@ -26,12 +26,12 @@ Each signatory will need to do the following:
 permission to install new software on. We'll refer to this computer as the
 "SETUP 1" computer.
 2. Review the errata for the version of Glacier you are using at
-https://github.com/vogelito/CryptoGlacierProtocol/releases.
+[https://github.com/vogelito/CryptoGlacierProtocol/releases](https://github.com/vogelito/CryptoGlacierProtocol/releases).
 3. Download the latest full release of CryptoGlacier (*not* just the protocol document)
-at https://github.com/vogelito/CryptoGlacierProtocol/releases.
+at [https://github.com/vogelito/CryptoGlacierProtocol/releases](https://github.com/vogelito/CryptoGlacierProtocol/releases).
 4. If your browser does not automatically extract the ZIP file contents into a
 folder within your downloads directory, do so.
-5. Rename the folder to "cryptoglacier."
+5. Rename the folder to "cryptoglacier".
 6. If you have used CryptoGlacier before, *and* you know you have the CryptoGlacier public key
 imported into a local GPG keyring, skip the next step. (If you don't know,
 that's fine; proceed as normal.)

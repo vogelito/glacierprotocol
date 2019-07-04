@@ -24,7 +24,9 @@ case.
 The protocol makes use of [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 and [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki).
 This will allow us to deterministically derive keys across blockchains from
-a 24-word mnemonic.
+a 24-word phrase. This 24-word phrase is more commonly known as a mnemonic phrase,
+mnemonic recovery phrase or mnemonic seed. It s a list of words which store all the
+information needed to recover your private keys across protocols.
 
 ## Offline Key Storage ("Cold Storage")
 

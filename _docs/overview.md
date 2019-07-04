@@ -107,11 +107,11 @@ and those degrees come at a cost (in time, money, convenience, etc.) So the
 first question is: How much security are you willing to invest in?
 In the last few years we've seen a rise of 3rd party institutional custody
 solutions for crypto assets. Most allow for multiple signatories, estate planning,
-etc... The pros and cons of the various 3rd party services are beyond the scope of
+etc. The pros and cons of the various 3rd party services are beyond the scope of
 this document. Some options are
 [BitGo](https://bitgo.com/),
 [Coinbase Custody](https://custody.coinbase.com/),
-[Ledger Vault](https://www.ledger.com/vault/),
+[Ledger Vault](https://www.ledger.com/vault/), and
 [Vo1t](https://vo1t.io/).
 
 However, all 3rd party storage services still come with some notable risks
@@ -153,7 +153,7 @@ These risks are not theoretical. Many online services have lost customers' funds
 [Bitfinex](http://www.bbc.com/news/technology-37009319),
 and many more.
 
-Many people do use online or hybrid solutions to store sizeable amounts of
+Many people use online or hybrid solutions to store sizeable amounts of
 money. We recommend self-managed storage for large holdings, but ultimately
 it's a personal decision based on your risk tolerance and costs you're willing
 to pay (in money and time) for security.
@@ -182,7 +182,7 @@ it's possible that an undiscovered vulnerability could be exploited by
 malware to steal private keys from the device.
 
 For details on this and other security considerations, see the
-"No Hardware Wallets" section of the [design document](../design-doc/overview)
+"No Hardware Wallets" section of the [design document](../design-doc/overview).
 As with online multisig vaults, many people do use hardware wallets to store sizeable
 amounts of money. We personally recommend CryptoGlacier for large holdings, but
 ultimately it's a personal decision based on your risk tolerance and costs you're

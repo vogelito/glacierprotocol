@@ -155,7 +155,7 @@ prepare your quarantined workspace.
                 <pre><span class="danger">Generated Entropy (copy this string into bip39-standalone.html): ae29155ab1b3f5a1fc0c7cee883cd39457d273b9eb5eb6ac16a309bc7dd4d293</span></pre>
 
             2. Verify that the <span class="danger">Generated Entropy</span> string shown in
-            the terminal window is identical to the <span class="danger">Generated Computer entropy</span>
+            the terminal window is identical to the <span class="danger">Final entropy</span>
             string shown in the node script terminal output of the **Q1 Computer**.
         3. **On the Q2 computer** open bip39-standalone.html
            ```
@@ -176,15 +176,16 @@ prepare your quarantined workspace.
             3. In the `Coin` dropdown menu in Firefox, select `ETH - Ethereum`
                 1. Verify that the <span class="warning">derived Ethereum address</span>
                 for the `m/44'/60'/0'/0/0` Path matches the <span class="warning">Ethereum address</span>
-                output of the script **on the Q1 computer**.
+                output of the script **on the Q1 computer**. (Case insensitive)
                 2. Verify that the <span class="danger">derived Ethereum Private Key</span>
-                for the `m/44'/60'/0'/0/0` Path matches the <span class="danger">Ripple Private Key</span>
-                output of the script **on the Q1 computer**.
+                for the `m/44'/60'/0'/0/0` Path matches the <span class="danger">Ethereum Private Key</span>
+                output of the script **on the Q1 computer**. (Case insensitive)
 
                     **For the Ethereum private key, verify each character**. Again, there are
                     attack vectors which could replace just a portion of private keys,
                     making the private keys easier to brute force so it's important to
-                    check them thoroughly.
+                    check them thoroughly. For **Ethereum**, both the private key and the address
+                    **ARE NOT** case sensitive.
             4. In the `Coin` dropdown menu in Firefox, select `XRP - Ripple`
                 1. Verify that the <span class="warning">derived Ripple address</span>
                 for the `m/44'/144'/0'/0/0` Path matches the <span class="warning">Ripple address</span>
@@ -199,7 +200,7 @@ prepare your quarantined workspace.
                     check them thoroughly.
         4. **On the Q2 computer** open Electrum
            ```
-           ~/apps/electrum-3.3.6-x86_64.AppImage
+           $ ~/apps/electrum-3.3.6-x86_64.AppImage
            ```
             1. Leave `default_wallet` and click `Next`.
             2. Select `Multi-signature wallet` and click `Next`.
@@ -214,9 +215,10 @@ prepare your quarantined workspace.
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
+            9. You can now close the window (click on the top left `x`)
         5. **On the Q2 computer** open Electrum-LTC
            ```
-           ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
+           $ ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
            ```
             1. Leave `default_wallet` and click `Next`.
             2. Select `Multi-signature wallet` and click `Next`.
@@ -231,9 +233,10 @@ prepare your quarantined workspace.
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
+            9. You can now close the window (click on the top left `x`)
         6. **On the Q2 computer** open Electron-Cash
            ```
-           ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
+           $ ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
            ```
             1. Leave `default_wallet` and click `Next`.
             2. Select `Multi-signature wallet` and click `Next`.
@@ -249,18 +252,22 @@ prepare your quarantined workspace.
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
+            9. You can now close the window (click on the top left `x`)
         7. **On the Q2 computer** open multisigweb
            ```
-           multisigweb
+           $ multisigweb
            ```
-            1. Go to the `Accounts` tab and click `Import`
-            2. Click `Browse...` and go to Home -> cryptoglacier
-            3. Select the `ethereum.json` file
-            4. In the password field end `cryptoglacier`
-            5. In the account name field enter anything you'd like, such as
+            1. Agree to the Terms of Use and Privacy Policy
+            2. Select `Light Wallet`
+            3. Go to the `Accounts` tab and click `Import`
+            4. Click `Browse...` and go to Home -> cryptoglacier
+            5. Select the `ethereum.json` file and click `Open`
+            6. In the password field enter `cryptoglacier`
+            7. In the account name field enter anything you'd like, such as
             `coolest signatory`
-            6. Click `Import Account`
-            7. Verify that the <span class="warning">Ethereum Address</span>
+            8. Click `Import Account`
+            9. Verify that the <span class="warning">Ethereum Address</span>
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
+            10. You can now close the window (click on the top left `x`)

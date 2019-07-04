@@ -5,7 +5,7 @@ description: CryptoGlacier uses multiple keys to protect your funds. This makes 
   of accidental key loss.
 ---
 
-Central to our security protocols is
+Central to our security protocol is
 a technique called "multisignature security." You'll need a quick primer on
 this topic to understand the CryptoGlacier protocol.
 
@@ -60,8 +60,8 @@ enough to steal the money.
 * **Loss**: If a key is destroyed or simply misplaced, you can recover your money
 using the remaining keys.
 * **Key-man risk**:
-By having multiple signatories you significantly reduce the risk of fund
-loss in case a signatory dies or becomes incapacitated. In the case of duress,
+By having multiple signatories you significantly reduce the risk of loss of funds
+in case a signatory dies or becomes incapacitated. In the case of duress,
 a single-signatory is unable to access funds.
 * **Unilateral access**: With multisignature security, signatories with a key
 will not be able to move funds (unless they steal additional key(s), or collude
@@ -106,7 +106,7 @@ to access your funds, signatories might collude with each other to steal funds.
 * **Signatory reliability**: A signatory may fail to store the key securely, or
 they may lose it.
 * **Geography risk**: Signatories should be located in different physical
-locations to reduce the risk of fund loss due to events that could affect wide
+locations to reduce the risk of loss of funds due to events that could affect wide
 geographical areas, like natural disasters or power losses which could
 potentially affect all your signatories' capability to sign transactions.
 * **Jurisdiction risk**: Signatories should be located in different

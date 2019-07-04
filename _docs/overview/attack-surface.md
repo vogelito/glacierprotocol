@@ -111,7 +111,7 @@ users to verify the signature and checksum. But this is not foolproof:
 
 An attacker could remove the self-verification procedure from the protocol document,
 and many users would not notice.
-* An attacker could compromise our keypair and create a fraudulent signature
+* An attacker could compromise the keypair and create a fraudulent signature
 (although this is exceedingly unlikely, due to Keybase's key verification systems)
 * The protocol document does begin with document self-verification on one Setup
 Computer. However, it doesn't guide the user through self-verification on the second

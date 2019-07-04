@@ -140,9 +140,10 @@ copy there.
                of=<span class="primary">USB-device-identifier-here</span> bs=1m
                </pre>
                Example:
-               ```
-               $ sudo dd if=ubuntu-16.04.1-desktop-amd64.img.dmg of=/dev/disk2 bs=1m
-               ```
+               <pre>
+               $ sudo dd if=ubuntu-16.04.1-desktop-amd64.img.dmg \
+               of=<span class="primary">/dev/disk2</span> bs=1m
+               </pre>
             3. Enter your administrator password when requested.
             4. Wait several minutes for the copying process to complete. When
             it does, you may see an error box pop up. This is expected; it's
@@ -164,9 +165,10 @@ copy there.
                 $ cd $HOME/Downloads
                 ```
             6.  
-                ```
-                $ sudo cmp -n `stat -f '%z' ubuntu-16.04.1-desktop-amd64.img.dmg` ubuntu-16.04.1-desktop-amd64.img.dmg USB-device-identifier-here
-                ```
+                <pre>
+                $ sudo cmp -n `stat -f '%z' ubuntu-16.04.1-desktop-amd64.img.dmg` \
+                ubuntu-16.04.1-desktop-amd64.img.dmg <span class="primary">USB-device-identifier-here</span>
+                </pre>
             7. Wait a few minutes for the verification process to complete.
             8. If all goes well, the command will output no data, returning to
             your usual terminal prompt.
@@ -224,7 +226,8 @@ copy there.
                 ```
             5.  
                 <pre>
-                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desktop-amd64.iso` ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
+                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desktop-amd64.iso` \
+                ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
             6. If prompted for a password, enter the computer's root password.
             7. Wait a few minutes for the verification process to complete.
             8. If all goes well, the command will output no data, returning to

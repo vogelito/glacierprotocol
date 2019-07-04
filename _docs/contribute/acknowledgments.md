@@ -11,7 +11,7 @@ CryptoGlacier is based on the popular [Glacier Protocol](https://glacierprotocol
 The following individuals have offered feedback or other contributions that
 were incorporated into CryptoGlacier:
 
-* Your name here!
+* Fulvia Morales
 * Your name here!
 * Your name here!
 * Your name here!

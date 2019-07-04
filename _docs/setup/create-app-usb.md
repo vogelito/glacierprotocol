@@ -54,7 +54,7 @@ already. (See the instructions in Section III for details.)
         has changed (or that this warning has been removed), there is a
         security risk.** Stop and seek assistance.
 
-        1. Access CryptoGlacier's Keybase profile at https://keybase.io/vogelito.
+        1. Access CryptoGlacier's Keybase profile at [https://keybase.io/vogelito](https://keybase.io/vogelito).
         2. Click the string of letters and numbers next to the key icon.
         3. In the pop-up that appears, locate the link reading "this key".
         4. Right-click the link and select "Save Link As..."
@@ -111,18 +111,24 @@ already. (See the instructions in Section III for details.)
     running off a bootable Ubuntu USB. The commands in steps a and b are a
     workaround.
         1. ```
-        $ sudo mv /var/cache/app-info/xapian/default /var/cache/app-info/xapian/default_old
+        $ sudo mv /var/cache/app-info/xapian/default \
+        /var/cache/app-info/xapian/default_old
         ```
         2. ```
-        $ sudo mv /var/cache/app-info/xapian/default_old /var/cache/app-info/xapian/default
+        $ sudo mv /var/cache/app-info/xapian/default_old \
+        /var/cache/app-info/xapian/default
         ```
         3. ```
         $ sudo apt-add-repository universe
         ```
         4. ```
-        $ curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
-        $ echo "deb https://deb.nodesource.com/node_10.x xenial main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-        $ echo "deb-src https://deb.nodesource.com/node_10.x xenial main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list
+        $ curl -sSL \
+        https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
+        | sudo apt-key add -
+        $ echo "deb https://deb.nodesource.com/node_10.x xenial main" \
+        | sudo tee /etc/apt/sources.list.d/nodesource.list
+        $ echo "deb-src https://deb.nodesource.com/node_10.x xenial \
+        main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list
         ```
         5. ```
         $ sudo apt-get update
@@ -332,12 +338,16 @@ contents should look like this
     ```
     Click the cryptoglacier folder. It will have the following content:
     ```
-    CryptoGlacier.pdf: OK
-    README.md: OK
-    mnemonic_entropy.py: OK
-    package.json: OK
-    package-lock.json: OK
-    setup.js: OK
+    node_modiules
+    CryptoGlacier.pdf
+    LICENSE
+    mnemonic_entropy.py
+    package.json
+    package-lock.json
+    README.md
+    setup.js
+    SHA256SUMS
+    SHA256SUMS.sig
     ```
 9. Eject and physically remove the Q1 APP USB from the SETUP 1 computer.
 
