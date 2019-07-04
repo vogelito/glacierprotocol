@@ -215,7 +215,7 @@ prepare your quarantined workspace.
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
-            9. You can now close the window (click on the top left `x`)
+            9. Close the window (click on the top left `x`)
         5. **On the Q2 computer** open Electrum-LTC
            ```
            $ ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
@@ -233,7 +233,7 @@ prepare your quarantined workspace.
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
-            9. You can now close the window (click on the top left `x`)
+            9. Close the window (click on the top left `x`)
         6. **On the Q2 computer** open Electron-Cash
            ```
            $ ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
@@ -252,7 +252,7 @@ prepare your quarantined workspace.
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
-            9. You can now close the window (click on the top left `x`)
+            9. Close the window (click on the top left `x`)
         7. **On the Q2 computer** open multisigweb
            ```
            $ multisigweb
@@ -270,4 +270,4 @@ prepare your quarantined workspace.
             is the same as the output of the script **on the Q1 computer**.
 
                 **Again, please make sure you verify each character.**
-            10. You can now close the window (click on the top left `x`)
+            10. Close the window (click on the top left `x`)

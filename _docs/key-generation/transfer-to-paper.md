@@ -87,8 +87,10 @@ non-quarantined computer.
     1. **On the Q1 computer**, display the
     <span class="warning">Bitcoin Master Public Key</span> as a
     <span class="warning">QR code</span> on the screen:
-        1. In File Manager, navigate to the "Home" folder, then the "cryptoglacier"
-        folder, and double-click "bitcoin_master_public_key.png".
+       ```
+       $ cd ~/cryptoglacier
+       $ eog bitcoin_master_public_key.png
+       ```
     2. Use the smartphone's QR code reader to read the <span class="warning">QR
     code</span>. When the <span class="warning">QR code</span> is
     successfully read, the smartphone should display the text version of the
@@ -110,6 +112,7 @@ non-quarantined computer.
     <span class="warning">QR Code</span> picture to yourself using a
     messaging app which you'll be able to access from a laptop. Also use the **identifier "B"**.
     (E-mail is not recommended for security reasons.)
+    7. Close the program displaying the QR code (click on the top left `x`)
 
 5. Repeat the previous step for the following:
 * <span class="warning">Litecoin Master Public Key</span>, stored in
