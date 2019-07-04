@@ -135,7 +135,7 @@ already. (See the instructions in Section III for details.)
         * **zbar-tools**: Used for reading QR codes to import data into quarantined
         computers
             ```
-            $ sudo apt-get install libindicator7=12.10.2+16.04.20151208-0ubuntu1 libappindicator1=12.10.1+16.04.20170215-0ubuntu1 nodejs=10.16.0-1nodesource1 qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1
+            $ sudo apt-get -y install libindicator7=12.10.2+16.04.20151208-0ubuntu1 libappindicator1=12.10.1+16.04.20170215-0ubuntu1 nodejs=10.16.0-1nodesource1 qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1
             ```
         * **multisigweb**: Used to manage multi-location multisig cold wallets for ETH and ERC20 token
             ```
@@ -282,8 +282,8 @@ already. (See the instructions in Section III for details.)
 7. Install the required packages for the CryptoGlacier scripts and install CryptoGlacier on the Q1 APP USB.
     1. Install the required packages for the node script:
        ```
-       cd ~/cryptoglacier
-       npm install
+       $ cd ~/cryptoglacier
+       $ npm install
        ```
 
     2. Copy the cryptoglacier folder to the Q1 APP USB.
