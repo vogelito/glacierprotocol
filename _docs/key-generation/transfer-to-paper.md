@@ -91,7 +91,7 @@ non-quarantined computer.
         folder, and double-click "bitcoin_master_public_key.png".
     2. Use the smartphone's QR code reader to read the <span class="warning">QR
     code</span>. When the <span class="warning">QR code</span> is
-    successfully read, the smartphone should display the text
+    successfully read, the smartphone should display the text version of the
     <span class="warning">Bitcoin Master Public Key</span>.
     3. Verify the <span class="warning">Bitcoin Master Public Key</span> address on the
     smartphone matches the <span class="warning">Bitcoin Master Public Key</span> in the Quarantined Scratchpad.
@@ -101,23 +101,25 @@ non-quarantined computer.
 
     4. Use the smartphone to send the
     <span class="warning">Bitcoin Master Public Key</span> to yourself using a
-    messaging app which you'll be able to access from a laptop with **message "B"**.
+    messaging app which you'll be able to access from a laptop (e.g. Whatsapp, Slack, etc..).
+    When sending the message, add **"B"** as an **identifier** to the message. This is an indication
+    that the <span class="warning">Public Key</span> belongs to Bitcoin.
     (E-mail is not recommended for security reasons.)
     5. Take a picture of the QR Code
     6. Use the smartphone to send the
     <span class="warning">QR Code</span> picture to yourself using a
-    messaging app which you'll be able to access from a laptop with **message "B"**.
+    messaging app which you'll be able to access from a laptop. Also use the **identifier "B"**.
     (E-mail is not recommended for security reasons.)
 
 5. Repeat the previous step for the following:
 * <span class="warning">Litecoin Master Public Key</span>, stored in
-"litecoin_master_public_key.png", with **message "L"**.
+"litecoin_master_public_key.png", with **identifier "L"**.
 * <span class="warning">Bitcoin Cash Master Public Key</span>, stored in
-"bitcoin_cash_master_public_key.png", with **message "BC"**.
+"bitcoin_cash_master_public_key.png", with **identifier "BC"**.
 * <span class="warning">Ethereum Address</span>, stored in
-"ethereum_address.png", with **message "E"**.
+"ethereum_address.png", with **identifier "E"**.
 * <span class="warning">Ripple Address</span>, stored in "ripple_address.png",
-with **message "X"**
+with **identifier "X"**
 
 6. Power down the smartphone and return it to the Faraday bag.
 7. Shut down **both** quarantined computers entirely. As a precaution against
