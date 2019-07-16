@@ -34,8 +34,10 @@ Each signatory will need to do the following:
     3. Manually count that you have transcribed 24 words.
     4. Label each page with:
         1. Today's date
-        2. The **version** of CryptoGlacier used (listed on the front page of this document)
+        2. Your initials
+        3. The **version** of CryptoGlacier used (listed on the front page of this document)
         Do not write "CryptoGlacier", simply the version of CryptoGlacier used (e.g. `0.94.1`)
+        4. Write down the chosen N-of-M configuration
 2. Visually hide all critically sensitive data.
 
     We'll be using a smartphone with a live Internet connection to read QR
@@ -155,6 +157,7 @@ when they absolutely need to be.
         clear-text version
         2. On the header:
         * Type today's date
+        * Your initials
         * Type the version of CryptoGlacier used (listed on the first page of this document)
         * Write down the chosen N-of-M configuration
     4. Do **not** put anything else in the document (such as "Bitcoin",
