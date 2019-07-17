@@ -11,22 +11,15 @@ critically sensitive cold storage data, so you can use any Internet-connected
 computer for this section.
 
 You will need access to an electronic *and* paper copy of your
-<span class="warning">Cold Storage Information Page</span>.
+<span class="warning">Cold Storage Information Packet</span>.
 
-1. Consider whether you want to route your funds through one or more
-intermediary non-cold-storage addresses for privacy purposes. (Review the
-Privacy Considerations subsection for details.)
-
-   If you do, make those intermediate transfers using whatever means you
-   normally use to transfer bitcoins.
-2. If you are depositing a large amount, consider making a small deposit as a test followed by a second deposit for the remainder.
-3. Verify cold storage address.
+1. If you are depositing a large amount, consider making a small deposit as a test followed by a second deposit for the remainder.
+2. Verify cold storage address.
     1. Get one of the paper
-    <span class="warning">Cold Storage Information Pages</span> containing
+    <span class="warning">Cold Storage Information Packets</span> containing
     your cold storage address.
     2. Open your electronic copy of the
-    <span class="warning">Cold Storage Information Page</span>
-    (see Section II for details).
+    <span class="warning">Cold Storage Information Packet</span>.
     If you've lost access to it, you'll need to recreate a new electronic
     copy by transcribing one of the hardcopies (attached to each public key)
     by hand.
@@ -36,36 +29,37 @@ Privacy Considerations subsection for details.)
     This is to insure that the electronic copy was not damaged, hacked,
     accidentally changed due to a typo, etc.
     4. Return the paper
-    <span class="warning">Cold Storage Information Page</span> to its
+    <span class="warning">Cold Storage Information Packet</span> to its
     normal secure storage.
-4. Perform the deposit.
+    5. Confirm this deposit address with your signatories.
+3. Perform the deposit.
     1. Use the wallet software or service of your choice to **prepare** to send the
     desired amount of funds to your
     <span class="warning">cold storage address</span>.
-    The Bitcoin network requires a fee to process transactions. We recommend
+    Crypto networks require a fee to process transactions. We recommend
     you use a wallet service that either covers the fees for you or recommends
     a fee amount automatically, which most do.
 
         **Enter all necessary transaction information, but do not actually execute the transaction.**
 
         1. Copy-paste your <span class="warning">cold storage address</span>
-        from the <span class="warning">Cold Storage Information Page</span>
-        into the wallet software.
+        from the <span class="warning">Cold Storage Information Packet</span>
+        into the wallet software. You may also choose to scan the <span class="warning">Cold storage address QR Code</span>
 
-    2. **Double-check that the address you pasted matches the address in the Cold
-    Storage Information Page. <span style="color: red;">If you use the wrong address, you will lose all
-    of your funds with no recourse.</span>**
+    2. **Double-check that the address you pasted or scanned matches the address
+    in the <span class="warning">Cold Storage Information Packet</span> and that
+    confirmed by the other signatories. <span style="color: red;">If you use the
+    wrong address, you will lose all of your funds with no recourse.</span>**
     3. Execute the transaction.
-5. Verify the deposit on the public blockchain.
-    1. Go to Blockr, paste the address into the search bar, and press Enter.
-    You'll be taken to a page that says "Bitcoin Address" at the top, with your
-    <span class="warning">cold storage address</span> listed underneath.
+4. Verify the deposit on the public blockchain.
+    1. Go to a block explorer, paste the address into the search bar, and press Enter.
+    You'll be taken to a page that shows your <span class="warning">cold storage address</span>
+    listed.
     2. Within a couple of minutes (and often much faster), you should be able
-    to refresh this page and see your funds listed under "Unconfirmed".
+    to refresh this page and see your funds listed.
     3. Periodically refresh the page until you see the funds moved from
     "Unconfirmed" to be reflected in "Balance". This generally happens within
-    15 minutes; if the Bitcoin network is unusually congested, it may
-    take longer.
+    15 minutes; if the network is unusually congested, it may take longer.
 
 Your funds are now secured in cold storage.
 

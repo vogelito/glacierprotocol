@@ -9,8 +9,8 @@ description: Learn how to store cold storage data with CryptoGlacier,
 1. Shut down any nearby computers or smartphones, or other devices with cameras.
 2. Immediate storage of
 <span class="danger">Cold Storage Information Packets</span>
-    1. Double-check to make sure each envelope contains a handwritten private
-    key and a <span class="warning">Cold Storage Information Page</span>.
+    1. Double-check to make sure each envelope contains a handwritten
+    <span class="danger">24-word BIP39 Mnemonic</span> and a <span class="warning">Cold Storage Information Page</span>.
     2. Seal each envelope.
     3. Use tamper-resistant seals in addition to the envelope's normal adhesive
     to seal it.
@@ -35,26 +35,18 @@ description: Learn how to store cold storage data with CryptoGlacier,
     storage location (e.g. safe deposit box).
     2. Don't put more than one <span class="danger">packet</span> in long-term
     storage in the same building!
-    Storing two keys in the same building increases the risk of losing both
-    keys in a disaster (e.g. fire) or to a thorough thief.
-    3. If you are entrusting any <span class="danger">packets</span> to trusted signatories:
-        1. Do **not** send them the <span class="danger">packet</span>
+    Signatories should make sure that their respective keys are never stored in
+    the same building, in the same city, or in the same institution. Doing so
+    increases the risk of losing access to your funds in a disaster (e.g. fire)
+    or thorough a thief/social attack.
+    3. Remember the following
+        1. Do **not** send your <span class="danger">packets</span>
         electronically -- no e-mail, no photograph, no "secure instant
-        message". If they are distant, using a courier service is probably
-        fine, as long as you get tracking and send
-        <span class="danger">packets</span> on different days and/or from
-        different locations. (Prevents an opportunistic thief from happening
-        across two of your private keys. Also avoids a case where you send all
-        your keys out in the same batch, and that entire batch is lost -- along
-        with your access to your money.)
-        2. Tell them verbally who the other signatories are, to facilitate
-        access to funds if you are dead or incapacitated.
-        3. Instruct them not to keep any related notes *on* or *with* the
+        message".
+        2. Do **not** keep any related notes *on* or *with* the
         <span class="danger">packets</span>.
         In the event the key is seen by someone untrustworthy or stolen by a
         random thief, such clues help them understand the significance of the
         key and give them an incentive to plot further thefts or attacks.
-        4. Remember that signatories will have the ability to know your cold
-        storage balance!
 
 You have finished securing your cold storage funds.
