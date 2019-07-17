@@ -36,8 +36,9 @@
 - title: Withdrawal
   docs:
   - withdrawal/preparation
-  - withdrawal/transaction-construction
-  - withdrawal/execution
+  - withdrawal/bitcoin-litecoin-bitcoin-cash
+  - withdrawal/ethereum
+  - withdrawal/xrp
 - title: Balance and maintenance
   docs:
   - check-balance/overview

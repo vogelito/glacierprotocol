@@ -7,14 +7,8 @@ description: Learn how to set up to withdraw funds using CryptoGlacier,
 redirect_from: /docs/withdrawal/
 ---
 
-The Withdrawal Protocol is used to transfer bitcoins out of high-security
+The Withdrawal Protocol is used to transfer funds out of high-security
 cold storage.
-
-Before beginning, consider whether you want to route your funds through one or
-more intermediary non-cold-storage addresses for privacy purposes. (Review the
-Privacy Considerations subsection for details.) If you do, you may want to
-withdraw the funds to an intermediary address *first* before sending them on to
-their final destination.
 
 In this first section, we'll gather physical hardcopies of all information
 needed to do the withdrawal. This is done with the help of a regular networked
@@ -23,14 +17,14 @@ QR codes.
 
 On any Internet-connected computer:
 
-1. If this is **not** your first time working with Glacier:
-    1. Use a networked computer to access the latest full release of Glacier (
-    not just the protocol document) at <https://github.com/GlacierProtocol/GlacierProtocol/releases>.
-    2. Open the protocol document (Glacier.pdf) within the ZIP file.
+1. If this is **not** your first time working with CryptoGlacier:
+    1. Use a networked computer to access the latest full release of CryptoGlacier (
+    not just the protocol document) at <https://github.com/vogelito/CryptoGlacierProtocol/releases>.
+    2. Open the protocol document (CryptoGlacier.pdf) within the ZIP file.
     3. Check the Release Notes (Appendix E) of the protocol document to see if
-    there are any new versions of Glacier recommended.
+    there are any new versions of CryptoGlacier recommended.
     4. Whether or not you decide to upgrade, review the errata for the version
-    of Glacier you are using at <https://github.com/GlacierProtocol/GlacierProtocol/releases>.
+    of Glacier you are using at <https://github.com/vogelito/CryptoGlacierProtocol/releases>.
 2. Open your electronic copy of the
 <span class="warning">Cold Storage Information Page</span>
 (see Section II of the Deposit Protocol for details).
