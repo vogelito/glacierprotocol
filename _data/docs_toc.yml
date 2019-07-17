@@ -27,6 +27,7 @@
   - multisig-account-creation/bitcoin-litecoin-bitcoin-cash
   - multisig-account-creation/ethereum
   - multisig-account-creation/xrp
+  - multisig-account-creation/create-cold-storage-information-packet
 - title: Deposit
   docs:
   - deposit/test-deposit-withdrawal

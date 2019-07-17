@@ -37,7 +37,7 @@ Each signatory will need to do the following:
         2. Your initials
         3. The **version** of CryptoGlacier used (listed on the front page of this document)
         Do not write "CryptoGlacier", simply the version of CryptoGlacier used (e.g. `0.94.1`)
-        4. Write down the chosen N-of-M configuration
+        4. Write down the chosen M-of-N configuration
 2. Visually hide all critically sensitive data.
 
     We'll be using a smartphone with a live Internet connection to read QR
@@ -159,7 +159,7 @@ when they absolutely need to be.
         * Type today's date
         * Your initials
         * Type the version of CryptoGlacier used (listed on the first page of this document)
-        * Write down the chosen N-of-M configuration
+        * Write down the chosen M-of-N configuration
     4. Do **not** put anything else in the document (such as "Bitcoin",
         "CryptoGlacier", "private key", etc.)
     5. Print a copy of the
