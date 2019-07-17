@@ -6,11 +6,11 @@ description: Learn how to withdraw funds using CryptoGlacier,
   based on the popular Glacier Protocol
 ---
 
-In this section, we construct a "signed transaction" in our quarantined
-environments, verify it, and then use QR codes to extract it from the
-quarantined environment to pass on to additional quarantied environments
-for additional signatures and eventually extract it for execution (in the
-following section).
+In this section, we first construct a transaction, which we then pass to
+a quarantined environment for signature, verify it, and then use QR codes
+to extract it from the quarantined environment to pass on to additional
+quarantied environments (of the other signatories) for additional signatures
+and eventually extract it for execution.
 
 For brevity purposes, we will use Bitcoin and Electrum as an example, but
 this should be easily replicable on Litecoin and Electrum-LTC or Bitcoin
@@ -43,7 +43,7 @@ The following steps will need to be done by M signatories:
 
 1. Gather required information
     1. Make sure you have your <span class="danger">Cold Storage Information Packets</span>
-    on hand (you'll need the private keys).
+    on hand (you'll need the <span class="danger">24-word BIP39 Mnemonic</span>).
         1. You will also need to coordinate with M-1 signatories who will in
         turn need their <span class="danger">Cold Storage Information Packets</span>.
     2. You should print the <span class="warning">QR Code</span> of the transaction
@@ -86,7 +86,7 @@ to prepare your quarantined workspace.
             4. Click on `Sign`
             5. You should see the `Status` of the transaction, indicating how
             many signatories have signed
-3. Verify transaction construction
+4. Verify transaction construction
     1. **On the Q2 computer**, repeat step 3 above.
     2. Verify that the <span class="warning">"Transaction ID"</span>
     output by Electrum is identical on both computers. It is possible for
@@ -97,7 +97,7 @@ to prepare your quarantined workspace.
     comparing the transaction ID generated in each quarantined environment.
     3. **If there are any discrepancies, do not proceed**. Restart the
     Withdrawal Protocol and seek assistance if discrepancies persist.
-4. Visually hide all critically sensitive data.
+5. Visually hide all critically sensitive data.
 
     We'll be using a smartphone with a live Internet connection to read QR
     codes from the quarantined computer screens. Any malware (or a malicious
@@ -109,7 +109,7 @@ to prepare your quarantined workspace.
     1. Put your <span class="danger">Cold Storage Information Packets</span>
     out of sight -- this prevents a smartphone camera from accidentally seeing
     them.
-5. Extract the signed transaction from the quarantined environment.
+6. Extract the signed transaction from the quarantined environment.
     1. QR reader setup
         1. Remove a smartphone from the Faraday bag and turn it on.
         2. If the smartphone doesn't already have a QR code reader on it,
@@ -128,7 +128,7 @@ to prepare your quarantined workspace.
         the signatory will be able to access from a laptop. If you are the last
         signatory, send the <span class="warning">picture</span> to yourself.
         
-6. Shut down **both** quarantined computers entirely. As a precaution against
+7. Shut down **both** quarantined computers entirely. As a precaution against
 side channel attacks, the quarantined computers should not be active except
 when they absolutely need to be.
     ```
@@ -136,7 +136,7 @@ when they absolutely need to be.
     ```
     The recommended Acer laptop may require you to hold down the power button
     for several seconds to complete the shutdown.
-7. Repeat the steps above until M signatories have signed the trasnaction
+8. Repeat the steps above until M signatories have signed the trasnaction
     1. The status of Electrum should change to `Signed` once all required
     signatories have signed the transaction
     2. Once the transaction has been signed
