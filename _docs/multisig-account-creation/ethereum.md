@@ -26,10 +26,13 @@ signatory.** If you are not that signatory, please skip this section.
   7. Choose a name for the account (can be anything)
   8. Click `Create Account`
 3. Send funds to the account that was just created
-  1. Click the `Copy` button next to the address created in the step above
-  2. Send a small amount of ETH (beyond the scope of this protocol) to the
-  address above
-  3. Wait for the transaction to be confirmed, you should see the new balance
+  1. Check the current gas prices at [ethgasstation](https://ethgasstation.info/)
+  2. Multiply the gas price by `2,057,168` and divide by `10^18` to see how much
+  ETH you will need to deploy the contract. We recommend you send twice the
+  amount from the calculation.
+  3. Click the `Copy` button next to the address created in the step above
+  4. Send the ETH (beyond the scope of this protocol) to the address above
+  5. Wait for the transaction to be confirmed, you should see the new balance
   on the top right section of the screen, next to the account address.
 4. Deploy new Multisig Wallet
   1. Go the the `Wallets` tab
