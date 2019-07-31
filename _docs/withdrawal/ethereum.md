@@ -134,16 +134,13 @@ when they absolutely need to be.
     ```
     The recommended Acer laptop may require you to hold down the power button
     for several seconds to complete the shutdown.
-7. Repeat the steps above until M signatories have signed the trasnaction
-    1. The status of Electrum should change to `Signed` once all required
-    signatories have signed the transaction
-    2. Once the transaction has been signed
 
 # Executing and verifying the transaction
 
-On any Internet-connected computer, the last signatory should:
+On any Internet-connected computer:
 
-1. Access the <span class="warning">QR Code of the fully signed transaction</span> you sent
+1. Open [MyEtherWallet](https://alpha.myetherwallet.com/pushTx)
+Access the <span class="warning">QR Code of the fully signed transaction</span> you sent
 yourself from your smartphone previously.
 2. Open up the watching-only Bitcoin Electrum Wallet
 3. Load the transaction
