@@ -59,6 +59,8 @@ recommended gas price in Gwei on the same piece of paper
         4. Verify the details (amount + destination) of the Transfer you are
         looking to confirm and write down on the piece of paper the ID (left-most
         column)
+5. Finally, remember that each signatory's Ethereum account will be making
+transactions on the blockchain, so make sure each account has some ETH balance.
 
 # Proposing Transfers
 
