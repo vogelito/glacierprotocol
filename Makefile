@@ -1,5 +1,5 @@
 SHA = $(shell git rev-parse --short HEAD)
-CONTAINER_SITE_NAME=com.glacier.website
+CONTAINER_SITE_NAME=com.cryptoglacier.website
 TOC_FILE=_data/docs_toc.yml
 SOURCE_DIR=_docs
 SOURCE_MD=$(shell find $(SOURCE_DIR) -type f -iname '*.md')
@@ -20,7 +20,7 @@ stop-site: run-stop-site
 
 # Generates a pdf version of the Glacier protocol
 .PHONY: pdf
-pdf: assets/glacier.pdf
+pdf: assets/cryptoglacier.pdf
 
 ## Runs a spell checker on the sources
 .PHONY: spell
@@ -45,7 +45,7 @@ run-stop-site:
 	@echo "Site stopped"
 
 # Utility to generate a pdf version of the protocol
-assets/glacier.pdf: dockerfiles/bin/.weasyprint $(SOURCE_MD) $(SOURCE_HTML) $(SOURCE_CSS)
+assets/cryptoglacier.pdf: dockerfiles/bin/.weasyprint $(SOURCE_MD) $(SOURCE_HTML) $(SOURCE_CSS)
 	./_build/generate_pdf.sh
 
 

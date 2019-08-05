@@ -337,7 +337,7 @@ contents should look like this
     libqrencode3_3.4.4-1_amd64.deb
     libzbar0_0.10+doc-10ubuntu1_amd64.deb
     multisigweb-1.6.0-amd64.deb
-    nodejs_10.16.0-1nodesource1_amd64.deb
+    nodejs_10.16.1-1nodesource1_amd64.deb
     qrencode_3.4.4-1_amd64.deb
     zbar-tools_0.10+doc-10ubuntu1_amd64.deb
     ```

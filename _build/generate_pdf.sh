@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-CONTAINER_NAME_SITE=com.glacier.pdf
-FILENAME=assets/glacier.pdf
+CONTAINER_NAME_SITE=com.cryptoglacier.pdf
+FILENAME=assets/cryptoglacier.pdf
 # Set this if you want to keep intermediate artifacts for debugging
 KEEP_ARTIFACTS=
 WEBSITE_PORT=40000
@@ -36,7 +36,7 @@ run_site() {
 
 poll_site() {
   echo 'Waiting for website to be running'
-  until $(curl --output /dev/null --silent --head --fail http://127.0.0.1:$WEBSITE_PORT); do
+  until $(curl --output /dev/null --silent --head --fail http://127.0.0.1:$WEBSITE_PORT/cryptoglacierdocs/); do
     printf '.'
     sleep 1
   done
@@ -49,8 +49,8 @@ stop_site() {
 
 generate_pdf() {
   docker run --rm -v $(pwd):/src \
-    weasyprint --base-url http://172.17.0.1:$WEBSITE_PORT \
-    http://172.17.0.1:$WEBSITE_PORT/pdf.html $FILENAME
+    weasyprint --base-url http://172.17.0.1:$WEBSITE_PORT/cryptoglacierdocs/ \
+    http://172.17.0.1:$WEBSITE_PORT/cryptoglacierdocs/pdf.html $FILENAME
   echo "PDF successfully created at $FILENAME"
 }
 
