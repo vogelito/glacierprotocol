@@ -35,7 +35,12 @@ On any Internet-connected computer:
 2. Navigate to [ethgasstation.info](https://ethgasstation.info) and record the
 recommended gas price in Gwei on the same piece of paper
 3. If you are **Proposing A Transfer**:
-    1. Create and print QR code with the destination address
+    1. Install the required software (on a Mac, only required the first time):
+    ```
+    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ brew install qrencode
+    ```
+    2. Create and print QR code with the destination address
         1. On terminal
         ```
         $ qrencode -s 5 -o destination.png <ENTER_DESTINATION_ADDRESS>
@@ -45,11 +50,11 @@ recommended gas price in Gwei on the same piece of paper
         $ open destination.png
         ```
         3. Print the QR Code
-    2. If you are withdrawing from an ERC20 Token, make sure you repeat the step
+    3. If you are withdrawing from an ERC20 Token, make sure you repeat the step
     above for the ERC20 Token Contract Address. You can find the ERC20 Contract
     Address on etherscan.io. **Make sure you also note the Contract Decimals
     (usually 18)** in the piece of paper.
-    3. On the same piece of paper carefully write down the amount of ETH or ERC20
+    4. On the same piece of paper carefully write down the amount of ETH or ERC20
     Tokens that you are withdrawing.
 4. If you are **Confirming a Transfer**:
     1. Obtain the Transfer ID:
