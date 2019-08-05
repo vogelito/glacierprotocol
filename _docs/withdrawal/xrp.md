@@ -31,15 +31,20 @@ any Internet-connected computer:
     2. On the same piece of paper carefully write down the amount of XRP that
     you are withdrawing.
     3. Create and print a QR code with the destination address
-        1. On terminal
+        1. Install the required software (on a Mac, only required the first time). On terminal:
+        ```
+        $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        $ brew install qrencode
+        ```
+        2. Create the QR Code
         ```
         $ qrencode -s 5 -o destination.png <PASTE_DESTINATION_ADDRESS>
         ```
-        2. Open the QR Code:
+        3. Open the QR Code:
         ```
         $ open destination.png
         ```
-        3. Print the QR Code
+        4. Print the QR Code
     4. If the transfer requires a Destination Tag, please write it down
     carefully on the piece of paper
 
