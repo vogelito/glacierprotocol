@@ -30,21 +30,29 @@ any Internet-connected computer:
         the `Sequence` number on a piece of paper
     2. On the same piece of paper carefully write down the amount of XRP that
     you are withdrawing.
-    3. Create and print a QR code with the destination address
+    3. Create and print the QR codes with the <span class="warning">Ripple Cold Storage Address</span> and the destination address
         1. Install the required software (on a Mac, only required the first time). On terminal:
         ```
         $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         $ brew install qrencode
         ```
-        2. Create the QR Code
+        2. Create the QR Code for the <span class="warning">Ripple Cold Storage Address</span>
+        ```
+        $ qrencode -s 5 -o source.png <PASTE_RIPPLE_COLD_STORAGE_ADDRESS>
+        ```
+        3. Open the QR Code and paste it in a word-editing doc under the header "SOURCE"
+        ```
+        $ open source.png
+        ```
+        4. Create the QR Code for the destination address
         ```
         $ qrencode -s 5 -o destination.png <PASTE_DESTINATION_ADDRESS>
         ```
-        3. Open the QR Code:
+        5. Open the QR Code and paste it in a word-editing doc under the header "DESTINATION"
         ```
         $ open destination.png
         ```
-        4. Print the QR Code
+        6. Print the word editing doc
     4. If the transfer requires a Destination Tag, please write it down
     carefully on the piece of paper
 
