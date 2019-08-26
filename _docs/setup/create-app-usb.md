@@ -103,6 +103,7 @@ already. (See the instructions in Section III for details.)
            package.json: OK
            package-lock.json: OK
            setup.js: OK
+           ether.js: OK
            ```
 5. Open the CryptoGlacier protocol document so that it is available for copy-pasting terminal commands.
 6. Install the remaining application software on the Q1 APP USB.
@@ -351,6 +352,7 @@ contents should look like this
     package-lock.json
     README.md
     setup.js
+    ether.js
     SHA256SUMS
     SHA256SUMS.sig
     ```
