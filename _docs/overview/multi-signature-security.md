@@ -77,7 +77,7 @@ For example, in a 1-of-2 setup, there would be two signatories and any one of th
 be able to spend funds. In a 2-of-3 setup, there would be three signatories and at least
 two will be required to spend funds.
 
-By choosiing M < N, you give up control but gain redundancy in the event of key loss.
+By choosing M < N, you give up control but gain redundancy in the event of key loss.
 
 Depending on your use case, you will need to optimize choosing your M-of-N policy. You will
 need to select a policy before beginning the protocol.
@@ -86,7 +86,8 @@ need to select a policy before beginning the protocol.
 
 Each signatory is responsible for securing their key in a safe deposit box.
 Signatories should make legal arrangements in advance so their key can be
-accessed in case of death or incapacitation.
+accessed in case of death or incapacitation. CryptoGlacier doesn't provide
+specific procedures to ensure this.
 
 The most failsafe way to ensure a signatory's agent will have access to a
 signatory's safe deposit box is to check with the bank. Standard estate

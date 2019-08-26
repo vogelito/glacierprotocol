@@ -52,7 +52,7 @@ Deposit or Withdrawal protocol now, you can stop here.
     file manager.
 6. Open a copy of this document on the Q1 computer.
     1. In the File Manager find the cryptoglacier folder. The PDF file for this
-    document should be visible with the name "CryptoGlacier.pdf." Open it.
+    document should be visible with the name "CryptoGlacier.pdf". Open it.
 
         You won't be able to click any external links in the document, since you
         don't have a network connection. If you need to look something up on the
@@ -65,7 +65,7 @@ Deposit or Withdrawal protocol now, you can stop here.
     $ cd ~/apps
     $ sudo dpkg -i *.deb
     ```
-9. Prepare the AppImage files for exection
+9. Prepare the AppImage files for execution
     ```
     $ chmod +x ~/apps/electrum-3.3.6-x86_64.AppImage
     $ chmod +x ~/apps/Electron-Cash-4.0.6-x86_64.AppImage

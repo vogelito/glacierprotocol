@@ -25,7 +25,7 @@ The protocol makes use of [BIP39](https://github.com/bitcoin/bips/blob/master/bi
 and [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki).
 This will allow us to deterministically derive keys across blockchains from
 a 24-word phrase. This 24-word phrase is more commonly known as a mnemonic phrase,
-mnemonic recovery phrase or mnemonic seed. It s a list of words which store all the
+mnemonic recovery phrase or mnemonic seed. It's a list of words which stores all the
 information needed to recover your private keys across protocols.
 
 ## Offline Key Storage ("Cold Storage")
@@ -48,11 +48,9 @@ key stays offline ("cold storage") at all times.
 
 ## Paper Key Storage
 
-Because
-the private key is a relatively small piece of information, it can be stored
-on paper as easily as it can be stored on a computer. And when it comes to
-key storage, paper has various advantages compared to computers: It's always
-offline (no chance of accidentally connecting it to the Internet!), it's
-easy & cheap to make multiple copies for backups (and different keys for
-multisignature security -- see below), and it's not susceptible to
+Because the menomic phrase is a relatively small piece of information, it can
+be stored on paper as easily as it can be stored on a computer. And when it
+comes to key storage, paper has various advantages compared to computers: It's
+always offline (no chance of accidentally connecting it to the Internet!), it's
+easy & cheap to make multiple copies for backups, and it's not susceptible to
 mechanical failure.

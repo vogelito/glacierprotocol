@@ -12,8 +12,8 @@ establishes a basic understanding of the CryptoGlacier protocol in order to
 facilitate its execution. For more background on the protocol's design, see
 the Glacier [design document](../design-doc/overview.md).
 
-As described previously, the CryptoGlacier is based on the Glacier protocol.
-It's aim is to put crypto funds in cold storage, using multisignature
+As previously described, the CryptoGlacier protocol is based on the Glacier
+protocol. It's aim is to put crypto funds in cold storage, using multisignature
 security, with keys generated and accessible by distinct signatories stored
 only on paper.
 
@@ -69,11 +69,11 @@ manufacturers. This is exceptionally unlikely.
 ## Electrum (and forks), Gnosis MultiSigWallet and CryptoGlacierScript
 
 The original Glacier Protocol relies on [Bitcoin Core](https://bitcoincore.org/)
-for for all cryptographic and financial operations because "its open source
-code is the most trustworthy... due to its track record of securing large
-amounts of money for many years, and the high degree of code review scrutiny
-it has received." Unfortunately Bitcoin Core only supports Bitcoin transactions
-and it lacks support for BIP39 mnemonics.
+for all cryptographic and financial operations because "its open source code is
+the most trustworthy... due to its track record of securing large amounts of
+money for many years, and the high degree of code review scrutiny it has
+received." Unfortunately Bitcoin Core only supports Bitcoin transactions and it
+lacks support for BIP39 mnemonics.
 
 CryptoGlacier relies on [Electrum](https://electrum.org) for Bitcoin
 transactions, [Electrum-LTC](https://electrum-ltc.org) (a fork of Electrum) for
@@ -93,32 +93,32 @@ review for flaws or vulnerabilities.
 
 ## Protocol Output
 
-The end result of the CryptoGlacier protocol is a set of paper information
-packets for each private key needed for the chosen multisignature withdrawal
-policy. Packets will be created by each signatory independently.
+The end result of the CryptoGlacier protocol is two sets of paper information
+packets per signatory. A private packet with the menomic phrase (which will be
+created by each signatory independently) and a packet which will be shared
+amongst signatories (which will be created by a designated signatory and
+distributed to the rest).
 
 Each signatory will have a **private and never to be shared** package containing:
 
 * A **24-word seed mnemonic** based on BIP39 -- these 24 words will be used to
-derive the private keys that will ultimately secure your funds.
-* The **Master Public Keys for Bitcoin, Litecoin, and Bitcoin Cash from all
-signatories** - each key is an alphanumeric string used in the multisignature
-protocol.
+derive the private keys that will provide one of the signatures needed to move
+your funds.
+
+There will also be a package that will need to be shared with the other
+signatories containing:
+* 3xN **Master Public Keys** -- each is an alphanumeric string used in the
+multisignature protocol of Bitcoin, Litecoin, and Bitcoin Cash.
+* N **Ethereum account addresses** -- each is a hex string designating the
+Ethereum account to be used as a signatory when setting up the Gnosis
+MultiSignatureWallet.
+* N **Ripple addresses** -- each is an alphanumeric string designating the XRP
+account to be used as a signatory when setting up the Ripple Multi-Signing
+account.
 * The **Ethereum Multisig Smart Contract Address** -- a hex string designating
 the Ethereum contract deployed using the Gnosis MultiSignatureWallet.
 * The **XRP Multisign Account** -- an alphanumeric string designating the
 Multi-Signing XRP account.
-
-There will also be a package that will need to be shared with the other
-signatories containing:
-* **Three Master Public Keys** -- an alphanumeric string for Bitcoin, Litecoin,
-and Bitcoin Cash used in the multisignature protocol.
-* The **Ethereum account address** -- a hex string designating the Ethereum
-account to be used as a signatory when setting up the Gnosis
-MultiSignatureWallet.
-* The **Ripple address** -- an alphanumeric string designating the XRP
-account to be used as a signatory when setting up the Ripple Multi-Signing
-account.
 
 Technical details: The CryptoGlacier protocol reuses Ethereum and Ripple
 addresses but uses HD wallets for Bitcoin, Bitcoin Cash, and Litecoin.
@@ -202,13 +202,10 @@ stack.
 but existing laptops you already possess, disabling all network
 connections during protocol execution, instead of purchasing new
 quarantined hardware. This fails to protect against some malware
-attacks, but provides additional savings in cost and effort.
-
-Such as an
+attacks, but provides additional savings in cost and effort. Such as an
 [existing infection of a laptop's firmware](https://www.youtube.com/watch?v=sNYsfUNegEA),
-malware which overrides
-OS settings to disable wireless connectivity, or certain undiscovered
-vulnerabilities in the software used by the protocol.
+malware which overrides OS settings to disable wireless connectivity, or
+certain undiscovered vulnerabilities in the software used by the protocol.
 
 These modifications are left as an exercise to the reader.
 

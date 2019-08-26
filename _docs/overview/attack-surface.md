@@ -36,17 +36,20 @@ Most attacks require the presence of malware, either in or near the quarantined 
     * Electron-Cash
     * Gnosis' MultiSigWallet
     * nodejs (via Nodesource)
-    * Several node packages are required for CryptoGlacierScript (via npm):
+    * Several node packages (and their dependencies) are required for CryptoGlacierScript (via npm):
       * argparse
       * bip39
       * bitcoinjs-lib
       * enquirer
+      * ethereumjs-tx
       * ethereumjs-wallet
       * js-sha256
       * lodash.clonedeep
       * ripple-bip32
       * ripple-keypairs
+      * ripple-lib
       * ripple-sign-keypairs
+      * wallet-address-validator
   * Malware on Setup Computer infects Setup USB software AND malware on Setup USB infects Quarantined USB software AND checksum verifications produces false positives
     * Checksum false positives could happen because:
       * Malware might interfere with the verification process (or the display of its results).
@@ -57,10 +60,12 @@ Most attacks require the presence of malware, either in or near the quarantined 
   * Malware on Setup Computer infects Setup Boot USB firmware AND malware on Setup Boot USB infects Quarantined Boot/App USB
   * Laptop or USB firmware has malware in the shrinkwrapped package
 * Hardware
-  * Laptop or USB hardware has "malware" in the shrinkwrapped package
-
-e.g. a  [USB JTAG exploit](http://www.itnews.com.au/news/intel-debugger-interface-open-to-hacking-via-usb-446889)  or chip-level backdoors (such as
-[this rootkit](https://www.wired.com/2016/06/demonically-clever-backdoor-hides-inside-computer-chip/)). "Malware" usually refers to software, but we're using it here more broadly to mean "computing technology which undermines the integrity of the computing environment in which it resides."
+  * Laptop or USB hardware has "malware" in the shrinkwrapped package. e.g. a
+  [USB JTAG exploit](http://www.itnews.com.au/news/intel-debugger-interface-open-to-hacking-via-usb-446889)
+  or chip-level backdoors (such as [this rootkit](https://www.wired.com/2016/06/demonically-clever-backdoor-hides-inside-computer-chip/)).
+  "Malware" usually refers to software, but we're using it here more broadly to
+  mean "computing technology which undermines the integrity of the computing
+  environment in which it resides."
 
 ## Failure scenarios
 
@@ -88,9 +93,12 @@ e.g. a  [USB JTAG exploit](http://www.itnews.com.au/news/intel-debugger-interfac
 ### Physical failures
 
 * M paper keys are stolen by an attacker
-* All (or all but one) paper keys are lost or destroyed
-* An attacker with physical line-of-sight to the laptop takes a photo of the screen while sensitive data is displayed
-* Malware on the quarantined machines writes sensitive data to persistent media (USB or laptop hard drive) AND the hardware is physically stolen afterward
+* (N-M+1) paper keys are lost or destroyed, making it impossible to achieve M
+signatories
+* An attacker with physical line-of-sight to the laptop takes a photo of the
+screen while sensitive data is displayed
+* Malware on the quarantined machines writes sensitive data to persistent media
+(USB or laptop hard drive) AND the hardware is physically stolen afterward
 
 ### CryptoGlacier protocol failures
 * CryptoGlacier hosting (i.e. DNS, Github, website hosting, etc.) is compromised

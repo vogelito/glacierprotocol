@@ -201,7 +201,7 @@ when they absolutely need to be.
     adhesive to seal it.
     5. **Immediately** put the <span class="danger">Cold Storage Information Packet</span>
     in the safest possible location in your home or office that is immediately accessible.
-    6. No, really. Like right now. That's basically one of the kys to a huge pile of
+    6. No, really. Like right now. That's basically one of the keys to a huge pile of
     cash you have just sitting there in envelopes on your desk.
 11. Hardware storage
     1. Put tamper-resistant seals on the ends of all USB drives.

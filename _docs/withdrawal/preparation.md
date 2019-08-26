@@ -26,8 +26,8 @@ On any Internet-connected computer:
     4. Whether or not you decide to upgrade, review the errata for the version
     of Glacier you are using at <https://github.com/vogelito/CryptoGlacierProtocol/releases>.
 2. Open your electronic copy of the
-<span class="warning">Cold Storage Information Page</span>
-(see Section II of the Deposit Protocol for details).
+<span class="warning">Cold Storage Information Packet</span>.
+
 3. Identify the blockchain transactions associated with the funds you'd like
 to withdraw.
     1. Go to [Blockchain.info](https://blockchain.info/), paste your

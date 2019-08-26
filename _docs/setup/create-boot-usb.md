@@ -193,7 +193,7 @@ copy there.
             circle/swirl icon in the upper-left corner of the screen.
             2. Type "startup disk creator" in the text box that appears
             3. Click on the "Startup Disk Creator" icon that appears.
-            4. The "Source disc image" panel should show the.iso file you
+            4. The "Source disc image" panel should show the `.iso` file you
             downloaded. If it does not, click the "Other" button and find it
             in the folder you downloaded it to.
             5. In the "Disk to use" panel, you should see two lines. They may
@@ -245,7 +245,7 @@ copy there.
 7. Create the Q1 BOOT USB
     **We do not recommend you boot Ubuntu on Mac devices released after 2015. Ubuntu
     support for newer generation Macs and vice-versa is still very poor at the time
-    of writting and you might find your mouse, keyboard, or network to be unusable.**
+    of writing and you might find your mouse, keyboard, or network to be unusable.**
 
     1. Boot the SETUP 1 computer from the SETUP 1 BOOT USB.
         1. Reboot the computer.

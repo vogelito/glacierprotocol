@@ -10,7 +10,7 @@ redirect_from: /docs/key-generation/
 The Key Generation Protocol will securely generate a <span class="danger">BIP39 Mnemonic</span> that will
 be used to store all your assets.
 
-Thgrough the [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
+Through the [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 standard we will create 24 words (a mnemonic) which will then be used to derive
 private keys for each protocol. Each signatory will only need to secure their
 24-word phrase in order to be able to access funds .

@@ -8,7 +8,7 @@ description: Learn how to withdraw funds using CryptoGlacier,
 
 In this section, we construct a "signed transaction" in our quarantined
 environments, verify it, and then use QR codes to extract it from the
-quarantined environment to pass on to additional quarantied environments
+quarantined environment to pass on to additional quarantined environments
 for additional signatures and eventually extract it for execution.
 
 This protocol is divided into two sub-protocols: Proposing Transfers and
@@ -52,7 +52,7 @@ recommended gas price in Gwei on the same piece of paper
         3. Print the QR Code
     3. If you are withdrawing from an ERC20 Token, make sure you repeat the step
     above for the ERC20 Token Contract Address. You can find the ERC20 Contract
-    Address on etherscan.io. **Make sure you also note the Contract Decimals
+    Address on etherscan.io **Make sure you also note the Contract Decimals
     (usually 18)** in the piece of paper.
     4. On the same piece of paper carefully write down the amount of ETH or ERC20
     Tokens that you are withdrawing.

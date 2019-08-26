@@ -7,7 +7,7 @@ redirect_from:
   - /docs/
 ---
 
-CryptoGlacier is a step-by-step protocol for storying crypto assets in a
+CryptoGlacier is a step-by-step protocol for storing crypto assets in a
 highly secure manner. It is based on the popular [Glacier Protocol](https://glacierprotocol.org/).
 
 There are two main differences between CryptoGlacier and Glacier:
@@ -38,10 +38,10 @@ and attracts many more security threats.
 cumbersome and introduces security risk through the possibility of human
 error, so it is best done infrequently.
 * **Technically unskilled users**: Although the CryptoGlacier protocol is long, it is
-clear and straightforward to follow. No significant technical expertise is required.
+clear and straightforward to follow. Some technical expertise is required.
 
 The CryptoGlacier protocol covers crypto storage, not procurement. It assumes you
-already possess crypto and wish to store them more securely.
+already possess crypto and wish to store it more securely.
 
 If you are already familiar with crypto security concepts and are certain that
 you want high security, multi-signature, cold storage, you may prefer to read
@@ -68,7 +68,7 @@ has some important distinctions and at the time of writting it hasn't yet
 attracted widespread Expert Advisory or Community Review.
 
 CryptoGlacier and CryptoGlacierScript, the CryptoGlacier companion software,
-are **open source**:. The code is straightforward and well-commented to
+are **open source**. The code is straightforward and well-commented to
 facilitate easy review for flaws or vulnerabilities.
 [View it on Github](https://github.com/vogelito/CryptoGlacierProtocol).
 
@@ -140,7 +140,7 @@ to cope with an economic crisis. In 1933, the US abruptly
 Regardless of how one views the political desirability of these particular
 decisions, there is precedent for governments taking such an action, and one
 cannot necessarily predict the reasons they might do so in the future.
-Furthermore,Bitcoin still operates in a political and legal grey zone, which
+Furthermore, Bitcoin still operates in a political and legal gray zone, which
 increases these political risks.
 
 Some 3rd party services have insurance to cover losses, although that

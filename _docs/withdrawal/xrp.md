@@ -8,7 +8,7 @@ description: Learn how to withdraw funds using CryptoGlacier,
 
 In this section, we construct a "signed transaction" in our quarantined
 environments, verify it, and then use QR codes to extract it from the
-quarantined environment to pass on to additional quarantied environments
+quarantined environment to pass on to additional quarantined environments
 for additional signatures and eventually extract it for execution.
 
 This protocol requires one signatory to **Create a transaction** and then M-1

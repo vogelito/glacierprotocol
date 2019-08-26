@@ -51,7 +51,7 @@ the hardware.
         bottom of the laptop.
         3. For any other models, use youtube to learn how to remove the wireless card.
 
-    4. After removing the wireless card, cover the ends of the internal wi-fi
+    4. After removing the wireless card, cover the ends of the internal WiFi
     antennae with electrical tape.
     5. If the computer has separate cards for WiFi and Bluetooth, be sure to
     remove both. (Most modern laptops, including the recommended Acer and Dell,

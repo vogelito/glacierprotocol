@@ -14,7 +14,7 @@ signatory.** If you are not that signatory, please skip this section.
 
 # Deploying the Contract
 1. Download Multisigweb
-  1. On an internet enabled computer, dowload and install [Gnosis Multisignature Wallet](https://github.com/gnosis/MultiSigWallet/releases).
+  1. On an internet enabled computer, download and install [Gnosis Multisignature Wallet](https://github.com/gnosis/MultiSigWallet/releases).
   2. Please make sure you verify the SHA256 checksums. At the time of writing, v1.6.0 was the latest version
 2. Create a new Ethereum Account that will be used to deploy the contract
   1. Open multisigweb

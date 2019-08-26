@@ -9,7 +9,7 @@ description: Learn how to withdraw funds using CryptoGlacier,
 In this section, we first construct a transaction, which we then pass to
 a quarantined environment for signature, verify it, and then use QR codes
 to extract it from the quarantined environment to pass on to additional
-quarantied environments (of the other signatories) for additional signatures
+quarantined environments (of the other signatories) for additional signatures
 and eventually extract it for execution.
 
 For brevity purposes, we will use Bitcoin and Electrum as an example, but
@@ -136,7 +136,7 @@ when they absolutely need to be.
     ```
     The recommended Acer laptop may require you to hold down the power button
     for several seconds to complete the shutdown.
-8. Repeat the steps above until M signatories have signed the trasnaction
+8. Repeat the steps above until M signatories have signed the transaction
     1. The status of Electrum should change to `Signed` once all required
     signatories have signed the transaction
     2. Once the transaction has been signed
