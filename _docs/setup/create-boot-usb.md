@@ -228,7 +228,8 @@ copy there.
                 ```
             5.  
                 <pre>
-                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desktop-amd64.iso` \
+                $ sudo cmp -n `stat -c '%s' \
+                ubuntu-16.04.1-desktop-amd64.iso` \
                 ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
             6. If prompted for a password, enter the computer's root password.
             7. Wait a few minutes for the verification process to complete.
