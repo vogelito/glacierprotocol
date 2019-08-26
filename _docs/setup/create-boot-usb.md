@@ -166,8 +166,10 @@ copy there.
                 ```
             6.  
                 <pre>
-                $ sudo cmp -n `stat -f '%z' ubuntu-16.04.1-desktop-amd64.img.dmg` \
-                ubuntu-16.04.1-desktop-amd64.img.dmg <span class="primary">USB-device-identifier-here</span>
+                $ sudo cmp -n `stat -f '%z' \
+                ubuntu-16.04.1-desktop-amd64.img.dmg` \
+                ubuntu-16.04.1-desktop-amd64.img.dmg \
+                <span class="primary">USB-device-identifier-here</span>
                 </pre>
             7. Wait a few minutes for the verification process to complete.
             8. If all goes well, the command will output no data, returning to
