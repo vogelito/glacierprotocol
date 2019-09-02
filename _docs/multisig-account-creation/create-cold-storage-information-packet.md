@@ -21,20 +21,21 @@ which will replace the **N** <span class="warning">Signatory Information Packets
     2. In the body of the document, write the following information. Pay
     attention to the order:
         1. **MESSAGE B**
-        2. Insert the <span class="warning">Bitcoin Cold Storage Address</span>
-        3. Insert the <span class="warning">Bitcoin Master Public Key QR Code</span>
+            1. Insert the <span class="warning">Bitcoin Master Public Key QR Code</span>
+            2. Insert the <span class="warning">Bitcoin Cold Storage Address</span>
         for all **N** signatories
-        4. **MESSAGE L**
-        5. Insert the <span class="warning">Litecoin Cold Storage Address</span>
-        6. Insert the <span class="warning">Litecoin Master Public Key QR Code</span>
-        for all **N** signatories
-        4. **MESSAGE BC**
-        5. Insert the <span class="warning">Bitcoin Cash Cold Storage Address</span>
-        6. Insert the <span class="warning">Bitcoin Cash Master Public Key QR Code</span>
-        for all **N** signatories
-        7. **MESSAGE E**
-        8. Insert the <span class="warning">Ethereum Cold Storage Address</span>
-        9. **MESSAGE X**
-        10. Insert the <span class="warning">Ripple Cold Storage Address</span>
+        2. **MESSAGE L**
+            1. Insert the <span class="warning">Litecoin Master Public Key QR Code</span>
+            for all **N** signatories
+            2. Insert the <span class="warning">Litecoin Cold Storage Address</span>
+        3. **MESSAGE BC**
+            1. Insert the <span class="warning">Bitcoin Cash Master Public Key QR Code</span>
+            for all **N** signatories
+            2. Insert the <span class="warning">Bitcoin Cash Cold Storage Address</span>
+        4. **MESSAGE E**
+            1. Insert the <span class="warning">Ethereum Cold Storage Address</span>
+            2. Insert the MultisigWeb Wallet Configuration
+        5. **MESSAGE X**
+            1. Insert the <span class="warning">Ripple Cold Storage Address</span>
 3. gpg encrypt this document (TODO)
 4. Send the gpg-encrypted document to all signatories

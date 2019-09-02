@@ -15,7 +15,7 @@ This protocol is divided into two sub-protocols: Proposing Transfers and
 Confirming Transfers. The flow is one signatory will propose and the rest will
 confirm.
 
-# Gather the required information
+## Gather the required information
 
 Every signatory needs to execute this section
 
@@ -67,7 +67,7 @@ recommended gas price in Gwei on the same piece of paper
 5. Finally, remember that each signatory's Ethereum account will be making
 transactions on the blockchain, so make sure each account has some ETH balance.
 
-# Proposing Transfers
+## Proposing Transfers
 
 Only one signatory needs to propose transfers. If a signatory has already
 proposed a transfer and you need to confirm it, see section below on
@@ -203,7 +203,7 @@ when they absolutely need to be.
 
 6. Skip to the section "Broadcasting and verifying transactions" below
 
-# Confirming Transfers
+## Confirming Transfers
 
 M-1 signatories need to confirm transfers. Only Transfers that have been
 proposed can be confirmed.
@@ -324,7 +324,7 @@ when they absolutely need to be.
 
 6. Follow the section "Broadcasting and verifying transactions" below
 
-# Broadcasting and verifying transactions
+## Broadcasting and verifying transactions
 
 On any Internet-connected computer:
 

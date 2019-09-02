@@ -14,7 +14,7 @@ for additional signatures and eventually extract it for execution.
 This protocol requires one signatory to **Create a transaction** and then M-1
 signatories to **Sign a transaction**.
 
-# Gather the required information
+## Gather the required information
 
 1. Make sure you have your <span class="danger">Cold Storage Information Packets</span>
 on hand (you'll need the <span class="danger">24-word BIP39 Mnemonic</span>).
@@ -62,7 +62,7 @@ sure you write down on a piece of paper
     2. The Destination TAG
     3. The Transaction amount
 
-# Create a new Transaction
+## Create a new Transaction
 
 Only one signatory needs to create a new transaction. If another signatory has
 already created a transaction and you need to sign over it, see section below on
@@ -141,7 +141,7 @@ when they absolutely need to be.
 
 
 
-# Sign a Transaction
+## Sign a Transaction
 
 M-1 signatories need to sign the transaction.
 
@@ -224,7 +224,7 @@ when they absolutely need to be.
     for several seconds to complete the shutdown.
 
 
-# Broadcasting the transactions
+## Broadcasting the transactions
 
 On any Internet-connected computer:
 

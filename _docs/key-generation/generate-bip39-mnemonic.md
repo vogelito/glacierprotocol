@@ -12,7 +12,7 @@ be used to store all your assets.
 
 Through the [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 standard we will create 24 words (a mnemonic) which will then be used to derive
-private keys for each protocol. Each signatory will only need to secure their
+private keys across protocols. Each signatory will only need to secure their
 24-word phrase in order to be able to access funds .
 
 By the end of this section, each signatory will generate the following information:

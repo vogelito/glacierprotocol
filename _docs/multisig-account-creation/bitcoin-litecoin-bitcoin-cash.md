@@ -59,4 +59,4 @@ be verified across signatories.
   ```
   $ ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
   ```
-    1. Electron Cash calls `master keys` simply `public or private keys`
+      Electron Cash calls `master keys` simply `public or private keys`

@@ -120,7 +120,7 @@ non-quarantined computer.
 * <span class="warning">Litecoin Master Public Key</span>, stored in
 "litecoin_master_public_key.png", with **identifier "L"**.
 * <span class="warning">Bitcoin Cash Master Public Key</span>, stored in
-"bitcoin_cash_master_public_key.png", with **identifier "BC"**.
+"bitcoincash_master_public_key.png", with **identifier "BC"**.
 * <span class="warning">Ethereum Address</span>, stored in
 "ethereum_address.png", with **identifier "E"**.
 * <span class="warning">Ripple Address</span>, stored in "ripple_address.png",
