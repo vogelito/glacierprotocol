@@ -49,7 +49,7 @@ the hardware.
         2. For the recommended Acer laptop, the process is similar to the Dell.
         Note there are two cover screws hidden underneath rubber feet on the
         bottom of the laptop.
-        3. For any other models, use youtube to learn how to remove the wireless card.
+        3. For any other models, use YouTube to learn how to remove the wireless card.
 
     4. After removing the wireless card, cover the ends of the internal WiFi
     antennae with electrical tape.

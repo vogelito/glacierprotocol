@@ -70,7 +70,7 @@ Each signatory will need to do the following:
             3. Select Preferences.
             4. Select the View tab.
             5. Uncheck "Do not split words over two lines".
-    4. **On the Q2 computer** close firefox.
+    4. **On the Q2 computer** close Firefox.
     5. Clear the terminal windows on the **Q1 and Q2** computers.
        ```
        $ clear

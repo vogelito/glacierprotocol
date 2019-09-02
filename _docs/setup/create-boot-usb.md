@@ -128,7 +128,7 @@ copy there.
                 that comes before (external, physical) (for example /dev/disk2).
 
         3. Put Ubuntu on the SETUP 1 BOOT USB.
-            1. First, unmount the usb
+            1. First, unmount the USB
                <pre>
                $ diskutil unmountDisk <span class="primary">USB-device-identifier-here</span>
                </pre>
@@ -204,7 +204,7 @@ copy there.
                 <pre>
                 Generic Flash Disk (/dev/sda)
                 Kanguru Flash Trust (<span class="primary">/dev/sdb</span>)</pre>
-            6. Select the line containing SETUP 1 BOOT USB.49 Make note of the
+            6. Select the line containing SETUP 1 BOOT USB and make note of the
             disk identifier (e.g. /dev/sdb).
             7. Click "Make Startup Disk" and then click "Yes".
             8. Wait a few minutes for the copying process to complete.

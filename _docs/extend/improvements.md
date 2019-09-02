@@ -83,4 +83,4 @@ Pinning Currently, we download Bitcoin Core on to the Quarantined App
 USBs via the Ubuntu Package archive. However, because Bitcoin is
 a privately-managed archive, it only hosts the latest release, rather than
 all previous versions. This prevents us from pinning the protocol to use
-a specific release (desireable for ongoing compatibility).
+a specific release (desirable for ongoing compatibility).

@@ -64,7 +64,7 @@ This document currently supports:
 
 Funds secured using CryptoGlacier can only be as secure as its design.
 As previously mentioned, CryptoGlacier is based on the Glacier protocol but
-has some important distinctions and at the time of writting it hasn't yet
+has some important distinctions and at the time of writing it hasn't yet
 attracted widespread Expert Advisory or Community Review.
 
 CryptoGlacier and CryptoGlacierScript, the CryptoGlacier companion software,

@@ -94,9 +94,9 @@ review for flaws or vulnerabilities.
 ## Protocol Output
 
 The end result of the CryptoGlacier protocol is two sets of paper information
-packets per signatory. A private packet with the menomic phrase (which will be
+packets per signatory. A private packet with the mnemonic phrase (which will be
 created by each signatory independently) and a packet which will be shared
-amongst signatories (which will be created by a designated signatory and
+among signatories (which will be created by a designated signatory and
 distributed to the rest).
 
 Each signatory will have a **private and never to be shared** package containing:

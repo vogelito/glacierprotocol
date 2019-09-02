@@ -48,7 +48,7 @@ key stays offline ("cold storage") at all times.
 
 ## Paper Key Storage
 
-Because the menomic phrase is a relatively small piece of information, it can
+Because the mnemonic phrase is a relatively small piece of information, it can
 be stored on paper as easily as it can be stored on a computer. And when it
 comes to key storage, paper has various advantages compared to computers: It's
 always offline (no chance of accidentally connecting it to the Internet!), it's

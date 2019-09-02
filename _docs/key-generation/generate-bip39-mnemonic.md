@@ -137,7 +137,7 @@ prepare your quarantined workspace.
             2. Verify that the <span class="danger">BIP39 Mnemonic</span> shown in
             the terminal window is identical on both computers.
 
-                **Make sure you carefuly verify every word**.
+                **Make sure you carefully verify every word**.
 
                 There are attack vectors which could replace just a portion of BIP39
                 seed phrase, making the private keys easier to brute force, so it's
@@ -163,7 +163,7 @@ prepare your quarantined workspace.
            ```
             1. Check the `Show entropy details` checkbox
             2. Copy the <span class="danger">Generated Entropy</span> output of the
-            pythong script into the `Entropy` box in Firefox and verify that the BIP39 seed
+            python script into the `Entropy` box in Firefox and verify that the BIP39 seed
             matches that of the node script terminal output of the **Q1 Computer**.
 
                 Example output in the `BIP39 Mnemonic` section in Firefox:
@@ -246,7 +246,7 @@ prepare your quarantined workspace.
             5. Click on `Options`, select `BIP39 seed` and click `OK`.
             6. Enter your <span class="danger">BIP39 seed phrase</span> and
             click `Next`.
-            7. Leave the default `m/44'/145'/0'` derivation pathselected and
+            7. Leave the default `m/44'/145'/0'` derivation path selected and
             click `Next`.
             8. Verify that the <span class="warning">Master Public Key</span>
             is the same as the output of the script **on the Q1 computer**.

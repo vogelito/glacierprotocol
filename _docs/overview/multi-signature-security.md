@@ -89,7 +89,7 @@ Signatories should make legal arrangements in advance so their key can be
 accessed in case of death or incapacitation. CryptoGlacier doesn't provide
 specific procedures to ensure this.
 
-The most failsafe way to ensure a signatory's agent will have access to a
+The most fail-safe way to ensure a signatory's agent will have access to a
 signatory's safe deposit box is to check with the bank. Standard estate
 planning legal documents should allow a signatory's agent to access the box
 upon a signatory's death or incapacitation. But banks can be fussy and
