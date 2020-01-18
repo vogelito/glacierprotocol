@@ -26,3 +26,12 @@ This builds and serves your local copy at `https://localhost:4000`.
 We use [Github Pages](https://pages.github.com/) to generate and serve this
 site. Under the hood, Github Pages uses [Jekyll](https://jekyllrb.com) as
 a static web site generator.
+
+## Full Release
+```
+# Update the version number
+vi _layouts/pdf.html
+make spell
+make pdf
+# Copy PDF into cryptoglacierscript project
+```
