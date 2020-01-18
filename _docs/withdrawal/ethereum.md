@@ -86,7 +86,8 @@ to prepare your quarantined workspace.
         $ node ~/cryptoglacier/setup.js --ether
         ```
         2. You will be prompted to enter your <span class="danger">24-word BIP39 Mnemonic</span>
-        3. The script will write an `ethereum.json` file to your `~/cryptoglacier` directory
+        3. If this is your first transaction, please see the "First transaction" section below
+        4. The script will write an `ethereum.json` file to your `~/cryptoglacier` directory
     2. Set the gas price on multisigweb
         1. Start multisigweb
         ```
@@ -166,6 +167,13 @@ to prepare your quarantined workspace.
         ```
         $ eog tx.png
         ```
+    9. If this is your first transaction, please also display the QR Code for the
+    first transaction
+        1. On Terminal, open a new tab with `Ctrl+Shift+T`
+        2. Display the QR Code for the first transaction
+        ```
+        $ eog tx0.png
+        ```
 3. Visually hide all critically sensitive data.
 
     We'll be using a smartphone with a live Internet connection to read QR
@@ -221,7 +229,8 @@ to prepare your quarantined workspace.
         $ node ~/cryptoglacier/setup.js --ether
         ```
         2. You will be prompted to enter your <span class="danger">24-word BIP39 Mnemonic</span>
-        3. The script will write an `ethereum.json` file to your `~/cryptoglacier` directory
+        3. If this is your first transaction, please see the "First transaction" section below
+        4. The script will write an `ethereum.json` file to your `~/cryptoglacier` directory
     2. Set the gas price on multisigweb
         1. Start multisigweb
         ```
@@ -286,6 +295,13 @@ to prepare your quarantined workspace.
         ```
         $ eog tx.png
         ```
+    9. If this is your first transaction, please also display the QR Code for the
+    first transaction
+        1. On Terminal, open a new tab with `Ctrl+Shift+T`
+        2. Display the QR Code for the first transaction
+        ```
+        $ eog tx0.png
+        ```
 3. Visually hide all critically sensitive data.
 
     We'll be using a smartphone with a live Internet connection to read QR
@@ -309,7 +325,7 @@ to prepare your quarantined workspace.
         [iOS](https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8),
         [Android](https://play.google.com/store/apps/details?id=com.application_4u.qrcode.barcode.scanner.reader.flashlight&hl=en).
     2. Transfer the signed transaction data to a non-quarantined computer.
-        1. Use the smartphone's QR code reader to read the QR code.
+        1. Use the smartphone's QR code reader to read the QR code(s).
         2. Visually inspect that the hex code is the same and send it to
         yourself using a messaging app which you can access from a laptop.
         
@@ -332,10 +348,20 @@ On any Internet-connected computer:
     1. Access the <span class="warning">hex Code of the fully signed transaction</span>
     you sent yourself from your smartphone previously.
     2. Open [alpha.myetherwallet.com/pushTx](https://alpha.myetherwallet.com/pushTx)
-    and paste the hex code in the `Signed Transaction` box
+    or [etherscan.io/pushtx](https://etherscan.io/pushtx) and paste the hex code in the
+    `Signed Transaction` box
     3. Click on `Send Transaction`
     4. Confirm the contents of the transaction and click `Yes, I am sure! Make transaction.`
     5. Wait until the transaction gets into an ethereum block by checking
     [etherscan.io](https://etherscan.io)
 2. Verify the transaction status by opening multisigweb on an internet connected
 device and importing the <span class="warning">Ethereum Cold Wallet Address</span>
+
+## First Transaction
+
+There is a [known bug](https://github.com/gnosis/MultiSigWallet/issues/298) that prevents
+Multisigweb from signing the very first ETH transaction which would have a nonce of zero.
+While Multisigweb is fixed, `setup.js` script will prompt you to see if this is your first
+transaction. If this is your first transaction, the script will create a `tx0.png` file
+that you will also need to extract from your quarantined environment and broadcast to the
+network.

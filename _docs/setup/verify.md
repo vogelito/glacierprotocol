@@ -174,7 +174,6 @@ https://en.wikipedia.org/wiki/Digital_signature.
             package.json: OK
             package-lock.json: OK
             setup.js: OK
-            ether.js: OK
             ```
 
         2. On Windows 10:

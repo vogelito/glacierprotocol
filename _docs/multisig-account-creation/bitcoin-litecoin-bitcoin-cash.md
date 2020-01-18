@@ -26,7 +26,7 @@ be verified across signatories.
   ```
   $ ~/apps/electrum-3.3.6-x86_64.AppImage
   ```
-  2. Select `Auto connect` and click `Next.
+  2. Select `Auto connect` and click `Next`.
   3. Leave the default wallet name and click `Next`.
   4. Select `Multi-signature wallet` and click `Next`.
   5. Select your chosen M-of-N policy. The top bar, `cosigners` is the `N`
