@@ -29,9 +29,9 @@ On any Internet-connected computer:
 1. Find your current account's Nonce
     1. Navigate to [etherscan.io](https://etherscan.io) and enter your <span class="warning">Ethereum Public Address</span>,
     also known as **MESSAGE E** on your <span class="warning">Cold Storage Information Packet</span>.
-    2. Find your last outgoing transaction and click on it, find the `Nonce` value
-    and write it down on a piece of paper. If there are no outgoing transactions,
-    then record the number `0`.
+    2. Find your last outgoing transaction and click on it, find the `Nonce` value,
+    add one to it and write it down on a piece of paper. If there are no outgoing
+    transactions, then record the number `0`.
 2. Navigate to [ethgasstation.info](https://ethgasstation.info) and record the
 recommended gas price in Gwei on the same piece of paper
 3. If you are **Proposing A Transfer**:
