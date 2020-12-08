@@ -236,7 +236,7 @@ prepare your quarantined workspace.
             9. Close the window (click on the top left `x`)
         6. **On the Q2 computer** open Electron-Cash
            ```
-           $ ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
+           $ ~/apps/Electron-Cash-4.2.3-x86_64.AppImage
            ```
             1. Leave `default_wallet` and click `Next`.
             2. Select `Multi-signature wallet` and click `Next`.

@@ -188,25 +188,25 @@ already. (See the instructions in Section III for details.)
             ```
         * **ElectronCash**: Used to manage multi-location multisig cold wallets
             ```
-            $ wget https://github.com/Electron-Cash/Electron-Cash/releases/download/4.0.6/Electron-Cash-4.0.6-x86_64.AppImage
-            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.6/win-linux/Electron-Cash-4.0.6-x86_64.AppImage.asc
-            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.0.6/win-linux/SHA256.Electron-Cash-4.0.6-x64_64.AppImage.txt
+            $ wget https://github.com/Electron-Cash/Electron-Cash/releases/download/4.2.3/Electron-Cash-4.2.3-x86_64.AppImage
+            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.2.3/win-linux/Electron-Cash-4.2.3-x86_64.AppImage.asc
+            $ wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/4.2.3/win-linux/SHA256.Electron-Cash-4.2.3-x64_64.AppImage.txt
             ```
             Import the signing keys
             ```
             $ gpg --import <(curl -L https://raw.githubusercontent.com/fyookball/keys-n-hashes/master/pubkeys/jonaldkey2.txt)
             ```
-            Make sure the output of `$ sha256sum -c SHA256.Electron-Cash-4.0.6-x64_64.AppImage.txt` is:
+            Make sure the output of `$ sha256sum -c SHA256.Electron-Cash-4.2.3-x64_64.AppImage.txt` is:
             ```
-            Electron-Cash-4.0.6-x86_64.AppImage: OK
+            Electron-Cash-4.2.3-x86_64.AppImage: OK
             ```
             Verify the signatures
             ```
-            $ gpg --verify Electron-Cash-4.0.6-x86_64.AppImage.asc Electron-Cash-4.0.6-x86_64.AppImage
+            $ gpg --verify Electron-Cash-4.2.3-x86_64.AppImage.asc Electron-Cash-4.2.3-x86_64.AppImage
             ```
             You should see something similar to (verify fingerprint matches):
             ```
-                gpg: Signature made Thu 06 Jun 2019 02:46:52 PM UTC using DSA key ID EFF1DDE1
+                gpg: Signature made Tue Dec  1 15:55:21 2020 UTC using DSA key ID EFF1DDE1
                 gpg: Good signature from "Jonald Fyookball <jonf@electroncash.org>"
                 gpg: WARNING: This key is not certified with a trusted signature!
                 gpg:          There is no indication that the signature belongs to the owner.
@@ -279,7 +279,7 @@ already. (See the instructions in Section III for details.)
             ```
             $ cp /var/cache/apt/archives/*.deb ~/apps
             $ cp ~/dls/electrum-3.3.6-x86_64.AppImage ~/apps
-            $ cp ~/dls/Electron-Cash-4.0.6-x86_64.AppImage ~/apps
+            $ cp ~/dls/Electron-Cash-4.2.3-x86_64.AppImage ~/apps
             $ cp ~/dls/electrum-ltc-3.3.6.1-x86_64.AppImage ~/apps
             $ cp ~/dls/bip39-standalone.html ~/apps
             $ cp ~/dls/multisigweb-1.6.0-amd64.deb ~/apps
@@ -328,7 +328,7 @@ contents should look like this
 
     ```
     bip39-standalone.html
-    Electron-Cash-4.0.6-x86_64.AppImage
+    Electron-Cash-4.2.3-x86_64.AppImage
     electrum-3.3.6-x86_64.AppImage
     electrum-ltc-3.3.6.1-x86_64.AppImage
     libappindicator1_12.10.1+16.04.20170215-0ubuntu1_amd64.deb

@@ -57,6 +57,6 @@ be verified across signatories.
   ```
   2. For Bitcoin Cash use the following program and the **Message BC** keys:
   ```
-  $ ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
+  $ ~/apps/Electron-Cash-4.2.3-x86_64.AppImage
   ```
       Electron Cash calls `master keys` simply `public or private keys`

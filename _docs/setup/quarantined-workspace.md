@@ -68,7 +68,7 @@ Deposit or Withdrawal protocol now, you can stop here.
 9. Prepare the AppImage files for execution
     ```
     $ chmod +x ~/apps/electrum-3.3.6-x86_64.AppImage
-    $ chmod +x ~/apps/Electron-Cash-4.0.6-x86_64.AppImage
+    $ chmod +x ~/apps/Electron-Cash-4.2.3-x86_64.AppImage
     $ chmod +x ~/apps/electrum-ltc-3.3.6.1-x86_64.AppImage
     ```
 10. Change into the cryptoglacier directory. You'll be using this directory to execute
