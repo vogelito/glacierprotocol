@@ -42,7 +42,7 @@ first have to propagate itself to the Non-Quarantined OS USB).
 copy there.
 3. Download Ubuntu by going to this link:
 
-    [http://old-releases.ubuntu.com/releases/xenial/ubuntu-16.04.1-desktop-amd64.iso](http://old-releases.ubuntu.com/releases/xenial/ubuntu-16.04.1-desktop-amd64.iso)
+    [https://old-releases.ubuntu.com/releases/xenial/ubuntu-16.04.1-desktop-amd64.iso](https://old-releases.ubuntu.com/releases/xenial/ubuntu-16.04.1-desktop-amd64.iso)
     Wait until the download is complete.
 
 4. Open a terminal window.
