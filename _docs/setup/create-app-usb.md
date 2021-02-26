@@ -144,7 +144,7 @@ already. (See the instructions in Section III for details.)
             $ sudo apt-get -y install \
             libindicator7=12.10.2+16.04.20151208-0ubuntu1 \
             libappindicator1=12.10.1+16.04.20170215-0ubuntu1 \
-            nodejs=10.23.0-1nodesource1 \
+            nodejs=10.24.0-1nodesource1 \
             qrencode=3.4.4-1 \
             zbar-tools=0.10+doc-10ubuntu1
             ```
@@ -337,7 +337,7 @@ contents should look like this
     libqrencode3_3.4.4-1_amd64.deb
     libzbar0_0.10+doc-10ubuntu1_amd64.deb
     multisigweb-1.6.0-amd64.deb
-    nodejs_10.23.0-1nodesource1_amd64.deb
+    nodejs_10.24.0-1nodesource1_amd64.deb
     qrencode_3.4.4-1_amd64.deb
     zbar-tools_0.10+doc-10ubuntu1_amd64.deb
     ```
