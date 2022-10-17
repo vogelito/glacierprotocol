@@ -347,11 +347,10 @@ On any Internet-connected computer:
 1. Send the Transaction
     1. Access the <span class="warning">hex Code of the fully signed transaction</span>
     you sent yourself from your smartphone previously.
-    2. Open [alpha.myetherwallet.com/pushTx](https://alpha.myetherwallet.com/pushTx)
-    or [etherscan.io/pushtx](https://etherscan.io/pushtx) and paste the hex code in the
-    `Signed Transaction` box
-    3. Click on `Send Transaction`
-    4. Confirm the contents of the transaction and click `Yes, I am sure! Make transaction.`
+    2. Open [blockchair.com/broadcast/](https://blockchair.com/broadcast/) and paste the hex
+    code in the text box.
+    3. Select `Ethereum` in the `Network` drop-down menu
+    4. Click on `Broadcast Transaction`
     5. Wait until the transaction gets into an ethereum block by checking
     [etherscan.io](https://etherscan.io)
 2. Verify the transaction status by opening multisigweb on an internet connected
